@@ -1,0 +1,15 @@
+git clone https://github.com/DimitriCalleau/Trauma.git
+
+git status
+
+git pull
+
+git add .
+
+git push
+
+git commit -m 'commit name'
+
+git pull -f       -> danger
+
+git push -f       -> danger
