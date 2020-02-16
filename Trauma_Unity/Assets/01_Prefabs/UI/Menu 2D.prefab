@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 8660636404885742636}
   - component: {fileID: 5494114004469883560}
   - component: {fileID: 663358573643242133}
+  - component: {fileID: -6996837212480156207}
   m_Layer: 5
   m_Name: Menu 2D
   m_TagString: Untagged
@@ -187,8 +188,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f12561a1e313741beda53363d660cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeScene: 
   pause: 0
   pausePanel: {fileID: 1774619511170154197}
+--- !u!114 &-6996837212480156207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605508695665630753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a5e2f79fe9e8342ad85838cd17263e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nbLvlDone: 0
+  end: 0
 --- !u!1 &4163299956968510176
 GameObject:
   m_ObjectHideFlags: 0

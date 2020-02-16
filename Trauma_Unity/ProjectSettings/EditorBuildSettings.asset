@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/00_Scenes/Maison.unity
+    guid: ccdca36971023f0438a9d3a054ec01ff
+  - enabled: 1
+    path: Assets/00_Scenes/Joie.unity
+    guid: 2fe795db19f9ec148afc87c7a1a28d0f
+  - enabled: 1
+    path: Assets/00_Scenes/Incomprehension.unity
+    guid: 7a4428ca1df9a6a42a48db304df88019
+  - enabled: 1
+    path: Assets/00_Scenes/Peur.unity
+    guid: 734a2fd485b686d4fb8c5596cbf52869
+  - enabled: 1
+    path: Assets/00_Scenes/Culpabilite.unity
+    guid: dfea52204f5ac264b8ba689490ec1f08
+  - enabled: 1
+    path: Assets/00_Scenes/Colere.unity
+    guid: 9a059d65d8d3e6a44b763fd361bcd6ca
+  - enabled: 1
+    path: Assets/00_Scenes/Tristesse.unity
+    guid: c7a028d8faeaf5344adf82da45396f27
   m_configObjects: {}

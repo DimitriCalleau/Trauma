@@ -7,27 +7,41 @@ using UnityEngine.AI;
 public class SceneAndUI : MonoBehaviour
 {
     //SceneManagement
-    string activeScene;
+    public string activeScene;
 
     //Ui
     public bool pause;
     private bool isPaused;
+    static private bool hasStarted;
     public GameObject pausePanel;
+    public GameObject startPanel;
+    public GameObject player;
 
     private void Start()
     {
-        pause = false;
+        if(hasStarted == false)
+        {
+            pause = true;
+        }
+        else if (hasStarted == true)
+        {
+            pause = false;
+            if(startPanel != null)
+            {
+                startPanel.SetActive(false);
+            }
+        }
         isPaused = false;
         pausePanel.SetActive(false);
     }
 
     private void Update()
     {
+        Debug.Log(hasStarted);
         if (Input.GetButtonDown("Cancel"))
         {
             pause = !pause;
         }
-
         if(pause == true)
         {
             if(isPaused == false)
@@ -57,6 +71,13 @@ public class SceneAndUI : MonoBehaviour
     {
         SceneManager.LoadScene(activeScene);
     }
+    
+    public void Play()
+    {
+        pause = false;
+        hasStarted = true;
+        startPanel.SetActive(false);
+    }
 
     public void Resume()
     {
@@ -68,13 +89,12 @@ public class SceneAndUI : MonoBehaviour
         Application.Quit();
     }
 
-    public void SaveProgression()
+    public void Save()
     {
-        Debug.Log("Save");
+        player.GetComponent<PlayerController>().SaveTransform();
     }
-
-    public void LoadLastSave()
+    public void Load()
     {
-        Debug.Log("Load");
+        player.GetComponent<PlayerController>().LoadTransform();
     }
 }

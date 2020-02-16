@@ -4,39 +4,43 @@ using UnityEngine;
 
 public class Controller2D : MonoBehaviour
 {
-    private Rigidbody2D rigidbody;
-
-    public GameObject Camera;
+    //General
+    public GameObject menu2D;
     public bool pause;
+    public int lvlActif;
+    public bool isDead;
 
     //Movement
-    public float forceMvt;
-    public float maxSpeedGround;
+    Rigidbody2D rb;
+    public float mvtSpeed;
     //Jump
     public float jumpForce;
     public int maxJump;
-    public int nbJump;
-    public bool isJumping;
+    int nbJump;
+    bool isGrounded;
 
-    public Rigidbody2D Rigidbody { get => rigidbody; set => rigidbody = value; }
-
+    //Lvl Bougie
+    private int checkPoint;
+    public int nbCheckpoint;
 
     // Start is called before the first frame update
 
     void Start()
     {
-        Rigidbody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        pause = Camera.GetComponent<SceneAndUI>().pause;
+        if(isDead == true)
+        {
+            menu2D.GetComponent<SceneAndUI>().Retry();
+        }
+        pause = menu2D.GetComponent<SceneAndUI>().pause;
         if (pause == false)
         {
-            bool GoToMenu = Input.GetButtonDown("Cancel");
-            bool attack = Input.GetButtonDown("Fire1");
-
+            //MVT
             float h = Input.GetAxisRaw("Horizontal");
             float v = Input.GetAxisRaw("Vertical");
             bool jump = Input.GetButtonDown("Jump");
@@ -49,46 +53,70 @@ public class Controller2D : MonoBehaviour
             {
                 GetComponent<SpriteRenderer>().flipX = true;
             }
-
             if (h != 0)
             {
-                rigidbody.AddForce((Vector2.right * forceMvt) * h);
+                rb.velocity = new Vector2(mvtSpeed * h, rb.velocity.y);
             }
             if (h == 0)
             {
+                if(isGrounded == true)
+                {
+                    rb.velocity = new Vector2(0f, rb.velocity.y);
+                }
+                else
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+                }
             }
-
-
-            if (rigidbody.velocity.x >= maxSpeedGround)
+            if (rb.velocity.x >= mvtSpeed)
             {
-                rigidbody.velocity = new Vector2(maxSpeedGround, rigidbody.velocity.y);
+                rb.velocity = new Vector2(mvtSpeed, rb.velocity.y);
             }
-            if (rigidbody.velocity.x <= -maxSpeedGround)
+            if (rb.velocity.x <= -mvtSpeed)
             {
-                rigidbody.velocity = new Vector2(-maxSpeedGround, rigidbody.velocity.y);
+                rb.velocity = new Vector2(-mvtSpeed, rb.velocity.y);
             }
 
             // le saut
-
             if (nbJump < maxJump && jump == true)
             {
-                Rigidbody.AddForce(Vector2.up * jumpForce);
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
                 nbJump += 1;
-                isJumping = true;
+                isGrounded = false;
+            }
+
+            if(checkPoint >= nbCheckpoint)
+            {
+
+                menu2D.GetComponent<GameManager>().nbLvlDone += 1;
+                menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
             }
         }
-
-    }
-
+    }   
     //Détecte les collisions(pour le jump et mort)
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Saut
         if (collision.gameObject.tag.Equals("Ground"))
         {
+            isGrounded = true;
             nbJump = 0;
-            isJumping = false;
         }
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            menu2D.GetComponent<SceneAndUI>().Retry();
+        }
+        if (collision.gameObject.tag.Equals("Finish"))
+        {
+            menu2D.GetComponent<GameManager>().nbLvlDone += 1;
+            menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
+        }
+        if (collision.gameObject.tag.Equals("checkPoint"))
+        {
+            checkPoint += 1;
+        }
     }
 }

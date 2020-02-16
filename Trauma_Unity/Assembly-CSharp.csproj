@@ -62,9 +62,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\02_Scripts\CameraFollow.cs" />
     <Compile Include="Assets\02_Scripts\Controller2D.cs" />
-    <Compile Include="Assets\02_Scripts\Controller3D.cs" />
+    <Compile Include="Assets\02_Scripts\EnemyCulpabilite.cs" />
+    <Compile Include="Assets\02_Scripts\EnemyPeur.cs" />
+    <Compile Include="Assets\02_Scripts\FieldOfViewCulpabilite.cs" />
+    <Compile Include="Assets\02_Scripts\GameManager.cs" />
+    <Compile Include="Assets\02_Scripts\MouseLook.cs" />
+    <Compile Include="Assets\02_Scripts\PlayerController.cs" />
+    <Compile Include="Assets\02_Scripts\Save3D\SaveData.cs" />
+    <Compile Include="Assets\02_Scripts\Save3D\SavingSystem.cs" />
     <Compile Include="Assets\02_Scripts\SceneAndUI.cs" />
+    <Compile Include="Assets\02_Scripts\SpecialObject.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/EARTSUP/Unity/Trauma/Trauma_Unity/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
