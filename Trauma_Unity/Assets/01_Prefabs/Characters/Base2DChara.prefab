@@ -178,9 +178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1506e1c930a27ae4c8aeff26a458e818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu2D: {fileID: 0}
+  menu2D: {fileID: 3605508695665630753, guid: d9209a326a7a5744abd6940923ae02bb, type: 3}
   pause: 0
-  lvlActif: 0
   isDead: 0
   mvtSpeed: 3
   jumpForce: 200
@@ -188,8 +187,8 @@ MonoBehaviour:
   nbCheckpoint: 10
   lightBougie: {fileID: 0}
   stackColere: 0
-  rangeColere: 0
+  rangeColere: 50
   layerColere:
     serializedVersion: 2
-    m_Bits: 0
-  flecheShooter: {fileID: 0}
+    m_Bits: 4096
+  flecheShooter: {fileID: 1108861157}

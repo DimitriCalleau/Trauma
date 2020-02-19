@@ -7,7 +7,6 @@ public class Controller2D : MonoBehaviour
     //General
     public GameObject menu2D;
     public bool pause;
-    public int lvlActif;
     public bool isDead;
 
     //Movement
