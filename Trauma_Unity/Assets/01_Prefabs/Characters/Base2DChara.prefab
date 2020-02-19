@@ -183,11 +183,13 @@ MonoBehaviour:
   lvlActif: 0
   isDead: 0
   mvtSpeed: 3
-  jumpForce: 170
+  jumpForce: 200
   maxJump: 1
   nbCheckpoint: 10
+  lightBougie: {fileID: 0}
   stackColere: 0
   rangeColere: 0
   layerColere:
     serializedVersion: 2
     m_Bits: 0
+  flecheShooter: {fileID: 0}
