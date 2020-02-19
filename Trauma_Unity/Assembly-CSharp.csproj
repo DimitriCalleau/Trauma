@@ -63,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\02_Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\02_Scripts\Colere\BlockDestructible.cs" />
+    <Compile Include="Assets\02_Scripts\Colere\FlecheColere.cs" />
+    <Compile Include="Assets\02_Scripts\Colere\SpawnerFleche.cs" />
     <Compile Include="Assets\02_Scripts\Controller2D.cs" />
     <Compile Include="Assets\02_Scripts\EnemyCulpabilite.cs" />
     <Compile Include="Assets\02_Scripts\EnemyPeur.cs" />

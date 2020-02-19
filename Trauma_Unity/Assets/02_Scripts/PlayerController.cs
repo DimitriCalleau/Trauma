@@ -38,7 +38,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(saved);
         bool pause = menu3D.GetComponent<SceneAndUI>().pause;
         if(pause == false)
         {

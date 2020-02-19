@@ -22,12 +22,36 @@ public class Controller2D : MonoBehaviour
     //Lvl Bougie
     private int checkPoint;
     public int nbCheckpoint;
+    public GameObject lightBougie;
+    bool isLightUp;
+    bool alreadyLit;
+
+    //Colere
+    public float stackColere;
+    public float rangeColere;
+    public LayerMask layerColere;
+    public GameObject flecheShooter;
 
     // Start is called before the first frame update
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //colere
+        if(menu2D.GetComponent<GameManager>().nbLvlDone == 4)
+        {
+            if(flecheShooter != null)
+            {
+                flecheShooter.SetActive(true);
+            }
+        }
+        else
+        {
+            if (flecheShooter != null)
+            {
+                flecheShooter.SetActive(false);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -85,12 +109,52 @@ public class Controller2D : MonoBehaviour
                 isGrounded = false;
             }
 
-            if(checkPoint >= nbCheckpoint)
+            if (menu2D.GetComponent<GameManager>().nbLvlDone == 5)
             {
+                //allumage
+                if(lightBougie != null)
+                {
+                    isLightUp = !isLightUp;
+                }
 
-                menu2D.GetComponent<GameManager>().nbLvlDone += 1;
-                menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
+                if (isLightUp)
+                {
+                    if(alreadyLit == false)
+                    {
+                        lightBougie.SetActive(true);
+                        alreadyLit = true;
+                    }
+                }
+                else
+                {
+                    if (alreadyLit == true)
+                    {
+                        lightBougie.SetActive(false);
+                        alreadyLit = false;
+                    }
+                }
+
+                if (checkPoint >= nbCheckpoint)
+                {
+                    menu2D.GetComponent<GameManager>().nbLvlDone += 1;
+                    menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
+                }
             }
+            if (menu2D.GetComponent<GameManager>().nbLvlDone == 4)
+            {
+                if(stackColere >= 1)
+                {
+                    Collider2D[] colereRange = Physics2D.OverlapCircleAll(transform.position, rangeColere, layerColere);
+                    for (int i = 0; i < colereRange.Length; i++)
+                    {
+                        Transform target = colereRange[i].transform;
+                        target.GetComponent<BlockDestructible>().broke = true;
+
+                    }
+                    stackColere = 0;
+                }
+            }
+
         }
     }   
     //Détecte les collisions(pour le jump et mort)

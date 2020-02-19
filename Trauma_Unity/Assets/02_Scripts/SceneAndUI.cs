@@ -37,7 +37,6 @@ public class SceneAndUI : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(hasStarted);
         if (Input.GetButtonDown("Cancel"))
         {
             pause = !pause;

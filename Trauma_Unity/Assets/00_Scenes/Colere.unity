@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu 2D
       objectReference: {fileID: 0}
+    - target: {fileID: 4322807364981012845, guid: d9209a326a7a5744abd6940923ae02bb,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 498445535}
     - target: {fileID: 7518691954770848826, guid: d9209a326a7a5744abd6940923ae02bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -318,6 +323,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cce402843cf7b9546b00c437f5475b3f, type: 3}
+--- !u!20 &498445535 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 827007129557017619, guid: cce402843cf7b9546b00c437f5475b3f,
+    type: 3}
+  m_PrefabInstance: {fileID: 498445534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &507235351
 PrefabInstance:
   m_ObjectHideFlags: 0
