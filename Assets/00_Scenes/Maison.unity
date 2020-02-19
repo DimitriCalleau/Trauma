@@ -574,10 +574,6 @@ PrefabInstance:
       propertyPath: fog5
       value: 
       objectReference: {fileID: 344210056}
-    - target: {fileID: 1919231977, guid: 6d0b5346b75814744ab8d10dcd1a7e5d, type: 3}
-      propertyPath: end
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4553294369486805770, guid: 6d0b5346b75814744ab8d10dcd1a7e5d,
         type: 3}
       propertyPath: m_LocalPosition.x

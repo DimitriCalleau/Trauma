@@ -43,7 +43,11 @@ public class SceneAndUI : MonoBehaviour
         }
         if(pause == true)
         {
-            if(isPaused == false)
+            if (Cursor.lockState == CursorLockMode.Locked)
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
+            if (isPaused == false)
             {
                 pausePanel.SetActive(true);
                 isPaused = true;
@@ -51,7 +55,11 @@ public class SceneAndUI : MonoBehaviour
         }
         else
         {
-            if(isPaused == true)
+            if (Cursor.lockState == CursorLockMode.None)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            if (isPaused == true)
             {
                 pausePanel.SetActive(false);
                 isPaused = false;
