@@ -16,7 +16,13 @@ public class Controller2D : MonoBehaviour
     public float jumpForce;
     public int maxJump;
     int nbJump;
-    bool isGrounded;
+
+    Collider2D grounding;
+    public float groundingRange;
+    public LayerMask layerGround;
+    public Transform groundDetector;
+    public bool isGrounded;
+    public bool detectGround;
 
     //Lvl Bougie
     private int checkPoint;
@@ -107,6 +113,31 @@ public class Controller2D : MonoBehaviour
                 nbJump += 1;
                 isGrounded = false;
             }
+            grounding = Physics2D.OverlapCircle(groundDetector.position, groundingRange, layerGround);
+            Debug.Log(grounding);
+
+            if (grounding != null)
+            {
+                if (isGrounded == false)
+                {
+                    isGrounded = true;
+                }
+                if (nbJump >= 1)
+                {
+                    nbJump = 0;
+                }
+            }
+            if (grounding == null)
+            {
+                if (isGrounded == true)
+                {
+                    isGrounded = false;
+                }
+                if (nbJump == 0)
+                {
+                    nbJump = 1;
+                }
+            }
 
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 5)
             {
@@ -159,11 +190,11 @@ public class Controller2D : MonoBehaviour
     //Détecte les collisions(pour le jump et mort)
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("Ground"))
+        /*if (collision.gameObject.tag.Equals("Ground"))
         {
             isGrounded = true;
             nbJump = 0;
-        }
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -181,5 +212,11 @@ public class Controller2D : MonoBehaviour
         {
             checkPoint += 1;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundDetector.position, groundingRange);
     }
 }
