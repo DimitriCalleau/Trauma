@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class FlecheColere : MonoBehaviour
 {
+    
     public float damages; // pas superieur a 1
     public int speed;
-
+    public float lifetime;
+    float timer;
+    private void Start()
+    {
+        timer = lifetime;
+    }
     private void Update()
     {
         Rigidbody2D billy;
@@ -15,6 +21,12 @@ public class FlecheColere : MonoBehaviour
         if(billy != null)
         {
             billy.AddForce(Vector2.left * speed * Time.deltaTime);
+        }
+        timer -= Time.deltaTime;
+
+        if (timer <= 0)
+        {
+            Destroy(this.gameObject);
         }
     }
 

@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class SpawnerFleche : MonoBehaviour
 {
-    public GameObject fleche;
+    public GameObject flecheA;
+    public GameObject flecheB;
     public float timeBetweenArrows;
     float timer;
 
     void Update()
     {
-        if(fleche != null)
+        if(flecheA != null)
         {
             if (timer <= 0)
             {
-                Instantiate(fleche, transform.position, Quaternion.identity);
+                Instantiate(flecheA, transform.position, Quaternion.identity);
                 timer = timeBetweenArrows;
             }
             timer -= Time.deltaTime;

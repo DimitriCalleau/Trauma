@@ -11,7 +11,8 @@ public class Controller2D : MonoBehaviour
 
     //Movement
     Rigidbody2D rb;
-    public float mvtSpeed;
+    float mvtSpeed;
+    public float startSpeed;
     //Jump
     public float jumpForce;
     public int maxJump;
@@ -23,6 +24,8 @@ public class Controller2D : MonoBehaviour
     public Transform groundDetector;
     public bool isGrounded;
     public bool detectGround;
+    public float groundTime;
+    public float groundTimer;
 
     //Lvl Bougie
     private int checkPoint;
@@ -37,10 +40,14 @@ public class Controller2D : MonoBehaviour
     public LayerMask layerColere;
     public GameObject flecheShooter;
 
+    //Peur
+    public float slowSpeed;
+
     // Start is called before the first frame update
 
     void Start()
     {
+        mvtSpeed = startSpeed;
         rb = GetComponent<Rigidbody2D>();
         //colere
         if(menu2D.GetComponent<GameManager>().nbLvlDone == 4)
@@ -62,7 +69,7 @@ public class Controller2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isDead == true)
+        if (isDead == true)
         {
             menu2D.GetComponent<SceneAndUI>().Retry();
         }
@@ -88,7 +95,7 @@ public class Controller2D : MonoBehaviour
             }
             if (h == 0)
             {
-                if(isGrounded == true)
+                if (isGrounded == true)
                 {
                     rb.velocity = new Vector2(0f, rb.velocity.y);
                 }
@@ -107,27 +114,41 @@ public class Controller2D : MonoBehaviour
             }
 
             // le saut
-            if (nbJump < maxJump && jump == true)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
-                nbJump += 1;
-                isGrounded = false;
-            }
             grounding = Physics2D.OverlapCircle(groundDetector.position, groundingRange, layerGround);
-            Debug.Log(grounding);
 
+            if (groundTimer >= 0)
+            {
+                groundTimer -= Time.deltaTime;
+            }
             if (grounding != null)
             {
-                if (isGrounded == false)
+                if (grounding.gameObject.tag.Equals("Slow"))
                 {
-                    isGrounded = true;
+                    if (mvtSpeed != slowSpeed)
+                    {
+                        mvtSpeed = slowSpeed;
+                    }
                 }
-                if (nbJump >= 1)
+                else
                 {
-                    nbJump = 0;
+                    if (mvtSpeed != startSpeed)
+                    {
+                        mvtSpeed = startSpeed;
+                    }
+                }
+                if (groundTimer <= 0)
+                {
+                    if (isGrounded == false)
+                    {
+                        isGrounded = true;
+                    }
+                    if (nbJump >= 1)
+                    {
+                        nbJump = 0;
+                    }
                 }
             }
-            if (grounding == null)
+            if (groundTimer > 0)
             {
                 if (isGrounded == true)
                 {
@@ -139,17 +160,25 @@ public class Controller2D : MonoBehaviour
                 }
             }
 
+            if (nbJump < maxJump && jump == true && groundTimer <= 0)
+            {
+                groundTimer += groundTime;
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
+                nbJump += 1;
+                isGrounded = false;
+            }
+
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 5)
             {
                 //allumage
-                if(lightBougie != null)
+                if (lightBougie != null)
                 {
                     isLightUp = !isLightUp;
                 }
 
                 if (isLightUp)
                 {
-                    if(alreadyLit == false)
+                    if (alreadyLit == false)
                     {
                         lightBougie.SetActive(true);
                         alreadyLit = true;
@@ -172,7 +201,7 @@ public class Controller2D : MonoBehaviour
             }
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 4)
             {
-                if(stackColere >= 1)
+                if (stackColere >= 1)
                 {
                     Collider2D[] colereRange = Physics2D.OverlapCircleAll(transform.position, rangeColere, layerColere);
                     for (int i = 0; i < colereRange.Length; i++)
@@ -184,17 +213,7 @@ public class Controller2D : MonoBehaviour
                     stackColere = 0;
                 }
             }
-
         }
-    }   
-    //Détecte les collisions(pour le jump et mort)
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        /*if (collision.gameObject.tag.Equals("Ground"))
-        {
-            isGrounded = true;
-            nbJump = 0;
-        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
