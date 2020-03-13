@@ -37,8 +37,6 @@ public class GameManager : MonoBehaviour
         {
             saveLvlDone = nbLvlDone;
         }
-        
-        Debug.Log("nombre de Lvl accomplient : " + nbLvlDone);
 
         if(nbLvlDone >= 6)
         {

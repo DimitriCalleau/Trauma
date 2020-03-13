@@ -15,17 +15,11 @@ public class Controller2D : MonoBehaviour
     public float startSpeed;
     //Jump
     public float jumpForce;
-    public int maxJump;
-    int nbJump;
-
     Collider2D grounding;
     public float groundingRange;
     public LayerMask layerGround;
     public Transform groundDetector;
     public bool isGrounded;
-    public bool detectGround;
-    public float groundTime;
-    public float groundTimer;
 
     //Lvl Bougie
     private int checkPoint;
@@ -43,6 +37,8 @@ public class Controller2D : MonoBehaviour
     //Peur
     public float slowSpeed;
 
+    //
+    public float stackTristesse;
     // Start is called before the first frame update
 
     void Start()
@@ -114,12 +110,15 @@ public class Controller2D : MonoBehaviour
             }
 
             // le saut
-            grounding = Physics2D.OverlapCircle(groundDetector.position, groundingRange, layerGround);
-
-            if (groundTimer >= 0)
+            if (jump == true)
             {
-                groundTimer -= Time.deltaTime;
+                if (isGrounded)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
+                }
             }
+
+            //slowBlock
             if (grounding != null)
             {
                 if (grounding.gameObject.tag.Equals("Slow"))
@@ -136,36 +135,6 @@ public class Controller2D : MonoBehaviour
                         mvtSpeed = startSpeed;
                     }
                 }
-                if (groundTimer <= 0)
-                {
-                    if (isGrounded == false)
-                    {
-                        isGrounded = true;
-                    }
-                    if (nbJump >= 1)
-                    {
-                        nbJump = 0;
-                    }
-                }
-            }
-            if (groundTimer > 0)
-            {
-                if (isGrounded == true)
-                {
-                    isGrounded = false;
-                }
-                if (nbJump == 0)
-                {
-                    nbJump = 1;
-                }
-            }
-
-            if (nbJump < maxJump && jump == true && groundTimer <= 0)
-            {
-                groundTimer += groundTime;
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
-                nbJump += 1;
-                isGrounded = false;
             }
 
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 5)
@@ -214,6 +183,13 @@ public class Controller2D : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void FixedUpdate()
+    {
+        //jump 
+        grounding = Physics2D.OverlapCircle(groundDetector.position, groundingRange, layerGround); 
+        isGrounded = Physics2D.OverlapCircle(groundDetector.position, groundingRange, layerGround);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
