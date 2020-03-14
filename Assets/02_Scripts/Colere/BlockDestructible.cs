@@ -4,5 +4,12 @@ using UnityEngine;
 
 public class BlockDestructible : MonoBehaviour
 {
-    public bool broke;
+    public void BreakingAnim()
+    {
+        Destroy(this.gameObject, 0.2f);
+    }
+    public void NormalDestruction()
+    {
+        Destroy(this.gameObject, 0.2f);
+    }
 }

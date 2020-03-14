@@ -17,8 +17,6 @@ public class PlateformMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Time.deltaTime);
-
         Vector3 move = initTransform;
         move.x += moveLenght * Mathf.Sin(Time.time * moveSpeed);
         transform.position = move;

@@ -37,12 +37,15 @@ public class Controller2D : MonoBehaviour
     //Peur
     public float slowSpeed;
 
-    //
-    public float stackTristesse;
-    // Start is called before the first frame update
+    //Culpabilité
+    public Transform spawnPoint;
 
+    //Tristesse
+    public float stackTristesse;
+    
     void Start()
     {
+      
         mvtSpeed = startSpeed;
         rb = GetComponent<Rigidbody2D>();
         //colere
@@ -67,6 +70,10 @@ public class Controller2D : MonoBehaviour
     {
         if (isDead == true)
         {
+            if (menu2D.GetComponent<GameManager>().nbLvlDone == 3)
+            {
+                
+            }   
             menu2D.GetComponent<SceneAndUI>().Retry();
         }
         pause = menu2D.GetComponent<SceneAndUI>().pause;
@@ -175,8 +182,9 @@ public class Controller2D : MonoBehaviour
                     Collider2D[] colereRange = Physics2D.OverlapCircleAll(transform.position, rangeColere, layerColere);
                     for (int i = 0; i < colereRange.Length; i++)
                     {
-                        Transform target = colereRange[i].transform;
-                        target.GetComponent<BlockDestructible>().broke = true;
+                        GameObject target = colereRange[i].gameObject;
+                        //Transform target = colereRange[i].transform;
+                        target.GetComponent<BlockDestructible>().BreakingAnim();
 
                     }
                     stackColere = 0;
@@ -209,9 +217,26 @@ public class Controller2D : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Breakable"))
+        {
+            if (menu2D.GetComponent<GameManager>().nbLvlDone == 0)
+            {
+                grounding = null;
+                isGrounded = false;
+                collision.gameObject.GetComponent<BlockDestructible>().NormalDestruction();
+            }
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundDetector.position, groundingRange);
+    }
+    public void RespawnCulpability()
+    {
+        transform.position = spawnPoint.position;
     }
 }

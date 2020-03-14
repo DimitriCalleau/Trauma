@@ -17,12 +17,12 @@ public class SaveData
 
     //Avancement
     public int lvlAvancement;
+    public int nbDeaths;
 
     public SaveData(PlayerController playerCtrl, GameManager gameManager)
     {
 
         lvlAvancement = gameManager.nbLvlDone;
-
         //Objet
         if(playerCtrl.pickedItem != null)
         {

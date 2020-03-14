@@ -72,13 +72,15 @@ public class SceneAndUI : MonoBehaviour
         SceneManager.LoadScene(sceneName);
 
         activeScene = sceneName;
+
     }
 
     public void Retry()
     {
-        SceneManager.LoadScene(activeScene);
+        SceneManager.LoadScene("Culpabilite");
+        //SceneManager.LoadScene(activeScene);
     }
-    
+
     public void Play()
     {
         pause = false;

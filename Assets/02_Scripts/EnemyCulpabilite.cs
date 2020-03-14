@@ -85,7 +85,7 @@ public class EnemyCulpabilite : MonoBehaviour
                 if(Physics.Raycast(transform.position,dirToTarget,distanceToTarget,groundLayer) == false)
                 {
                     viewMeshRenderer.material = mats[1];
-                    target.GetComponent<Controller2D>().isDead = true;
+                    target.GetComponent<Controller2D>().RespawnCulpability();
                     visibleTargets.Add(target);
                     Debug.Log("t mort salope");
                 }
