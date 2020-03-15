@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Controller2D : MonoBehaviour
 {
     //General
     public GameObject menu2D;
+    public Image colereBar;
+    public GameObject fullColere;
+    public bool colereStacked;
     public bool pause;
     public bool isDead;
 
@@ -45,7 +49,7 @@ public class Controller2D : MonoBehaviour
     
     void Start()
     {
-      
+        fullColere.SetActive(false);
         mvtSpeed = startSpeed;
         rb = GetComponent<Rigidbody2D>();
         //colere
@@ -125,6 +129,24 @@ public class Controller2D : MonoBehaviour
                 }
             }
 
+            if (stackColere >= 1)
+            {
+                stackColere = 1;
+                if(colereStacked == false)
+                {
+                    fullColere.SetActive(true);
+                    colereStacked = true;
+                }
+            }
+            else
+            {
+                if (colereStacked == true)
+                {
+                    fullColere.SetActive(false);
+                    colereStacked = false;
+                }
+            }
+            colereBar.fillAmount = stackColere;
             //slowBlock
             if (grounding != null)
             {
@@ -180,14 +202,15 @@ public class Controller2D : MonoBehaviour
                 if (stackColere >= 1)
                 {
                     Collider2D[] colereRange = Physics2D.OverlapCircleAll(transform.position, rangeColere, layerColere);
-                    for (int i = 0; i < colereRange.Length; i++)
+                    if (Input.GetKey(KeyCode.A))
                     {
-                        GameObject target = colereRange[i].gameObject;
-                        //Transform target = colereRange[i].transform;
-                        target.GetComponent<BlockDestructible>().BreakingAnim();
-
+                        for (int i = 0; i < colereRange.Length; i++)
+                        {
+                            GameObject target = colereRange[i].gameObject;
+                            target.GetComponent<BlockDestructible>().BreakingAnim();
+                            stackColere = 0;
+                        }
                     }
-                    stackColere = 0;
                 }
             }
         }
@@ -208,8 +231,7 @@ public class Controller2D : MonoBehaviour
         }
         if (collision.gameObject.tag.Equals("Finish"))
         {
-            menu2D.GetComponent<GameManager>().nbLvlDone += 1;
-            menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
+            FinishLevel();
         }
         if (collision.gameObject.tag.Equals("checkPoint"))
         {
@@ -238,5 +260,11 @@ public class Controller2D : MonoBehaviour
     public void RespawnCulpability()
     {
         transform.position = spawnPoint.position;
+    }
+
+    public void FinishLevel()
+    {
+        menu2D.GetComponent<GameManager>().nbLvlDone += 1;
+        menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
     }
 }

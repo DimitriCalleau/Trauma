@@ -72,7 +72,6 @@ public class SceneAndUI : MonoBehaviour
         SceneManager.LoadScene(sceneName);
 
         activeScene = sceneName;
-
     }
 
     public void Retry()

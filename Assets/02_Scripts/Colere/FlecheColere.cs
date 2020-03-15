@@ -17,7 +17,6 @@ public class FlecheColere : MonoBehaviour
     {
         Rigidbody2D billy;
         billy = this.GetComponent<Rigidbody2D>();
-        Debug.Log(billy);
         if(billy != null)
         {
             billy.AddForce(Vector2.left * speed * Time.deltaTime);

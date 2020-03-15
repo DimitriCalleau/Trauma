@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class EnemyCulpabilite : MonoBehaviour
 {
+    public bool finLvlPeur;
     //Detection
     public float viewRadius;
     [Range(0,360)]
@@ -84,10 +85,17 @@ public class EnemyCulpabilite : MonoBehaviour
                 float distanceToTarget = Vector2.Distance(transform.position, target.position);
                 if(Physics.Raycast(transform.position,dirToTarget,distanceToTarget,groundLayer) == false)
                 {
+
                     viewMeshRenderer.material = mats[1];
-                    target.GetComponent<Controller2D>().RespawnCulpability();
+                    if (finLvlPeur == true)
+                    {
+                        target.GetComponent<Controller2D>().FinishLevel();
+                    }
+                    else
+                    {
+                        target.GetComponent<Controller2D>().RespawnCulpability();
+                    }
                     visibleTargets.Add(target);
-                    Debug.Log("t mort salope");
                 }
                 else
                 {
