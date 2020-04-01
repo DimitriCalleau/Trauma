@@ -8,6 +8,7 @@ public class CheckPoint : MonoBehaviour
     int nbLvl;
     //Jump
     public float modifiedJump;
+    public float modifiedSpeed;
     public float modifiedGravity;
 
     // Update is called once per frame
@@ -22,6 +23,7 @@ public class CheckPoint : MonoBehaviour
             if(nbLvl == 0)
             {
                 collision.gameObject.GetComponent<Controller2D>().jumpForce = modifiedJump;
+                collision.gameObject.GetComponent<Controller2D>().mvtSpeed = modifiedSpeed;
                 collision.gameObject.GetComponent<Rigidbody2D>().gravityScale = modifiedGravity;
             }
 

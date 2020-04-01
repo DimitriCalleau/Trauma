@@ -15,7 +15,7 @@ public class Controller2D : MonoBehaviour
 
     //Movement
     Rigidbody2D rb;
-    float mvtSpeed;
+    public float mvtSpeed;
     public float startSpeed;
     //Jump
     public float jumpForce;
@@ -49,13 +49,13 @@ public class Controller2D : MonoBehaviour
     
     void Start()
     {
-        fullColere.SetActive(false);
         mvtSpeed = startSpeed;
         rb = GetComponent<Rigidbody2D>();
         //colere
         if(menu2D.GetComponent<GameManager>().nbLvlDone == 4)
         {
-            if(flecheShooter != null)
+            fullColere.SetActive(false);
+            if (flecheShooter != null)
             {
                 flecheShooter.SetActive(true);
             }
@@ -129,39 +129,24 @@ public class Controller2D : MonoBehaviour
                 }
             }
 
-            if (stackColere >= 1)
+            if (menu2D.GetComponent<GameManager>().nbLvlDone == 2)
             {
-                stackColere = 1;
-                if(colereStacked == false)
+                //slowBlock
+                if (grounding != null)
                 {
-                    fullColere.SetActive(true);
-                    colereStacked = true;
-                }
-            }
-            else
-            {
-                if (colereStacked == true)
-                {
-                    fullColere.SetActive(false);
-                    colereStacked = false;
-                }
-            }
-            colereBar.fillAmount = stackColere;
-            //slowBlock
-            if (grounding != null)
-            {
-                if (grounding.gameObject.tag.Equals("Slow"))
-                {
-                    if (mvtSpeed != slowSpeed)
+                    if (grounding.gameObject.tag.Equals("Slow"))
                     {
-                        mvtSpeed = slowSpeed;
+                        if (mvtSpeed != slowSpeed)
+                        {
+                            mvtSpeed = slowSpeed;
+                        }
                     }
-                }
-                else
-                {
-                    if (mvtSpeed != startSpeed)
+                    else
                     {
-                        mvtSpeed = startSpeed;
+                        if (mvtSpeed != startSpeed)
+                        {
+                            mvtSpeed = startSpeed;
+                        }
                     }
                 }
             }
@@ -212,6 +197,25 @@ public class Controller2D : MonoBehaviour
                         }
                     }
                 }
+
+                if (stackColere >= 1)
+                {
+                    stackColere = 1;
+                    if (colereStacked == false)
+                    {
+                        fullColere.SetActive(true);
+                        colereStacked = true;
+                    }
+                }
+                else
+                {
+                    if (colereStacked == true)
+                    {
+                        fullColere.SetActive(false);
+                        colereStacked = false;
+                    }
+                }
+                colereBar.fillAmount = stackColere;
             }
         }
     }
