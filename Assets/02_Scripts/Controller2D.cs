@@ -7,6 +7,7 @@ public class Controller2D : MonoBehaviour
 {
     //General
     public GameObject menu2D;
+    public GameObject camera2D;
     public Image colereBar;
     public GameObject fullColere;
     public bool colereStacked;
@@ -128,7 +129,6 @@ public class Controller2D : MonoBehaviour
                     rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
                 }
             }
-
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 2)
             {
                 //slowBlock
@@ -215,7 +215,10 @@ public class Controller2D : MonoBehaviour
                         colereStacked = false;
                     }
                 }
-                colereBar.fillAmount = stackColere;
+                if(colereBar != null)
+                {
+                    colereBar.fillAmount = stackColere;
+                }
             }
         }
     }

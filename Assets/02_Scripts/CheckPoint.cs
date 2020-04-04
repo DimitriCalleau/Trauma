@@ -11,6 +11,8 @@ public class CheckPoint : MonoBehaviour
     public float modifiedSpeed;
     public float modifiedGravity;
 
+    public int cameraDistance;
+
     // Update is called once per frame
     void Update()
     {
@@ -18,6 +20,7 @@ public class CheckPoint : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.gameObject.tag.Equals("Player"))
         {
             if(nbLvl == 0)
@@ -25,11 +28,13 @@ public class CheckPoint : MonoBehaviour
                 collision.gameObject.GetComponent<Controller2D>().jumpForce = modifiedJump;
                 collision.gameObject.GetComponent<Controller2D>().mvtSpeed = modifiedSpeed;
                 collision.gameObject.GetComponent<Rigidbody2D>().gravityScale = modifiedGravity;
+                collision.gameObject.GetComponent<Controller2D>().camera2D.GetComponent<Camera>().orthographicSize = cameraDistance;
             }
 
             if(nbLvl == 4)
             {
                 collision.gameObject.GetComponent<Controller2D>().stackTristesse += 1;
+                Destroy(this.gameObject);
             }
         }
     }
