@@ -18,9 +18,11 @@ public class SaveData
     //Avancement
     public int lvlAvancement;
     public int nbDeaths;
+    public string scene;
 
-    public SaveData(PlayerController playerCtrl, GameManager gameManager)
+    public SaveData(PlayerController playerCtrl, GameManager gameManager, SceneAndUI sceneUi)
     {
+        scene = sceneUi.activeScene;
 
         lvlAvancement = gameManager.nbLvlDone;
         //Objet

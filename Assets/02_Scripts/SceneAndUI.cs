@@ -69,15 +69,18 @@ public class SceneAndUI : MonoBehaviour
 
     public void SceneLoader(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
-
         activeScene = sceneName;
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void ActiveScene(string activeSceneName)
+    {
+        activeScene = activeSceneName;
     }
 
     public void Retry()
     {
-        SceneManager.LoadScene("Culpabilite");
-        //SceneManager.LoadScene(activeScene);
+        SceneManager.LoadScene(activeScene);
     }
 
     public void Play()
@@ -104,5 +107,10 @@ public class SceneAndUI : MonoBehaviour
     public void Load()
     {
         player.GetComponent<PlayerController>().LoadTransform();
+    }
+
+    public void End()
+    {
+        player.transform.position = new Vector3(6, 1f, 0);
     }
 }

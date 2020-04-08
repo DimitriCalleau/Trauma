@@ -50,6 +50,7 @@ public class Controller2D : MonoBehaviour
     
     void Start()
     {
+        LoadInfos();
         mvtSpeed = startSpeed;
         rb = GetComponent<Rigidbody2D>();
         //colere
@@ -273,5 +274,14 @@ public class Controller2D : MonoBehaviour
     {
         menu2D.GetComponent<GameManager>().nbLvlDone += 1;
         menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
+    }
+
+    public void LoadInfos()
+    {
+        Debug.Log("mangetesmorts");
+        SaveData data = SavingSystem.LoadData();
+
+        string activeSceneName = data.scene;
+        menu2D.GetComponent<SceneAndUI>().ActiveScene(activeSceneName);
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //temp
+    bool billy;
     //Movement
     public CharacterController controller;
     public GameObject menu3D;
@@ -27,10 +29,10 @@ public class PlayerController : MonoBehaviour
     float holdingTimer;
     public float holdingWait;
 
-    static public bool saved;
+    static public bool verifEnterScene;
     private void Start()
     {
-        if(saved == true)
+        if(verifEnterScene == true)
         {
             LoadTransform();
         }
@@ -101,30 +103,47 @@ public class PlayerController : MonoBehaviour
                 {
                     pickedItem.GetComponent<Rigidbody>().isKinematic = false;
                     pickedItem.transform.SetParent(null);
-                    pickedItem = null;
                     isHolding = false;
+                    pickedItem = null;
                 }
             }
             if (pickedItem != null)
             {
                 if (pickedItem.layer.ToString() == "11")
                 {
-                    if(pickedItem.GetComponent<SpecialObject>().nbObjet == menu3D.GetComponent<GameManager>().nbLvlDone + 1)
+                    if(verifEnterScene == false)
                     {
-                        SaveTransform();
-                        saved = true;
-                        string sceneToLoad = pickedItem.GetComponent<SpecialObject>().sceneToLoad;
-                        menu3D.GetComponent<SceneAndUI>().SceneLoader(sceneToLoad);
+                        if (pickedItem.GetComponent<SpecialObject>().nbObjet == menu3D.GetComponent<GameManager>().nbLvlDone + 1)
+                        {
+                            string sceneToLoad = pickedItem.GetComponent<SpecialObject>().sceneToLoad;
+                            menu3D.GetComponent<SceneAndUI>().ActiveScene(sceneToLoad);
+                            SaveTransform();
+                            verifEnterScene = true;
+                            menu3D.GetComponent<SceneAndUI>().SceneLoader(sceneToLoad);
+                        }
+                    }
+                    else
+                    {
+                        verifEnterScene = false;
                     }
                 }
             }
-        } 
+        }
+        
+        if (menu3D.GetComponent<GameManager>().end == true)
+        {
+            if(billy == false)
+            {
+                menu3D.GetComponent<SceneAndUI>().End();
+                billy = true;
+            } 
+        }
     }
 
     public void SaveTransform()
     {
         Debug.Log("saved");
-        SavingSystem.SaveData(this, menu3D.GetComponent<GameManager>());
+        SavingSystem.SaveData(this, menu3D.GetComponent<GameManager>(), menu3D.GetComponent<SceneAndUI>());
     }
     public void LoadTransform()
     {
@@ -147,5 +166,8 @@ public class PlayerController : MonoBehaviour
             pickedItem.transform.position = tempParent.transform.position;
             isHolding = true;
         }
+
+        string activeSceneName = data.scene;
+        menu3D.GetComponent<SceneAndUI>().ActiveScene(activeSceneName);
     }
 }

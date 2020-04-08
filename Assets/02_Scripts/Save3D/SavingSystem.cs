@@ -4,13 +4,13 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SavingSystem
 {
-    public static void SaveData(PlayerController playerCtrl, GameManager gameManager)
+    public static void SaveData(PlayerController playerCtrl, GameManager gameManager, SceneAndUI sceneUi)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/trauma.sav";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        SaveData dataLvl = new SaveData(playerCtrl,gameManager);
+        SaveData dataLvl = new SaveData(playerCtrl,gameManager,sceneUi);
 
         formatter.Serialize(stream, dataLvl);
         stream.Close();

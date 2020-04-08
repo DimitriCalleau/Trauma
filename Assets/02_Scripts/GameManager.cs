@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         nbLvlDone = saveLvlDone;
-        
     }
     private void Update()
     {
