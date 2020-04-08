@@ -19,6 +19,7 @@ public class SaveData
     public int lvlAvancement;
     public int nbDeaths;
     public string scene;
+    public bool verifLancement;
 
     public SaveData(PlayerController playerCtrl, GameManager gameManager, SceneAndUI sceneUi)
     {

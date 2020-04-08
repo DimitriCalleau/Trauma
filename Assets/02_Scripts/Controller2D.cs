@@ -241,6 +241,7 @@ public class Controller2D : MonoBehaviour
         {
             FinishLevel();
         }
+
         if (collision.gameObject.tag.Equals("checkPoint"))
         {
             checkPoint += 1;
@@ -273,12 +274,12 @@ public class Controller2D : MonoBehaviour
     public void FinishLevel()
     {
         menu2D.GetComponent<GameManager>().nbLvlDone += 1;
+        menu2D.GetComponent<SceneAndUI>().ActiveScene("Maison");
         menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
     }
 
     public void LoadInfos()
     {
-        Debug.Log("mangetesmorts");
         SaveData data = SavingSystem.LoadData();
 
         string activeSceneName = data.scene;

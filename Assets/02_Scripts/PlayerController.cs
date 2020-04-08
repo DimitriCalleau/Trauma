@@ -30,11 +30,13 @@ public class PlayerController : MonoBehaviour
     public float holdingWait;
 
     static public bool verifEnterScene;
+    static public int nbLvl;
     private void Start()
     {
         if(verifEnterScene == true)
         {
             LoadTransform();
+            verifEnterScene = false;
         }
     }
 
@@ -113,8 +115,9 @@ public class PlayerController : MonoBehaviour
                 {
                     if(verifEnterScene == false)
                     {
-                        if (pickedItem.GetComponent<SpecialObject>().nbObjet == menu3D.GetComponent<GameManager>().nbLvlDone + 1)
+                        if (pickedItem.GetComponent<SpecialObject>().nbObjet == nbLvl + 1)
                         {
+                            nbLvl += 1;
                             string sceneToLoad = pickedItem.GetComponent<SpecialObject>().sceneToLoad;
                             menu3D.GetComponent<SceneAndUI>().ActiveScene(sceneToLoad);
                             SaveTransform();
@@ -122,14 +125,9 @@ public class PlayerController : MonoBehaviour
                             menu3D.GetComponent<SceneAndUI>().SceneLoader(sceneToLoad);
                         }
                     }
-                    else
-                    {
-                        verifEnterScene = false;
-                    }
                 }
             }
         }
-        
         if (menu3D.GetComponent<GameManager>().end == true)
         {
             if(billy == false)
@@ -151,7 +149,7 @@ public class PlayerController : MonoBehaviour
         SaveData data = SavingSystem.LoadData();
 
         menu3D.GetComponent<GameManager>().nbLvlDone = data.lvlAvancement;
-
+        
         //position joueur
         transform.position = new Vector3(data.positionX, data.positionY, data.positionZ);
         transform.localRotation = Quaternion.Euler(data.rotationX, data.rotationY, data.rotationZ);
