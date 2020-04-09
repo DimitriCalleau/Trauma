@@ -24,4 +24,9 @@ public class GameManager : MonoBehaviour
             end = true;
         }
     }
+
+    public void lvlDoneForce()
+    {
+        saveLvlDone = nbLvlDone;
+    }
 }

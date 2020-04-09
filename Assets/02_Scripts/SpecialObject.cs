@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpecialObject : MonoBehaviour
 {
     public GameManager menu3D;
+    public GameObject player;
 
     public int nbObjet;
     public string sceneToLoad;
@@ -31,6 +32,7 @@ public class SpecialObject : MonoBehaviour
                 }
             }
         }
+
         if(lvlDone == true)
         {
             this.gameObject.layer = 9;
