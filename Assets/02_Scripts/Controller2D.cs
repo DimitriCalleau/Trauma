@@ -7,7 +7,6 @@ public class Controller2D : MonoBehaviour
 {
     //Animtion
     public Animator Anm;
-    public SpriteRenderer sprRenderer;
     bool isWalking;
     bool isJumping;
 
@@ -170,13 +169,14 @@ public class Controller2D : MonoBehaviour
             }
             else
             {
+                if (isJumping == false)
+                {
+                    Anm.SetBool("Jump", true);
+                    isJumping = true;
+                }
                 if (rb.velocity.y >= 0) //verif quil saute et pas tombe
                 {
-                    if (isJumping == false)
-                    {
-                        Anm.SetBool("Jump", true);
-                        isJumping = true;
-                    }
+
                 }
             }
 
