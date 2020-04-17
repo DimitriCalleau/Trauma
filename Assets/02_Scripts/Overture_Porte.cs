@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Overture_Porte : MonoBehaviour
 {
+    public int lvlToUnlock;
+    int NblvlDone;
+    public GameObject player;
+
     bool open;
     bool opened;
     bool canOpen;
@@ -19,21 +23,24 @@ public class Overture_Porte : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(canOpen == true)
+        NblvlDone = player.GetComponent<PlayerController>().nbLvlDonePorte;
+
+        if(NblvlDone >= lvlToUnlock)
         {
-            if (Input.GetButtonDown("Interact"))
+            if (canOpen == true)
             {
-                if(opened == false)
+                if (Input.GetButtonDown("Interact"))
                 {
-                    animator.SetBool("Open", true);
-                    animator.SetBool("Close", false);
-                    opened = true;
-                }
-                if(opened == true)
-                {
-                    animator.SetBool("Open", false);
-                    animator.SetBool("Close", true);
-                    opened = false;
+                    if (opened == false)
+                    {
+                        animator.SetBool("Open", true);
+                        opened = true;
+                    }
+                    else
+                    {
+                        animator.SetBool("Open", false);
+                        opened = false;
+                    }
                 }
             }
         }
@@ -44,6 +51,7 @@ public class Overture_Porte : MonoBehaviour
         if (other.gameObject.tag.Equals("Player"))
         {
             canOpen = true;
+            Debug.Log("can open");
         }
     }
 
@@ -52,6 +60,7 @@ public class Overture_Porte : MonoBehaviour
         if (other.gameObject.tag.Equals("Player"))
         {
             canOpen = false;
+            Debug.Log("can not open");
         }
     }
 }
