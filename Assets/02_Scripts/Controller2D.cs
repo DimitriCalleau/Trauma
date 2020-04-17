@@ -138,7 +138,7 @@ public class Controller2D : MonoBehaviour
             {
                 if (isGrounded)
                 {
-                    rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
+                    rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
                 }
             }
 
