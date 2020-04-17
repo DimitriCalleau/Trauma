@@ -1,12 +1,60 @@
 fileFormatVersion: 2
 guid: 70a323d5e0bada8459e70b4300f80dc2
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7458233722090377570
+    second: Sprite_Rochers_0
+  - first:
+      213: 2532586893321768484
+    second: Sprite_Rochers_1
+  - first:
+      213: -6580066805181700711
+    second: Sprite_Rochers_2
+  - first:
+      213: -6357360727740609646
+    second: Sprite_Rochers_3
+  - first:
+      213: -2159992304980688184
+    second: Sprite_Rochers_4
+  - first:
+      213: -4460790273411515608
+    second: Sprite_Rochers_5
+  - first:
+      213: 7007991595846346505
+    second: Sprite_Rochers_6
+  - first:
+      213: 8035517143984894917
+    second: Sprite_Rochers_7
+  - first:
+      213: -6549276667219960396
+    second: Sprite_Rochers_8
+  - first:
+      213: 5123087786771674970
+    second: Sprite_Rochers_9
+  - first:
+      213: 4884419105775148071
+    second: Sprite_Rochers_10
+  - first:
+      213: -6111476343756140941
+    second: Sprite_Rochers_11
+  - first:
+      213: 3700110275300593
+    second: Sprite_Rochers_12
+  - first:
+      213: -9089781454589251176
+    second: Sprite_Rochers_13
+  - first:
+      213: -5829145073239032551
+    second: Sprite_Rochers_14
+  - first:
+      213: 3152793933398031888
+    second: Sprite_Rochers_16
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,24 +82,24 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -70,13 +118,361 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_Rochers_0
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 2939
+        width: 1019
+        height: 702
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef926ae353a81e49b5e70fd72aa2970
+      internalID: 7458233722090377570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_1
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 2938
+        width: 716
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9747914bd66789847bafee0bd1df213e
+      internalID: 2532586893321768484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_2
+      rect:
+        serializedVersion: 2
+        x: 2388
+        y: 2925
+        width: 498
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15c4c72905022547a7e569b1b9f7a02
+      internalID: -6580066805181700711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_3
+      rect:
+        serializedVersion: 2
+        x: 3114
+        y: 2908
+        width: 1399
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fdafd9ee4f67f4e813d50a58dd1e37
+      internalID: -6357360727740609646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_4
+      rect:
+        serializedVersion: 2
+        x: 4771
+        y: 2882
+        width: 870
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d519e839c56b04fa727fb5d5164632
+      internalID: -2159992304980688184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_5
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1824
+        width: 1018
+        height: 703
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a93258b7847d6439e7fb7d2c745309
+      internalID: -4460790273411515608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_6
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 1847
+        width: 716
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6c295635bbd6540bef477c250cbd09
+      internalID: 7007991595846346505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_7
+      rect:
+        serializedVersion: 2
+        x: 2398
+        y: 1836
+        width: 495
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd812466f26d9c4ea2cc421ca454453
+      internalID: 8035517143984894917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_8
+      rect:
+        serializedVersion: 2
+        x: 3121
+        y: 1832
+        width: 1401
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b865d6fdfb31b846b1e84d5bb75e68c
+      internalID: -6549276667219960396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_9
+      rect:
+        serializedVersion: 2
+        x: 4811
+        y: 1858
+        width: 870
+        height: 728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c640391f6d53b34bbfbeed72289aba6
+      internalID: 5123087786771674970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_10
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 712
+        width: 1018
+        height: 702
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd0ab04b271a15468888330e6137042
+      internalID: 4884419105775148071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_11
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 734
+        width: 715
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530c9379784973347913d9dc5fcf9ba5
+      internalID: -6111476343756140941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_12
+      rect:
+        serializedVersion: 2
+        x: 2401
+        y: 725
+        width: 497
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4e71f496a5bd243b590f0ad1617242
+      internalID: 3700110275300593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_13
+      rect:
+        serializedVersion: 2
+        x: 3127
+        y: 720
+        width: 1398
+        height: 708
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2326996d823078c48a0304f9c2ca19bb
+      internalID: -9089781454589251176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_14
+      rect:
+        serializedVersion: 2
+        x: 4815
+        y: 746
+        width: 869
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64732d0b8819a53498560d7e681d0e84
+      internalID: -5829145073239032551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rochers_16
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 2645
+        width: 117
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01cc844c4d34bf842a5bcb7cc3f42efe
+      internalID: 3152793933398031888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cc035a1258488504db666e0da8f389c7
     internalID: 0
     vertices: []
     indices: 
