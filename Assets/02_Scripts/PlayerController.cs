@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     static public bool verifEnterScene;
     static public int nbLvl;
+    public int nbLvlDonePorte;
     private void Start()
     {
         if(verifEnterScene == true)
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        nbLvlDonePorte = nbLvl;
         bool pause = menu3D.GetComponent<SceneAndUI>().pause;
         if(pause == false)
         {
@@ -127,14 +129,6 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
-        }
-        if (menu3D.GetComponent<GameManager>().end == true)
-        {
-            if(billy == false)
-            {
-                menu3D.GetComponent<SceneAndUI>().End();
-                billy = true;
-            } 
         }
     }
 
