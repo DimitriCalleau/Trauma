@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class Controller2D : MonoBehaviour
 {
+    //Animtion
+    public Animator Anm;
+    public SpriteRenderer sprRenderer;
+    bool isWalking;
+    bool isJumping;
+
     //General
     public GameObject menu2D;
     public GameObject camera2D;
@@ -97,11 +103,11 @@ public class Controller2D : MonoBehaviour
 
             if (h > 0)
             {
-                GetComponent<SpriteRenderer>().flipX = false;
+                transform.rotation = Quaternion.Euler(0, 0, 0);
             }
             if (h < 0)
             {
-                GetComponent<SpriteRenderer>().flipX = true;
+                transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             if (h != 0)
             {
@@ -135,6 +141,45 @@ public class Controller2D : MonoBehaviour
                     rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
                 }
             }
+
+            //Anim
+
+            if (isGrounded)
+            {
+                if (isJumping == true)
+                {
+                    Anm.SetBool("Jump", false);
+                    isJumping = false;
+                }
+                if (h != 0)
+                {
+                    if(isWalking == false)
+                    {
+                        Anm.SetBool("Walk", true);
+                        isWalking = true;
+                    }
+                }
+                else
+                {
+                    if (isWalking == true)
+                    {
+                        Anm.SetBool("Walk", false);
+                        isWalking = false;
+                    }
+                }
+            }
+            else
+            {
+                if (rb.velocity.y >= 0) //verif quil saute et pas tombe
+                {
+                    if (isJumping == false)
+                    {
+                        Anm.SetBool("Jump", true);
+                        isJumping = true;
+                    }
+                }
+            }
+
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 2)
             {
                 //slowBlock
