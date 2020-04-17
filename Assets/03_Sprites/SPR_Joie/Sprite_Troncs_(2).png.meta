@@ -1,0 +1,703 @@
+fileFormatVersion: 2
+guid: c8cababc1d799e948b9fefa4cca6a60e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3730171277315726379
+    second: Sprite_Troncs_(2)_0
+  - first:
+      213: 7519807879073354733
+    second: Sprite_Troncs_(2)_1
+  - first:
+      213: 3129584505454515747
+    second: Sprite_Troncs_(2)_2
+  - first:
+      213: -3723638836564798972
+    second: Sprite_Troncs_(2)_3
+  - first:
+      213: -7381688872572229738
+    second: Sprite_Troncs_(2)_4
+  - first:
+      213: 5044911499885773454
+    second: Sprite_Troncs_(2)_5
+  - first:
+      213: -6385438844340320054
+    second: Sprite_Troncs_(2)_6
+  - first:
+      213: -1202222800747191526
+    second: Sprite_Troncs_(2)_7
+  - first:
+      213: 5610096819184058550
+    second: Sprite_Troncs_(2)_8
+  - first:
+      213: 2954190171408346496
+    second: Sprite_Troncs_(2)_9
+  - first:
+      213: 8058851205891197999
+    second: Sprite_Troncs_(2)_10
+  - first:
+      213: -893722327566657351
+    second: Sprite_Troncs_(2)_11
+  - first:
+      213: -2101334460623252438
+    second: Sprite_Troncs_(2)_12
+  - first:
+      213: 1170979621430813959
+    second: Sprite_Troncs_(2)_13
+  - first:
+      213: -9133038843003431559
+    second: Sprite_Troncs_(2)_14
+  - first:
+      213: -9082618578760197623
+    second: Sprite_Troncs_(2)_15
+  - first:
+      213: -6609180920983097233
+    second: Sprite_Troncs_(2)_16
+  - first:
+      213: -4426132026617896134
+    second: Sprite_Troncs_(2)_17
+  - first:
+      213: -7482479224046834239
+    second: Sprite_Troncs_(2)_18
+  - first:
+      213: -5634606680724540082
+    second: Sprite_Troncs_(2)_19
+  - first:
+      213: -6997270485232453845
+    second: Sprite_Troncs_(2)_20
+  - first:
+      213: 6017139062399964127
+    second: Sprite_Troncs_(2)_21
+  - first:
+      213: -7194756508553604858
+    second: Sprite_Troncs_(2)_22
+  - first:
+      213: -8929795258455520413
+    second: Sprite_Troncs_(2)_23
+  - first:
+      213: -8873231883228746614
+    second: Sprite_Troncs_(2)_24
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_0
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 2193
+        width: 794
+        height: 1747
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c4c53fd1fbd3148be2a29fd71fd4f7
+      internalID: -3730171277315726379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_1
+      rect:
+        serializedVersion: 2
+        x: 1837
+        y: 2190
+        width: 800
+        height: 1752
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8259f297a09c87b41b8df0d582f9fbc6
+      internalID: 7519807879073354733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_2
+      rect:
+        serializedVersion: 2
+        x: 2867
+        y: 2201
+        width: 368
+        height: 1759
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52bce66081f2b5d4cb9b4cbe924afe5f
+      internalID: 3129584505454515747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_3
+      rect:
+        serializedVersion: 2
+        x: 3479
+        y: 2193
+        width: 524
+        height: 1773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5bffa8e9b7e994d8c8266f6a8d7b54
+      internalID: -3723638836564798972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_4
+      rect:
+        serializedVersion: 2
+        x: 4025
+        y: 3434
+        width: 40
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9d58cb8727d624ca297dcc9ec5dfbf
+      internalID: -7381688872572229738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_5
+      rect:
+        serializedVersion: 2
+        x: 4057
+        y: 3422
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4743cdf69e7fcf44cb1b760fc5363c01
+      internalID: 5044911499885773454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_6
+      rect:
+        serializedVersion: 2
+        x: 4285
+        y: 2198
+        width: 167
+        height: 1756
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebb87adc860503499f00b543abf94f7
+      internalID: -6385438844340320054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_7
+      rect:
+        serializedVersion: 2
+        x: 4788
+        y: 2194
+        width: 501
+        height: 1767
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23856b9337a2fc4b800db9b6d3f509a
+      internalID: -1202222800747191526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_8
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 3400
+        width: 5
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59e78118b4239e43a19b15718d45b5d
+      internalID: 5610096819184058550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_9
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 3374
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c85337ffb1d68458151c2a01af8f65
+      internalID: 2954190171408346496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_10
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 3356
+        width: 5
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd68931a7a671d646b72ae487671a415
+      internalID: 8058851205891197999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_11
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 3350
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48aad311130ae74ebc73ec643aa6d66
+      internalID: -893722327566657351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_12
+      rect:
+        serializedVersion: 2
+        x: 4063
+        y: 3302
+        width: 5
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11569f3e71fbec044bfee6744af2751c
+      internalID: -2101334460623252438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_13
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 218
+        width: 794
+        height: 1744
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0f7042fff6a0b4784b12fd0a4d48fa
+      internalID: 1170979621430813959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_14
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 212
+        width: 800
+        height: 1754
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30858ab31ec84b840aaf1799445f70b6
+      internalID: -9133038843003431559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_15
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 224
+        width: 366
+        height: 1761
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe33f5054561e14586bc364d2c2cb07
+      internalID: -9082618578760197623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_16
+      rect:
+        serializedVersion: 2
+        x: 3107
+        y: 215
+        width: 524
+        height: 1775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3ff389139726b4487f18235428ee7c
+      internalID: -6609180920983097233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_17
+      rect:
+        serializedVersion: 2
+        x: 3653
+        y: 1459
+        width: 40
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1821630fa0b131a4099efd1d2239a02f
+      internalID: -4426132026617896134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_18
+      rect:
+        serializedVersion: 2
+        x: 3685
+        y: 1445
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16abcb46f66af1342b463fc50e982fd5
+      internalID: -7482479224046834239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_19
+      rect:
+        serializedVersion: 2
+        x: 3913
+        y: 221
+        width: 167
+        height: 1755
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa90495b7e7915e4789ab844944ac918
+      internalID: -5634606680724540082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_20
+      rect:
+        serializedVersion: 2
+        x: 4416
+        y: 212
+        width: 501
+        height: 1767
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b86cc2acf37fd4dba30ef127f55005
+      internalID: -6997270485232453845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_21
+      rect:
+        serializedVersion: 2
+        x: 3688
+        y: 1425
+        width: 5
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb69643bf1569694b979215fd70ff76c
+      internalID: 6017139062399964127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_22
+      rect:
+        serializedVersion: 2
+        x: 3688
+        y: 1399
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533367b43d6a29348810975d3e6f1b84
+      internalID: -7194756508553604858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_23
+      rect:
+        serializedVersion: 2
+        x: 3688
+        y: 1381
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c0e3b6a53b3034db47dca537c64b11
+      internalID: -8929795258455520413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Troncs_(2)_24
+      rect:
+        serializedVersion: 2
+        x: 3688
+        y: 1327
+        width: 8
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d912018263e4240b15c4f22f85dd74
+      internalID: -8873231883228746614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 08a02877be6a0c948b109048ce786e80
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

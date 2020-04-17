@@ -1,0 +1,679 @@
+fileFormatVersion: 2
+guid: 7b038ba0514ffea4b911631a7c55566a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2832763525682802081
+    second: Sprite_Buissons_0
+  - first:
+      213: -497704974567260361
+    second: Sprite_Buissons_1
+  - first:
+      213: 817018807346583599
+    second: Sprite_Buissons_2
+  - first:
+      213: -4297008529001458677
+    second: Sprite_Buissons_3
+  - first:
+      213: -383162737481743243
+    second: Sprite_Buissons_4
+  - first:
+      213: -116007727427286928
+    second: Sprite_Buissons_5
+  - first:
+      213: -1625579188192838616
+    second: Sprite_Buissons_6
+  - first:
+      213: -8439058113798359725
+    second: Sprite_Buissons_7
+  - first:
+      213: -6127988148316917595
+    second: Sprite_Buissons_8
+  - first:
+      213: 106965120050230681
+    second: Sprite_Buissons_9
+  - first:
+      213: 7873524410206276045
+    second: Sprite_Buissons_10
+  - first:
+      213: -2042663654471584202
+    second: Sprite_Buissons_11
+  - first:
+      213: 7673820131225493579
+    second: Sprite_Buissons_12
+  - first:
+      213: -8595136999803597454
+    second: Sprite_Buissons_13
+  - first:
+      213: -8100423546095823083
+    second: Sprite_Buissons_14
+  - first:
+      213: 4804506387357805811
+    second: Sprite_Buissons_15
+  - first:
+      213: 6297595574675268612
+    second: Sprite_Buissons_16
+  - first:
+      213: -6732853503935940697
+    second: Sprite_Buissons_17
+  - first:
+      213: -8699122797871620031
+    second: Sprite_Buissons_18
+  - first:
+      213: -6882184228142074882
+    second: Sprite_Buissons_19
+  - first:
+      213: 1141786965436454601
+    second: Sprite_Buissons_20
+  - first:
+      213: 8895937187084594744
+    second: Sprite_Buissons_21
+  - first:
+      213: 7317598465978278586
+    second: Sprite_Buissons_22
+  - first:
+      213: -7653616611631777122
+    second: Sprite_Buissons_23
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_Buissons_0
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 3039
+        width: 992
+        height: 852
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd338d28e614ff4d901d4d970d8afb6
+      internalID: -2832763525682802081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_1
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 3043
+        width: 1063
+        height: 856
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ce12361d67aec4996b26b383616edb
+      internalID: -497704974567260361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_2
+      rect:
+        serializedVersion: 2
+        x: 2938
+        y: 3604
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3375320f8058f5b42b77ac92025a5d5d
+      internalID: 817018807346583599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_3
+      rect:
+        serializedVersion: 2
+        x: 2956
+        y: 3071
+        width: 1197
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e32a6b10eb8df6468577612e5dd318c
+      internalID: -4297008529001458677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_4
+      rect:
+        serializedVersion: 2
+        x: 4439
+        y: 3085
+        width: 1211
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c67c3152b87ad40a4bf6d3f306fefc
+      internalID: -383162737481743243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_5
+      rect:
+        serializedVersion: 2
+        x: 2940
+        y: 3567
+        width: 9
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3f8ab42f45ab24d91d13e4ffb05bac
+      internalID: -116007727427286928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_6
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 3551
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b064b4b335e7c31459b2cd5ee992d761
+      internalID: -1625579188192838616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_7
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1842
+        width: 993
+        height: 852
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c5c1c3acdc73d4b9f1d9a6a9ee51f1
+      internalID: -8439058113798359725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_8
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 1827
+        width: 1065
+        height: 856
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ba9c078e61c124d802fd71a4243039
+      internalID: -6127988148316917595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_9
+      rect:
+        serializedVersion: 2
+        x: 2938
+        y: 2347
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac6c9347c291df479b5f76d37c2981c
+      internalID: 106965120050230681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_10
+      rect:
+        serializedVersion: 2
+        x: 2956
+        y: 1814
+        width: 1197
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236286b12fc3d4f408401647005ef523
+      internalID: 7873524410206276045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_11
+      rect:
+        serializedVersion: 2
+        x: 4448
+        y: 1877
+        width: 1210
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a12a2ea69d9604db268688a2d1fd8d
+      internalID: -2042663654471584202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_12
+      rect:
+        serializedVersion: 2
+        x: 2938
+        y: 2326
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c89adc6215d1014ebefb2355d933bf8
+      internalID: 7673820131225493579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_13
+      rect:
+        serializedVersion: 2
+        x: 2943
+        y: 2317
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515d69d5c5eb3884ea34e18769d792d4
+      internalID: -8595136999803597454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_14
+      rect:
+        serializedVersion: 2
+        x: 2943
+        y: 2310
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d155989c5b2d346a69ff82b87250bf
+      internalID: -8100423546095823083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_15
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 2294
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cf969e052f6be41b1f3d2575345ebc
+      internalID: 4804506387357805811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_16
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 565
+        width: 993
+        height: 855
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4cc8cb56ca1c1c4fbf42ddc627f60da
+      internalID: 6297595574675268612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_17
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 512
+        width: 1064
+        height: 855
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf469f1995c23c14d982265c76e5e505
+      internalID: -6732853503935940697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_18
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 1026
+        width: 9
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d5ff186f38cb24a8d96f6a4f0038ee
+      internalID: -8699122797871620031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_19
+      rect:
+        serializedVersion: 2
+        x: 3009
+        y: 513
+        width: 1196
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d467cfb4f04c28349be9320dd18e89bb
+      internalID: -6882184228142074882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_20
+      rect:
+        serializedVersion: 2
+        x: 4471
+        y: 559
+        width: 1210
+        height: 771
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37258053885c8841af0725c22745c01
+      internalID: 1141786965436454601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_21
+      rect:
+        serializedVersion: 2
+        x: 2995
+        y: 1017
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794acf57c2e2f33458e2cf3c05e6bf6f
+      internalID: 8895937187084594744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_22
+      rect:
+        serializedVersion: 2
+        x: 2995
+        y: 1011
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11309b209ba8c5d4e9cb8c0a923cf74b
+      internalID: 7317598465978278586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Buissons_23
+      rect:
+        serializedVersion: 2
+        x: 2998
+        y: 995
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fae57c3c932444c91652929bbe9720
+      internalID: -7653616611631777122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 841f5e800ae98824b9c9a1abaec26eb0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
