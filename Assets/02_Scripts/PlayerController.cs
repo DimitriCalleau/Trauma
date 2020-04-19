@@ -131,7 +131,22 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag.Equals("Lilliputien"))
+        {
+            transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            controller.stepOffset = 0.02f;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag.Equals("Lilliputien"))
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+            controller.stepOffset = 0.2f;
+        }
+    }
     public void SaveTransform()
     {
         Debug.Log("saved");
