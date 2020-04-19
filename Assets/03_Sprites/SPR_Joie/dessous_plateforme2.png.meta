@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a4c60cdb1ef5abd4f863d65e9e697131
+guid: c805174f6613e8342b6f5e121d3d61ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4813822683111449533
-    second: Sprite_backgroud_0
+      213: -4471021980143716157
+    second: dessous_plateforme2_0
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -89,22 +89,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_backgroud_0
+      name: dessous_plateforme2_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 5892
-        height: 1268
+        x: 1570
+        y: 1282
+        width: 2924
+        height: 1921
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c9f22acf4260b5449c577be5005ead1
-      internalID: 4813822683111449533
+      spriteID: 3d70c9add7b6ff24785c497a5f2ff33a
+      internalID: -4471021980143716157
       vertices: []
       indices: 
       edges: []
@@ -112,7 +112,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 03d44d44400c2a647b9f283cd2d95d8c
+    spriteID: eee3b173d07eb294f9c878819bed6acc
     internalID: 0
     vertices: []
     indices: 

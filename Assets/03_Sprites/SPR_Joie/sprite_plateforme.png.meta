@@ -128,9 +128,9 @@ TextureImporter:
       name: sprite_plateforme_1
       rect:
         serializedVersion: 2
-        x: 3300
+        x: 3276
         y: 3063
-        width: 2605
+        width: 2629
         height: 1106
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
