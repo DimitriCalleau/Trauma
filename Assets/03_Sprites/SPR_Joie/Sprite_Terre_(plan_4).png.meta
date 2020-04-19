@@ -101,12 +101,12 @@ TextureImporter:
       name: Sprite_Terre_(plan_4)_0
       rect:
         serializedVersion: 2
-        x: 1120
+        x: 1129
         y: 3006
-        width: 3751
+        width: 3736
         height: 962
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -122,12 +122,12 @@ TextureImporter:
       name: Sprite_Terre_(plan_4)_1
       rect:
         serializedVersion: 2
-        x: 1118
+        x: 1126
         y: 1619
-        width: 3750
+        width: 3734
         height: 960
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -148,7 +148,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -164,12 +164,12 @@ TextureImporter:
       name: Sprite_Terre_(plan_4)_3
       rect:
         serializedVersion: 2
-        x: 1111
+        x: 1116
         y: 292
-        width: 3751
+        width: 3729
         height: 963
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
