@@ -6,7 +6,7 @@ public class CheckPoint : MonoBehaviour
 {
     public GameObject gameManager;
     int nbLvl;
-    bool state;
+    public bool state;
     //Jump
     public float jump;
     public float speed;
