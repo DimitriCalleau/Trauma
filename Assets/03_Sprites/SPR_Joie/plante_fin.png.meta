@@ -1,0 +1,631 @@
+fileFormatVersion: 2
+guid: 4c2f26c4eb18ec14daa49bce21f79044
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4544882929756373075
+    second: plante_fin_0
+  - first:
+      213: 565139217376098120
+    second: plante_fin_1
+  - first:
+      213: 2089234141581018892
+    second: plante_fin_4
+  - first:
+      213: -1299185773835542823
+    second: plante_fin_8
+  - first:
+      213: 7937989063993707460
+    second: plante_fin_9
+  - first:
+      213: -646032849633992496
+    second: plante_fin_10
+  - first:
+      213: -2063870928904879415
+    second: plante_fin_12
+  - first:
+      213: -8373311138372410281
+    second: plante_fin_13
+  - first:
+      213: 5226492265924004627
+    second: plante_fin_14
+  - first:
+      213: 4528298977267113426
+    second: plante_fin_15
+  - first:
+      213: 6288222032716886125
+    second: plante_fin_16
+  - first:
+      213: -8735498933791467681
+    second: plante_fin_17
+  - first:
+      213: 739303884365271634
+    second: plante_fin_18
+  - first:
+      213: 6699440871619975519
+    second: plante_fin_19
+  - first:
+      213: -4534617535150908817
+    second: plante_fin_20
+  - first:
+      213: 8171532516540485118
+    second: plante_fin_21
+  - first:
+      213: 8834334602784729865
+    second: plante_fin_22
+  - first:
+      213: -5543278388006146899
+    second: plante_fin_23
+  - first:
+      213: -6936503201107160020
+    second: plante_fin_25
+  - first:
+      213: 7497000453538636069
+    second: plante_fin_26
+  - first:
+      213: 1246189780123149701
+    second: plante_fin_27
+  - first:
+      213: -3560181667354017869
+    second: plante_fin_28
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: plante_fin_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2729
+        width: 1573
+        height: 1440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8af04cd9de5f994f98f44ccd32e7246
+      internalID: -4544882929756373075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_1
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 3037
+        width: 593
+        height: 1105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782ea3d94b5fc8340ae53f04689ff825
+      internalID: 565139217376098120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_4
+      rect:
+        serializedVersion: 2
+        x: 2386
+        y: 3058
+        width: 173
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00fbeff6bfe4124d81688754f89bd6d
+      internalID: 2089234141581018892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_8
+      rect:
+        serializedVersion: 2
+        x: 4070
+        y: 2977
+        width: 506
+        height: 1192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7a13c4c1554684f8975de4997fde9e
+      internalID: -1299185773835542823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_9
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 2984
+        width: 176
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0dcc2bc4e120b40b20da39d5413429
+      internalID: 7937989063993707460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_10
+      rect:
+        serializedVersion: 2
+        x: 4981
+        y: 3055
+        width: 924
+        height: 1114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3081edf3bd49304fb7dda2e215e462b
+      internalID: -646032849633992496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_12
+      rect:
+        serializedVersion: 2
+        x: 2885
+        y: 2918
+        width: 348
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff4e1c5283a87142b03f529e083543d
+      internalID: -2063870928904879415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_13
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1111
+        width: 162
+        height: 1219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0190f5b86ca6da947960abd5081ca752
+      internalID: -8373311138372410281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_14
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1146
+        width: 201
+        height: 1205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c0c3fbcedf87140be511686176a704
+      internalID: 5226492265924004627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_15
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1088
+        width: 120
+        height: 1012
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ce6bd26f934584e97b8f0339c4da11
+      internalID: 4528298977267113426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_16
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 2028
+        width: 373
+        height: 753
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f71a436a6229bc4faa2eba864431094
+      internalID: 6288222032716886125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_17
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 1922
+        width: 409
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 640497878f4764d43bb26e32c88a19b1
+      internalID: -8735498933791467681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_18
+      rect:
+        serializedVersion: 2
+        x: 3867
+        y: 1858
+        width: 518
+        height: 663
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf8021525f7ed849a68e0dee3017889
+      internalID: 739303884365271634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_19
+      rect:
+        serializedVersion: 2
+        x: 4817
+        y: 1801
+        width: 657
+        height: 933
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63833e8dee6d49944ac85bc9857294f8
+      internalID: 6699440871619975519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_20
+      rect:
+        serializedVersion: 2
+        x: 4535
+        y: 1887
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549ee73c46834b644abe09c63353e346
+      internalID: -4534617535150908817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_21
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 1169
+        width: 314
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55cdde674c63fcf4aa938a782417e130
+      internalID: 8171532516540485118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_22
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 1186
+        width: 375
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a4b21c378b0f04aa5af6f4f9b9acdc
+      internalID: 8834334602784729865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_23
+      rect:
+        serializedVersion: 2
+        x: 3442
+        y: 1054
+        width: 474
+        height: 697
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3a122c580e2c846be7aca8d7526e45
+      internalID: -5543278388006146899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_25
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 0
+        width: 1139
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46428b3391358884fa7a821fa169e5f6
+      internalID: -6936503201107160020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_26
+      rect:
+        serializedVersion: 2
+        x: 2276
+        y: 0
+        width: 811
+        height: 875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730dc7488e077224d95308f49e871227
+      internalID: 7497000453538636069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_27
+      rect:
+        serializedVersion: 2
+        x: 3401
+        y: 0
+        width: 666
+        height: 789
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d17733c36662064283bda03d4d3e461
+      internalID: 1246189780123149701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plante_fin_28
+      rect:
+        serializedVersion: 2
+        x: 4396
+        y: 0
+        width: 1127
+        height: 866
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68697f7eac3a9149b3e737da74ee2d6
+      internalID: -3560181667354017869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 81ad0c72ad525a248bcf174c11a8341c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
