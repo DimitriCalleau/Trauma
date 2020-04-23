@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Lilliputien"))
         {
-            if(nbLvl >= 3)
+            if(nbLvl < 3)
             {
                 transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                 controller.stepOffset = 0.02f;
