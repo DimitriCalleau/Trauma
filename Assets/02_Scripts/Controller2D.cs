@@ -53,13 +53,9 @@ public class Controller2D : MonoBehaviour
     //Tristesse
     public float stackTristesse;
 
-    //Timer
-    float timingSwitch;
-    float timerSwitch;
-    bool turnSwitch;
+
     void Start()
     {
-        timingSwitch = 1f;
         LoadInfos();
         mvtSpeed = startSpeed;
         rb = GetComponent<Rigidbody2D>();
@@ -273,19 +269,7 @@ public class Controller2D : MonoBehaviour
             }
         }
 
-        if(turnSwitch == true)
-        {
-            if (timerSwitch > 0)
-            {
-                timerSwitch -= Time.deltaTime;
-            }
-            if (timerSwitch <= 0)
-            {
-                turnSwitch = false;
-                menu2D.GetComponent<SceneAndUI>().ActiveScene("Maison");
-                menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
-            }
-        }
+
     }
 
     private void FixedUpdate()
@@ -339,8 +323,9 @@ public class Controller2D : MonoBehaviour
         menu2D.GetComponent<GameManager>().nbLvlDone += 1;
         Debug.Log(menu2D.GetComponent<GameManager>().nbLvlDone);
         menu2D.GetComponent<GameManager>().lvlDoneForce();
-        timerSwitch = timingSwitch;
-        turnSwitch = true;
+        menu2D.GetComponent<SceneAndUI>().ActiveScene("Maison");
+        menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
+
     }
 
     public void LoadInfos()
