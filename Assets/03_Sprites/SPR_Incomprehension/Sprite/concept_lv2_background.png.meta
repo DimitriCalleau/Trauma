@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 442c72212627b234f8c998d69f3510be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -593430917912511511
+    second: concept_lv2_background_0
+  - first:
+      213: -6156538375009015402
+    second: concept_lv2_background_1
+  - first:
+      213: -1639921410589092081
+    second: concept_lv2_background_2
+  - first:
+      213: 1391378137422763748
+    second: concept_lv2_background_3
+  - first:
+      213: 5897124625300438968
+    second: concept_lv2_background_4
+  - first:
+      213: 2624161884224049889
+    second: concept_lv2_background_5
+  - first:
+      213: -5686393149699287378
+    second: concept_lv2_background_6
+  - first:
+      213: -5557931142293961868
+    second: concept_lv2_background_7
+  - first:
+      213: 469288757125899139
+    second: concept_lv2_background_8
+  - first:
+      213: -7102374202266633622
+    second: concept_lv2_background_9
+  - first:
+      213: 1061353845741265374
+    second: concept_lv2_background_10
+  - first:
+      213: -1375793724987077562
+    second: concept_lv2_background_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: concept_lv2_background_0
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 2665
+        width: 1390
+        height: 1105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1ff7967c1b30441bbc01cbec07924f
+      internalID: -593430917912511511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_lv2_background_1
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 3610
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d139449f9eec44342b6195c63b6ac1fb
+      internalID: -6156538375009015402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_lv2_background_2
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 2992
+        width: 1056
+        height: 1011
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a8a08b7246e77408d4b70852b11415
+      internalID: -1639921410589092081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_lv2_background_3
+      rect:
+        serializedVersion: 2
+        x: 4488
+        y: 3135
+        width: 948
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d929588b6468394d8794313a1b7198e
+      internalID: 1391378137422763748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_lv2_background_4
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 1210
+        width: 1499
+        height: 919
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5aabfae346b73a4488f8aaf5e0280b4
+      internalID: 5897124625300438968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_lv2_background_5
+      rect:
+        serializedVersion: 2
+        x: 3707
+        y: 1939
+        width: 426
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db2d10d52972014f8697998e90e2513
+      internalID: 2624161884224049889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_lv2_background_6
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 203
+        width: 795
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6b033fb8f26bf4eb8c69a2f65c3082
+      internalID: -5686393149699287378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_lv2_background_7
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 353
+        width: 387
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1514536b432a4944b9cc2a08541ed5a4
+      internalID: -5557931142293961868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_lv2_background_8
+      rect:
+        serializedVersion: 2
+        x: 2173
+        y: 272
+        width: 501
+        height: 525
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb20cd105cb1f24d899a8dec4f544f6
+      internalID: 469288757125899139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_lv2_background_9
+      rect:
+        serializedVersion: 2
+        x: 3016
+        y: 192
+        width: 389
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: babfbf4ce5873f14e986ca538e6a9024
+      internalID: -7102374202266633622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_lv2_background_10
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 277
+        width: 475
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6556ef8cc3e17a46b3a8505a767bf16
+      internalID: 1061353845741265374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_lv2_background_11
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 59
+        width: 1344
+        height: 1522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f41566d310007e48b0cda3cb81d9dd1
+      internalID: -1375793724987077562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7397d7f8c0cf75e40a74ea65015eca01
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
