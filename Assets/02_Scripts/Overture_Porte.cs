@@ -51,7 +51,7 @@ public class Overture_Porte : MonoBehaviour
         if (other.gameObject.tag.Equals("Player"))
         {
             canOpen = true;
-            Debug.Log("can open");
+            //Debug.Log("can open");
         }
     }
 
@@ -60,7 +60,7 @@ public class Overture_Porte : MonoBehaviour
         if (other.gameObject.tag.Equals("Player"))
         {
             canOpen = false;
-            Debug.Log("can not open");
+            //Debug.Log("can not open");
         }
     }
 }

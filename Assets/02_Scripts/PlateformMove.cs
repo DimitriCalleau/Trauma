@@ -4,21 +4,48 @@ using UnityEngine;
 
 public class PlateformMove : MonoBehaviour
 {
-    public float moveLenght;
-    public float moveSpeed;
-    public Vector3 initTransform;
+    public Animator anm;
+    public BoxCollider2D bxCo;
+    public float anmTimer;
+    public float anmTiming;
+    public int phase;
 
     // Start is called before the first frame update
     void Start()
     {
-        initTransform = transform.position;
+        phase = 0;
+        bxCo.isTrigger = false;
+        anmTimer = anmTiming;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 move = initTransform;
-        move.x += moveLenght * Mathf.Sin(Time.time * moveSpeed);
-        transform.position = move;
+        if(anmTimer >= 0)
+        {
+            anmTimer -= Time.deltaTime;
+        }
+
+        if (anmTimer <= 0)
+        {
+            if (phase == 0)
+            {
+                anm.SetBool("Move", true);
+                bxCo.isTrigger = true;
+                anmTimer = anmTiming;
+                phase = 1;
+            }
+        }
+
+        if (anmTimer <= 0)
+        {
+            if (phase == 1)
+            {
+                anm.SetBool("Move", false);
+                bxCo.isTrigger = false;
+                anmTimer = anmTiming;
+                phase = 0;
+            }
+        }
     }
 }
