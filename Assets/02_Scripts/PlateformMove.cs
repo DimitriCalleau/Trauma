@@ -32,6 +32,7 @@ public class PlateformMove : MonoBehaviour
             {
                 anm.SetBool("Move", true);
                 bxCo.isTrigger = true;
+                transform.gameObject.layer = 0;
                 anmTimer = anmTiming;
                 phase = 1;
             }
@@ -43,6 +44,7 @@ public class PlateformMove : MonoBehaviour
             {
                 anm.SetBool("Move", false);
                 bxCo.isTrigger = false;
+                transform.gameObject.layer = 8;
                 anmTimer = anmTiming;
                 phase = 0;
             }
