@@ -141,6 +141,20 @@ public class Controller2D : MonoBehaviour
 
             if (isGrounded)
             {
+                if (grounding.gameObject.tag.Equals("Slow"))
+                {
+                    if (mvtSpeed != slowSpeed)
+                    {
+                        mvtSpeed = slowSpeed;
+                    }
+                }
+                else
+                {
+                    if (mvtSpeed != startSpeed)
+                    {
+                        mvtSpeed = startSpeed;
+                    }
+                }
                 if (isJumping == true)
                 {
                     Anm.SetBool("Jump", false);
@@ -176,27 +190,6 @@ public class Controller2D : MonoBehaviour
                 }
             }
 
-            if (menu2D.GetComponent<GameManager>().nbLvlDone == 2)
-            {
-                //slowBlock
-                if (grounding != null)
-                {
-                    if (grounding.gameObject.tag.Equals("Slow"))
-                    {
-                        if (mvtSpeed != slowSpeed)
-                        {
-                            mvtSpeed = slowSpeed;
-                        }
-                    }
-                    else
-                    {
-                        if (mvtSpeed != startSpeed)
-                        {
-                            mvtSpeed = startSpeed;
-                        }
-                    }
-                }
-            }
 
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 5)
             {
