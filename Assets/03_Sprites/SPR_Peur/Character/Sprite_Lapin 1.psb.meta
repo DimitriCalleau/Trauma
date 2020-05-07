@@ -505,14 +505,14 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 599
     mosaicPosition: {x: 0, y: 0}
   - name: "T\xEAte"
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 597
     mosaicPosition: {x: 0, y: 0}
   - name: Sourcil
@@ -526,7 +526,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 851
     mosaicPosition: {x: 0, y: 0}
   - name: Noir
@@ -540,7 +540,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 598
     mosaicPosition: {x: 0, y: 0}
   - name: Oeil
@@ -561,7 +561,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 596
     mosaicPosition: {x: 0, y: 0}
   - name: Layer4
@@ -575,7 +575,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 595
     mosaicPosition: {x: 0, y: 0}
   - name: Layer5
@@ -589,7 +589,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 594
     mosaicPosition: {x: 0, y: 0}
   - name: Layer6
@@ -603,7 +603,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 593
     mosaicPosition: {x: 0, y: 0}
   - name: Layer7
@@ -617,7 +617,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 592
     mosaicPosition: {x: 0, y: 0}
   - name: Layer12
@@ -631,7 +631,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 591
     mosaicPosition: {x: 0, y: 0}
   - name: Layer11
@@ -645,7 +645,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 590
     mosaicPosition: {x: 0, y: 0}
   - name: Layer10
@@ -659,7 +659,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 589
     mosaicPosition: {x: 0, y: 0}
   - name: Layer9
@@ -673,7 +673,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 588
     mosaicPosition: {x: 0, y: 0}
   - name: Ombres
@@ -687,14 +687,14 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 775
     mosaicPosition: {x: 0, y: 0}
   - name: Cuisse avant 2
     spriteName: 
     isGroup: 1
     parentIndex: 26
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 767
     mosaicPosition: {x: 0, y: 0}
   - name: Layer29
@@ -708,7 +708,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 26
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 773
     mosaicPosition: {x: 0, y: 0}
   - name: Layer34
@@ -722,14 +722,14 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 774
     mosaicPosition: {x: 0, y: 0}
   - name: "Cuisse arri\xE8re 2"
     spriteName: 
     isGroup: 1
     parentIndex: 31
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 753
     mosaicPosition: {x: 0, y: 0}
   - name: Layer18
@@ -743,7 +743,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 31
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 757
     mosaicPosition: {x: 0, y: 0}
   - name: Layer21
@@ -757,7 +757,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 31
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 763
     mosaicPosition: {x: 0, y: 0}
   - name: Layer26
