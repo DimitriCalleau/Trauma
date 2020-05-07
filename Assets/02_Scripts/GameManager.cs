@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        nbLvlDone = saveLvlDone;
+        //nbLvlDone = saveLvlDone;
+        nbLvlDone = 2;
     }
     private void Update()
     {
