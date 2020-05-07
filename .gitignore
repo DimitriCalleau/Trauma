@@ -68,3 +68,7 @@ Assets/01_Prefabs/2D Background/LV2.meta
 Assets/04_Models/chambre_parents/prefab.meta
 Assets/05_Materials/Chambre_Parent/armoire_parent/lambert2_Height.tga.meta
 Assets/00_Scenes/Maison.unity
+.vs/Trauma/v15/Server/sqlite3/storage.ide-wal
+.vs/Trauma/v15/Server/sqlite3/storage.ide-shm
+*.ide-shm
+*.ide-wal
