@@ -9,9 +9,9 @@ public class PlayerController : MonoBehaviour
     //Movement
     public CharacterController controller;
     public GameObject menu3D;
-   
-    public float speed = 12f;
-    public float gravity = 9.81f;
+
+    public float speed;
+    public float gravity;
     Vector3 velocity;
 
     public Transform groundCheck;
@@ -22,13 +22,19 @@ public class PlayerController : MonoBehaviour
     //Pickup
     bool isHolding;
     GameObject selectedItem;
+    public GameObject detectionPorte;
     public GameObject pickedItem;
     public GameObject tempParent;
-    float distance;
-    public int distanceMax;
+
+    //UI
+    public GameObject uiPorte;
+    public GameObject uiGrab;
+    float distancesSelection;
+
     float holdingTimer;
     public float holdingWait;
-
+    float distance;
+    public float distanceMax;
     static public bool verifEnterScene;
     static public int nbLvl;
     public int nbLvlDonePorte;
@@ -38,7 +44,11 @@ public class PlayerController : MonoBehaviour
         {
             LoadTransform();
             verifEnterScene = false;
+
         }
+        speed = 3f;
+        uiPorte.SetActive(false);
+        uiGrab.SetActive(false);
     }
 
     void Update()
@@ -71,10 +81,46 @@ public class PlayerController : MonoBehaviour
                 if (hit.transform.gameObject.tag.Equals("Pickable"))
                 {
                     selectedItem = hit.transform.gameObject;
+                    if (Vector3.Distance(transform.position, selectedItem.transform.position) < distanceMax)
+                    {
+                        if (isHolding == false)
+                        {
+                            uiGrab.SetActive(true);
+                        }
+                        else
+                        {
+                            uiGrab.SetActive(false);
+                        }
+                    }
+                    else
+                    {
+                        uiGrab.SetActive(false);
+                    }
                 }
                 else
                 {
                     selectedItem = null;
+                    uiGrab.SetActive(false);
+                }
+
+                if (hit.transform.gameObject.tag.Equals("Porte"))
+                {
+                    if (detectionPorte.GetComponent<DetectionPorte>().detected == true)
+                    {
+                        uiPorte.SetActive(true);
+                        if (Input.GetButtonDown("Interact"))
+                        {
+                            hit.transform.gameObject.GetComponent<Overture_Porte>().Open();
+                        }
+                    }
+                    else
+                    {
+                        uiPorte.SetActive(false);
+                    }
+                }
+                else
+                {
+                    uiPorte.SetActive(false);
                 }
             }
             if (holdingTimer > 0)
@@ -83,8 +129,8 @@ public class PlayerController : MonoBehaviour
             }
             if (selectedItem != null)
             {
-                distance = Mathf.Sqrt(((selectedItem.transform.position.x - transform.position.x) * (selectedItem.transform.position.x - transform.position.x)) + ((selectedItem.transform.position.y - transform.position.y) * (selectedItem.transform.position.y - transform.position.y)) + ((selectedItem.transform.position.z - transform.position.z) * (selectedItem.transform.position.z - transform.position.z)));
-                //distance = Vector3.Distance(transform.position, selectedItem.transform.position);
+                distance = Vector3.Distance(selectedItem.transform.position, transform.position);
+
                 if (distance <= distanceMax)
                 {
                     if (isHolding == false)
@@ -92,6 +138,7 @@ public class PlayerController : MonoBehaviour
                         if (Input.GetButtonDown("Interact"))
                         {
                             pickedItem = selectedItem;
+                            uiGrab.SetActive(false);
                             pickedItem.transform.SetParent(tempParent.transform);
                             pickedItem.GetComponent<Rigidbody>().isKinematic = true;
                             pickedItem.transform.position = tempParent.transform.position;
@@ -139,6 +186,7 @@ public class PlayerController : MonoBehaviour
             {
                 transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                 controller.stepOffset = 0.02f;
+                speed = 1f;
             }
         }
     }
@@ -148,6 +196,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.localScale = new Vector3(1, 1, 1);
             controller.stepOffset = 0.2f;
+            speed = 3f;
         }
     }
     public void SaveTransform()

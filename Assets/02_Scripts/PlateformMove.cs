@@ -9,6 +9,8 @@ public class PlateformMove : MonoBehaviour
     public float anmTimer;
     public float anmTiming;
     public int phase;
+    float angle;
+    bool canTurn;
 
     // Start is called before the first frame update
     void Start()
@@ -26,11 +28,18 @@ public class PlateformMove : MonoBehaviour
             anmTimer -= Time.deltaTime;
         }
 
+        if(canTurn == true)
+        {
+            angle += 1000 * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        }
+
         if (anmTimer <= 0)
         {
             if (phase == 0)
             {
-                anm.SetBool("Move", true);
+                canTurn = true;
+                //anm.SetBool("Move", true);
                 bxCo.isTrigger = true;
                 transform.gameObject.layer = 0;
                 anmTimer = anmTiming;
@@ -42,7 +51,10 @@ public class PlateformMove : MonoBehaviour
         {
             if (phase == 1)
             {
-                anm.SetBool("Move", false);
+                canTurn = false;
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                angle = 0;
+                //anm.SetBool("Move", false);
                 bxCo.isTrigger = false;
                 transform.gameObject.layer = 8;
                 anmTimer = anmTiming;

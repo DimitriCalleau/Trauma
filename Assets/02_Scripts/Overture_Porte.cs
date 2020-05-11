@@ -10,14 +10,12 @@ public class Overture_Porte : MonoBehaviour
 
     bool open;
     bool opened;
-    bool canOpen;
     public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         open = false;
         opened = false;
-        canOpen = false;
     }
 
     // Update is called once per frame
@@ -25,42 +23,22 @@ public class Overture_Porte : MonoBehaviour
     {
         NblvlDone = player.GetComponent<PlayerController>().nbLvlDonePorte;
 
-        if(NblvlDone >= lvlToUnlock)
+    }
+
+    public void Open()
+    {
+        if (NblvlDone >= lvlToUnlock)
         {
-            if (canOpen == true)
+            if (opened == false)
             {
-                if (Input.GetButtonDown("Interact"))
-                {
-                    if (opened == false)
-                    {
-                        animator.SetBool("Open", true);
-                        opened = true;
-                    }
-                    else
-                    {
-                        animator.SetBool("Open", false);
-                        opened = false;
-                    }
-                }
+                animator.SetBool("Open", true);
+                opened = true;
             }
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag.Equals("Player"))
-        {
-            canOpen = true;
-            //Debug.Log("can open");
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag.Equals("Player"))
-        {
-            canOpen = false;
-            //Debug.Log("can not open");
+            else
+            {
+                animator.SetBool("Open", false);
+                opened = false;
+            }
         }
     }
 }
