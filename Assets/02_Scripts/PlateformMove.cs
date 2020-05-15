@@ -15,7 +15,7 @@ public class PlateformMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        phase = 0;
+      
         bxCo.isTrigger = false;
         anmTimer = anmTiming;
     }
