@@ -23,13 +23,16 @@ public class BackgroudMoving : MonoBehaviour
         float distance = (camera2D.transform.position.x * parallaxEffect);
 
         transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
-        if(temp>startPos + lenght)
+        if(lenght != null)
         {
-            startPos += lenght;
-        }
-        else if(temp< startPos - lenght)
-        {
-            startPos -= lenght;
+            if (temp > startPos + lenght)
+            {
+                startPos += lenght;
+            }
+            else if (temp < startPos - lenght)
+            {
+                startPos -= lenght;
+            }
         }
     }
 }
