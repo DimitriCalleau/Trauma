@@ -1,0 +1,739 @@
+fileFormatVersion: 2
+guid: 95015917c6b7cba4aadf51b0e940fcbf
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Capuche
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1413
+      height: 1168
+    spriteID: 9988a8f8493c9204ea9ea83b3138263c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2170, y: -1871}
+  - name: Machoire partie 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 699
+      y: 3503
+      width: 692
+      height: 280
+    spriteID: d4218d738f4a1304281811e389e758c9
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2207, y: 1470}
+  - name: Machoire partie 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 699
+      y: 3082
+      width: 692
+      height: 413
+    spriteID: 4b7b46a918d115047a7ca7ca4750e98d
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2109, y: 1183}
+  - name: Tete
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1425
+      y: 4
+      width: 957
+      height: 956
+    spriteID: bc2d4f244ecc26d458c9c82f7c4ce20e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1191, y: -1881}
+  - name: Bras partie 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1180
+      width: 1367
+      height: 780
+    spriteID: 8b4614f6b30cb5e469c8d884c5357cd3
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1123, y: 1040}
+  - name: Bras partie 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1425
+      y: 2047
+      width: 455
+      height: 1146
+    spriteID: 09f08a4cef32368468241af8f2ae0c3d
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -915, y: 1271}
+  - name: Pied partie 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3767
+      width: 423
+      height: 305
+    spriteID: a077ea348d25c1345a4129fab18e87ce
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2869, y: 3487}
+  - name: Pied partie 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 699
+      y: 3791
+      width: 524
+      height: 298
+    spriteID: f9cd5cc73bcaea943b3b6a820a1aa1ec
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1885, y: 3507}
+  - name: Cheville
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 435
+      y: 3767
+      width: 202
+      height: 263
+    spriteID: 7ec31aa134d34bf43b1ae4379b987198
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2130, y: 3339}
+  - name: Zip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1231
+      y: 3791
+      width: 102
+      height: 191
+    spriteID: 9d8701b643d8a104b9084641e3b0691c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1697, y: 2032}
+  - name: Corps partie 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1968
+      width: 687
+      height: 1509
+    spriteID: fe77be7ac8ccb6545b35b6078db68b7c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2456, y: 1455}
+  - name: Corps partie 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1425
+      y: 968
+      width: 686
+      height: 1071
+    spriteID: 158bbc335c55b90459dd5a92deda5845
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1027, y: 4}
+  - name: Chaines capuche
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2119
+      y: 968
+      width: 247
+      height: 982
+    spriteID: 857f2f60e8d7bb54bbbcd4fce4173c13
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -4, y: -826}
+  - name: Chaine machoire
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2390
+      y: 683
+      width: 259
+      height: 1121
+    spriteID: 1982bb6118dcd29419da95b7e6250281
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -753, y: -159}
+  - name: "Corps derri\xE8re"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 699
+      y: 1968
+      width: 687
+      height: 1106
+    spriteID: 8787d856892c0b341b913a642c25d251
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1761, y: 1455}
+  - name: "Pied derri\xE8re 2"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1425
+      y: 3201
+      width: 388
+      height: 280
+    spriteID: 408816f925a92c042934fad10db6056c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1464, y: 2797}
+  - name: "Pied derri\xE8re 1"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3485
+      width: 482
+      height: 274
+    spriteID: 16ee253f94785f9439290164d30906da
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2619, y: 3077}
+  - name: "Cheville derri\xE8re"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 494
+      y: 3485
+      width: 186
+      height: 242
+    spriteID: a66d36196eb458d418b1d5a923699178
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2112, y: 2945}
+  - name: "Bras derri\xE8re 2"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2390
+      y: 4
+      width: 1252
+      height: 671
+    spriteID: 2268421f7393abe428f654ec9e15b56e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1000, y: -358}
+  - name: "Bras derri\xE8re 1"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1888
+      y: 2047
+      width: 331
+      height: 1011
+    spriteID: 6ea112a7ec9da5c429e9e7c799fd1456
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -612, y: 1140}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 5500, y: 3200}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 4096
+  textureActualHeight: 4096
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Sprite
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 813
+    mosaicPosition: {x: 0, y: 0}
+  - name: Capuche
+    spriteName: Capuche
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 9988a8f8493c9204ea9ea83b3138263c
+    layerID: 787
+    mosaicPosition: {x: 4, y: 4}
+  - name: Machoire
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 
+    layerID: 871
+    mosaicPosition: {x: 0, y: 0}
+  - name: Machoire partie 2
+    spriteName: Machoire partie 2
+    isGroup: 0
+    parentIndex: 2
+    spriteID: d4218d738f4a1304281811e389e758c9
+    layerID: 786
+    mosaicPosition: {x: 699, y: 3503}
+  - name: Machoire partie 1
+    spriteName: Machoire partie 1
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 4b7b46a918d115047a7ca7ca4750e98d
+    layerID: 785
+    mosaicPosition: {x: 699, y: 3082}
+  - name: Tete
+    spriteName: Tete
+    isGroup: 0
+    parentIndex: 0
+    spriteID: bc2d4f244ecc26d458c9c82f7c4ce20e
+    layerID: 784
+    mosaicPosition: {x: 1425, y: 4}
+  - name: Bras devant
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 
+    layerID: 872
+    mosaicPosition: {x: 0, y: 0}
+  - name: Bras partie 2
+    spriteName: Bras partie 2
+    isGroup: 0
+    parentIndex: 6
+    spriteID: 8b4614f6b30cb5e469c8d884c5357cd3
+    layerID: 804
+    mosaicPosition: {x: 4, y: 1180}
+  - name: Bras partie 1
+    spriteName: Bras partie 1
+    isGroup: 0
+    parentIndex: 6
+    spriteID: 09f08a4cef32368468241af8f2ae0c3d
+    layerID: 799
+    mosaicPosition: {x: 1425, y: 2047}
+  - name: Pied devant
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 
+    layerID: 873
+    mosaicPosition: {x: 0, y: 0}
+  - name: Pied partie 2
+    spriteName: Pied partie 2
+    isGroup: 0
+    parentIndex: 9
+    spriteID: a077ea348d25c1345a4129fab18e87ce
+    layerID: 793
+    mosaicPosition: {x: 4, y: 3767}
+  - name: Pied partie 1
+    spriteName: Pied partie 1
+    isGroup: 0
+    parentIndex: 9
+    spriteID: f9cd5cc73bcaea943b3b6a820a1aa1ec
+    layerID: 792
+    mosaicPosition: {x: 699, y: 3791}
+  - name: Cheville
+    spriteName: Cheville
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 7ec31aa134d34bf43b1ae4379b987198
+    layerID: 791
+    mosaicPosition: {x: 435, y: 3767}
+  - name: Zip
+    spriteName: Zip
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 9d8701b643d8a104b9084641e3b0691c
+    layerID: 788
+    mosaicPosition: {x: 1231, y: 3791}
+  - name: Corps partie 2
+    spriteName: Corps partie 2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: fe77be7ac8ccb6545b35b6078db68b7c
+    layerID: 790
+    mosaicPosition: {x: 4, y: 1968}
+  - name: Corps partie 1
+    spriteName: Corps partie 1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 158bbc335c55b90459dd5a92deda5845
+    layerID: 789
+    mosaicPosition: {x: 1425, y: 968}
+  - name: Chaines capuche
+    spriteName: Chaines capuche
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 857f2f60e8d7bb54bbbcd4fce4173c13
+    layerID: 781
+    mosaicPosition: {x: 2119, y: 968}
+  - name: Chaine machoire
+    spriteName: Chaine machoire
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 1982bb6118dcd29419da95b7e6250281
+    layerID: 776
+    mosaicPosition: {x: 2390, y: 683}
+  - name: "Corps derri\xE8re"
+    spriteName: "Corps derri\xE8re"
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 8787d856892c0b341b913a642c25d251
+    layerID: 852
+    mosaicPosition: {x: 699, y: 1968}
+  - name: "Pied derri\xE8re"
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 
+    layerID: 874
+    mosaicPosition: {x: 0, y: 0}
+  - name: "Pied derri\xE8re 2"
+    spriteName: "Pied derri\xE8re 2"
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 408816f925a92c042934fad10db6056c
+    layerID: 867
+    mosaicPosition: {x: 1425, y: 3201}
+  - name: "Pied derri\xE8re 1"
+    spriteName: "Pied derri\xE8re 1"
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 16ee253f94785f9439290164d30906da
+    layerID: 866
+    mosaicPosition: {x: 4, y: 3485}
+  - name: "Cheville derri\xE8re"
+    spriteName: "Cheville derri\xE8re"
+    isGroup: 0
+    parentIndex: 19
+    spriteID: a66d36196eb458d418b1d5a923699178
+    layerID: 865
+    mosaicPosition: {x: 494, y: 3485}
+  - name: "Bras derri\xE8re"
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 
+    layerID: 875
+    mosaicPosition: {x: 0, y: 0}
+  - name: "Bras derri\xE8re 2"
+    spriteName: "Bras derri\xE8re 2"
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 2268421f7393abe428f654ec9e15b56e
+    layerID: 839
+    mosaicPosition: {x: 2390, y: 4}
+  - name: "Bras derri\xE8re 1"
+    spriteName: "Bras derri\xE8re 1"
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 6ea112a7ec9da5c429e9e7c799fd1456
+    layerID: 836
+    mosaicPosition: {x: 1888, y: 2047}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  boneGOs: []
+  generateGOHierarchy: 0
+  textureAssetName: Sprite_culpabilite Texture
+  prefabAssetName: Sprite_culpabilite Prefab
+  spriteLibAssetName: Sprite_culpabilite Sprite Lib
