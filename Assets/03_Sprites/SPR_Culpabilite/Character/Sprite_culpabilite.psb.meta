@@ -549,7 +549,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 813
     mosaicPosition: {x: 0, y: 0}
   - name: Capuche
@@ -563,7 +563,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 871
     mosaicPosition: {x: 0, y: 0}
   - name: Machoire partie 2
@@ -591,7 +591,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 872
     mosaicPosition: {x: 0, y: 0}
   - name: Bras partie 2
@@ -612,7 +612,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 873
     mosaicPosition: {x: 0, y: 0}
   - name: Pied partie 2
@@ -682,7 +682,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 874
     mosaicPosition: {x: 0, y: 0}
   - name: "Pied derri\xE8re 2"
@@ -710,7 +710,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 875
     mosaicPosition: {x: 0, y: 0}
   - name: "Bras derri\xE8re 2"
