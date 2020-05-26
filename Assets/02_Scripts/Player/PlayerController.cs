@@ -105,18 +105,18 @@ public class PlayerController : MonoBehaviour
 
                 if (hit.transform.gameObject.tag.Equals("Porte"))
                 {
-                    if (detectionPorte.GetComponent<DetectionPorte>().detected == true)
-                    {
+                    //if (detectionPorte.GetComponent<DetectionPorte>().detected == true)
+                    //{
                         uiPorte.SetActive(true);
                         if (Input.GetButtonDown("Interact"))
                         {
                             hit.transform.gameObject.GetComponent<Overture_Porte>().Open();
                         }
-                    }
-                    else
+                    //}
+                   /*else
                     {
                         uiPorte.SetActive(false);
-                    }
+                    }*/
                 }
                 else
                 {
