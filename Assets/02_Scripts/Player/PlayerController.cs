@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
     //Pickup
     bool isHolding;
     GameObject selectedItem;
-    public GameObject detectionPorte;
     public GameObject pickedItem;
     public GameObject tempParent;
 
@@ -105,18 +104,19 @@ public class PlayerController : MonoBehaviour
 
                 if (hit.transform.gameObject.tag.Equals("Porte"))
                 {
-                    //if (detectionPorte.GetComponent<DetectionPorte>().detected == true)
-                    //{
+                    if(hit.distance <= 1.5)
+                    {
                         uiPorte.SetActive(true);
                         if (Input.GetButtonDown("Interact"))
                         {
                             hit.transform.gameObject.GetComponent<Overture_Porte>().Open();
+                        
                         }
-                    //}
-                   /*else
+                    }
+                    else
                     {
                         uiPorte.SetActive(false);
-                    }*/
+                    }
                 }
                 else
                 {
