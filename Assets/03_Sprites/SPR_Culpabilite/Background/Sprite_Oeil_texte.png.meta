@@ -1,0 +1,439 @@
+fileFormatVersion: 2
+guid: 4e84713a560588541b8cd55d0bf88061
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4685276879989827736
+    second: Sprite_Oeil_texte_0
+  - first:
+      213: -1800965950292786650
+    second: Sprite_Oeil_texte_1
+  - first:
+      213: 7202722344687852101
+    second: Sprite_Oeil_texte_2
+  - first:
+      213: -1296602350008201715
+    second: Sprite_Oeil_texte_3
+  - first:
+      213: 7245982199709297600
+    second: Sprite_Oeil_texte_4
+  - first:
+      213: 7452249420993786807
+    second: Sprite_Oeil_texte_5
+  - first:
+      213: -1915401941556868131
+    second: Sprite_Oeil_texte_6
+  - first:
+      213: 258538532923389601
+    second: Sprite_Oeil_texte_7
+  - first:
+      213: 7032787445694875246
+    second: Sprite_Oeil_texte_8
+  - first:
+      213: -4246582701867753853
+    second: Sprite_Oeil_texte_9
+  - first:
+      213: -329466305806753419
+    second: Sprite_Oeil_texte_10
+  - first:
+      213: -556854639388410131
+    second: Sprite_Oeil_texte_11
+  - first:
+      213: 9014528189048012268
+    second: Sprite_Oeil_texte_12
+  - first:
+      213: 7901934317583002011
+    second: Sprite_Oeil_texte_13
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_0
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 2488
+        width: 1318
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab790b346da9cbd4cacc8f9fdaae7ce2
+      internalID: 4685276879989827736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_1
+      rect:
+        serializedVersion: 2
+        x: 2156
+        y: 2438
+        width: 1152
+        height: 662
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42821f9378c43304d8590d12bff28dbb
+      internalID: -1800965950292786650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_2
+      rect:
+        serializedVersion: 2
+        x: 3381
+        y: 2434
+        width: 1311
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b8e985ea1359141b03b7392ad1397c
+      internalID: 7202722344687852101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1544
+        width: 1398
+        height: 904
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9fd9143da5b8f49829d2ca2f56be51
+      internalID: -1296602350008201715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_4
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 1512
+        width: 1225
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285761133919f434abb270739338dd0c
+      internalID: 7245982199709297600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_5
+      rect:
+        serializedVersion: 2
+        x: 3003
+        y: 1742
+        width: 1206
+        height: 663
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89aa00a4445d4a14eb92429903820f24
+      internalID: 7452249420993786807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_6
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 1879
+        width: 937
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b9a1e6909427944b4d051f6adb4056
+      internalID: -1915401941556868131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 834
+        width: 1556
+        height: 656
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298af8bcc624462428981bc64d1b4bf1
+      internalID: 258538532923389601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_8
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 903
+        width: 1466
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c9f0257a3ca5045bc3d71d316d4409
+      internalID: 7032787445694875246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_9
+      rect:
+        serializedVersion: 2
+        x: 3391
+        y: 1155
+        width: 1996
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9959197a8103ad4c92868c225fd7e0e
+      internalID: -4246582701867753853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_10
+      rect:
+        serializedVersion: 2
+        x: 4472
+        y: 701
+        width: 977
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e28e528fd1c1d4ea9cf47bc040f5f6
+      internalID: -329466305806753419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_11
+      rect:
+        serializedVersion: 2
+        x: 4115
+        y: 60
+        width: 933
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ab2b576cc55ce45b959c75d9fc2ce1
+      internalID: -556854639388410131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_12
+      rect:
+        serializedVersion: 2
+        x: 2156
+        y: 251
+        width: 1873
+        height: 630
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40738c7f2193dc34e90b65a986e14414
+      internalID: 9014528189048012268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_13
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 164
+        width: 1754
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e3a8e678f90274cac4c3ef359b056d
+      internalID: 7901934317583002011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fd114299fe33ee74db94c397eac4bdb5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
