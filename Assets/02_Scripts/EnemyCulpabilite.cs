@@ -15,7 +15,8 @@ public class EnemyCulpabilite : MonoBehaviour
     public LayerMask groundLayer;
 
     public Material[] mats;
-
+    public Sprite[] spriteState;
+    public SpriteRenderer sprRdr;
     //Rotation
     public float timeBetweenRotation;
     public float tinyTiming;
@@ -40,6 +41,7 @@ public class EnemyCulpabilite : MonoBehaviour
     {
         state1activ = true;
         changeDone = false;
+        sprRdr.sprite = spriteState[0];
         transform.rotation = Quaternion.Euler(0f, 0f, state1);
         StartCoroutine("FindTargetWithDelay", .2f);
         viewMesh = new Mesh();
@@ -186,6 +188,7 @@ public class EnemyCulpabilite : MonoBehaviour
         {
             timer = timeBetweenRotation;
             transform.rotation = Quaternion.Euler(0f, 0f, state2);
+            sprRdr.sprite = spriteState[1];
             state1inactiv = true;
             state2activ = true;
             state1activ = false;
@@ -196,6 +199,7 @@ public class EnemyCulpabilite : MonoBehaviour
         {
             timer = timeBetweenRotation;
             transform.rotation = Quaternion.Euler(0f, 0f, state2);
+            sprRdr.sprite = spriteState[1];
             state3inactiv = true;
             state2activ = true;
             state3activ = false;
@@ -208,6 +212,7 @@ public class EnemyCulpabilite : MonoBehaviour
             {
                 timer = timeBetweenRotation;
                 transform.rotation = Quaternion.Euler(0f, 0f, state3);
+                sprRdr.sprite = spriteState[2];
                 state1inactiv = false;
                 state3activ = true;
                 state2activ = false;
@@ -218,6 +223,7 @@ public class EnemyCulpabilite : MonoBehaviour
             {
                 timer = timeBetweenRotation;
                 transform.rotation = Quaternion.Euler(0f, 0f, state1);
+                sprRdr.sprite = spriteState[0];
                 state3inactiv = false;
                 state1activ = true;
                 state2activ = false;
