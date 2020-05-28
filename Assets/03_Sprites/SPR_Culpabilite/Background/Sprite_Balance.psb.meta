@@ -86,18 +86,18 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Plateforme 2
+  - name: Sprite_Balance_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1957
-      y: 4
-      width: 1066
-      height: 1524
-    spriteID: 52fc5280d4546c94abd77888d3918506
+      x: 2
+      y: 4426
+      width: 2792
+      height: 444
+    spriteID: 787d525192b8bd44a86a1b66263a40ad
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -107,19 +107,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -1306, y: -753}
-  - name: Plateforme 1
+    uvTransform: {x: 2, y: 4426}
+  - name: Sprite_Balance_1
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0.95}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 2891
-      width: 2668
-      height: 1530
-    spriteID: f42eb72642b91294e949be8c4f4165da
+      x: 2
+      y: 2890
+      width: 1068
+      height: 1532
+    spriteID: 231f9a81121a7a94a87048c67f762445
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -129,19 +129,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -1156, y: 2140}
-  - name: Balance
+    uvTransform: {x: 2, y: 2890}
+  - name: Sprite_Balance_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4429
-      width: 2789
-      height: 438
-    spriteID: b9feb5f88f4668f4f9f5a9115cbe81ad
+      x: 2616
+      y: 4380
+      width: 52
+      height: 36
+    spriteID: fed05a9853bed1a408399bd463e1f2dc
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -151,19 +151,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -1329, y: 2266}
-  - name: Pied
+    uvTransform: {x: 2616, y: 4380}
+  - name: Sprite_Balance_3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 1945
-      height: 2879
-    spriteID: 1483879751d3e364e8e127c60817776c
+      x: 2
+      y: 2
+      width: 1244
+      height: 2884
+    spriteID: c5da002b348210b4ea5635f78c6d70d1
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -173,7 +173,29 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -2087, y: -193}
+    uvTransform: {x: 2, y: 2}
+  - name: Sprite_Balance_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.95}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1954
+      y: 2
+      width: 1072
+      height: 1528
+    spriteID: 0515842abf6ddd44e9aeb7330f9aa337
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1954, y: 2}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -197,7 +219,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 1357
     mosaicPosition: {x: 0, y: 0}
   - name: Plateforme 2
