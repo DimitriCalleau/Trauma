@@ -184,6 +184,7 @@ public class EnemyCulpabilite : MonoBehaviour
 
     private void ChangeEyeState()
     {
+        viewMeshRenderer.material = mats[0];
         if (state1activ == true && changeDone == false)
         {
             timer = timeBetweenRotation;
