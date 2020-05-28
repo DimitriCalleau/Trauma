@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlateformeSlide : MonoBehaviour
 {
-    public float range;
     public float speed;
+    public float range;
+    private float x;
     private Vector2 startPos;
     private Vector2 V;
 
@@ -13,13 +14,14 @@ public class PlateformeSlide : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
+        V = startPos;
     }
 
     // Update is called once per frame
     void Update()
     {
-        V = startPos;
-        V.x += range * Mathf.Sin(Time.deltaTime * speed);
+        x += speed * Time.deltaTime;
+        V = new Vector2(startPos.x + Mathf.Sin(x) * range, startPos.y);
         transform.position = V;
     }
 }
