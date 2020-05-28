@@ -261,6 +261,12 @@ public class Controller2D : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            rb.velocity = new Vector2(0f, 0f);
+            Anm.SetBool("Jump", false);
+            Anm.SetBool("Walk", false);
+        }
 
 
     }
