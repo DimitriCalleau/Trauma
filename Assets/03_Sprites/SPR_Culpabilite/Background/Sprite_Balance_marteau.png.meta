@@ -104,18 +104,18 @@ TextureImporter:
       name: Sprite_Balance_marteau_0
       rect:
         serializedVersion: 2
-        x: 87
-        y: 402
-        width: 2634
-        height: 2565
+        x: 198
+        y: 517
+        width: 2462
+        height: 2236
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7d4ceb3b5180444387ad54d6767ba5f
+      spriteID: 4f50b94d5af376f4e9f7751e76a16524
       internalID: 1736688339094433230
       vertices: []
       indices: 
@@ -125,18 +125,18 @@ TextureImporter:
       name: Sprite_Balance_marteau_1
       rect:
         serializedVersion: 2
-        x: 2836
-        y: 1371
-        width: 1297
-        height: 1632
+        x: 2996
+        y: 1392
+        width: 943
+        height: 1541
       alignment: 9
-      pivot: {x: 0.483335, y: 0.22628926}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83b57bb9524586d4fa20c8ae26b8aa15
+      spriteID: 87b1f298f27488546b097d64aa0078b4
       internalID: -2899358482983433081
       vertices: []
       indices: 
@@ -146,18 +146,18 @@ TextureImporter:
       name: Sprite_Balance_marteau_2
       rect:
         serializedVersion: 2
-        x: 2999
-        y: 302
-        width: 951
-        height: 1008
-      alignment: 9
-      pivot: {x: 0.47727206, y: 0.36419573}
+        x: 4186
+        y: 1185
+        width: 1162
+        height: 1216
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0540d874aaa50f94bacc4f251e60ecb5
+      spriteID: 21576414c903ca8449d1ec86ec5e7d44
       internalID: 177828794470104301
       vertices: []
       indices: 
@@ -167,18 +167,18 @@ TextureImporter:
       name: Sprite_Balance_marteau_3
       rect:
         serializedVersion: 2
-        x: 4180
-        y: 1108
-        width: 1221
-        height: 1524
+        x: 3001
+        y: 332
+        width: 943
+        height: 873
       alignment: 9
-      pivot: {x: 0.07514852, y: 0.114705406}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c034bd3ace26db42be32078648ab572
+      spriteID: d1907e08f76fee842a2264c5944fba9e
       internalID: 782970182771382217
       vertices: []
       indices: 
@@ -188,18 +188,18 @@ TextureImporter:
       name: Sprite_Balance_marteau_4
       rect:
         serializedVersion: 2
-        x: 4385
-        y: 431
-        width: 1052
-        height: 638
+        x: 4424
+        y: 541
+        width: 975
+        height: 413
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf793d353940d4b4fb5c27be9e05a510
+      spriteID: ce17d4a3206fabe4d8d201634d143d00
       internalID: 6768449315925561404
       vertices: []
       indices: 

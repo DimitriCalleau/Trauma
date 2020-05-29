@@ -295,7 +295,10 @@ public class Controller2D : MonoBehaviour
             {
                 FinishLevel();
             }
-
+        }
+        if (collision.gameObject.tag.Equals("Marteau"))
+        {
+            RespawnCulpability();
         }
         if (collision.gameObject.tag.Equals("checkPoint"))
         {
