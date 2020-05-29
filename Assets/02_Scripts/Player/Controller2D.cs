@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Controller2D : MonoBehaviour
 {
+
     //Animtion
     public Animator Anm;
     bool isWalking;
@@ -48,6 +49,7 @@ public class Controller2D : MonoBehaviour
     public float slowSpeed;
 
     //Culpabilité
+    public bool milieuCulpa;
     public Transform spawnPoint;
 
     //Tristesse
@@ -289,7 +291,6 @@ public class Controller2D : MonoBehaviour
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 1)
             {
                 collision.gameObject.GetComponent<Animator>().SetBool("Detected", true);
-
             }
             else
             {
@@ -298,7 +299,15 @@ public class Controller2D : MonoBehaviour
         }
         if (collision.gameObject.tag.Equals("Marteau"))
         {
-            RespawnCulpability();
+            if (milieuCulpa == true)
+            {
+                RespawnCulpability();
+            }
+            if (milieuCulpa == false)
+            {
+                TutoCulpability();
+            }
+
         }
         if (collision.gameObject.tag.Equals("checkPoint"))
         {
@@ -327,6 +336,14 @@ public class Controller2D : MonoBehaviour
     public void RespawnCulpability()
     {
         transform.position = spawnPoint.position;
+        if (milieuCulpa == false)
+        {
+            milieuCulpa = true;
+        }
+    }
+    public void TutoCulpability()
+    {
+        transform.position = new Vector3(-4, 0.6f, 0);
     }
 
     public void FinishLevel()

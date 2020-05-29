@@ -5,14 +5,11 @@ using UnityEngine;
 public class SpecialObject : MonoBehaviour
 {
     public GameManager menu3D;
-    public GameObject player;
-
     public int nbObjet;
     public string sceneToLoad;
     public Renderer rnd;
     public Material[] mats = new Material[2];
     private int activeMat;
-    public bool lvlDone;
 
     private void Start()
     {
@@ -26,20 +23,12 @@ public class SpecialObject : MonoBehaviour
         {
             if (menu3D.GetComponent<GameManager>().nbLvlDone >= nbObjet)
             {
-                if (lvlDone == false)
+                this.gameObject.layer = 9;
+                if (activeMat == 0)
                 {
-                    lvlDone = true;
+                    rnd.material = mats[1];
+                    activeMat = 1;
                 }
-            }
-        }
-
-        if(lvlDone == true)
-        {
-            this.gameObject.layer = 9;
-            if(activeMat == 0)
-            {
-                rnd.material = mats[1];
-                activeMat = 1;
             }
         }
     }

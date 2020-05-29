@@ -13,6 +13,7 @@ public class Marteau : MonoBehaviour
     public float timingOpen;
     public float timingClosed;
     public int phase;
+    public bool respawnOrNot;
     // Start is called before the first frame update
     void Start()
     {
