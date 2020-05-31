@@ -16,6 +16,7 @@ public class Controller2D : MonoBehaviour
     public GameObject camera2D;
     public Image colereBar;
     public GameObject fullColere;
+    public GameObject insulte;
     public bool colereStacked;
     public bool pause;
     public bool isDead;
@@ -262,6 +263,10 @@ public class Controller2D : MonoBehaviour
                     colereBar.fillAmount = stackColere;
                 }
             }
+            if (menu2D.GetComponent<GameManager>().nbLvlDone == 3)
+            {
+                
+            }
         }
         else
         {
@@ -335,6 +340,7 @@ public class Controller2D : MonoBehaviour
     }
     public void RespawnCulpability()
     {
+        insulte.GetComponent<AffichageMotCupabilite>().death += 1;
         transform.position = spawnPoint.position;
         if (milieuCulpa == false)
         {
@@ -344,6 +350,7 @@ public class Controller2D : MonoBehaviour
     public void TutoCulpability()
     {
         transform.position = new Vector3(-4, 0.6f, 0);
+        insulte.GetComponent<AffichageMotCupabilite>().death += 1;
     }
 
     public void FinishLevel()
