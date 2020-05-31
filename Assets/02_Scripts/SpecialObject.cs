@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpecialObject : MonoBehaviour
 {
-    public GameManager menu3D;
     public int nbObjet;
     public string sceneToLoad;
     public Renderer rnd;
@@ -17,19 +16,13 @@ public class SpecialObject : MonoBehaviour
         activeMat = 0;
     }
 
-    private void Update()
+    public void ChangeMat()
     {
-        if (menu3D != null)
+        this.gameObject.layer = 9;
+        if (activeMat == 0)
         {
-            if (menu3D.GetComponent<GameManager>().nbLvlDone >= nbObjet)
-            {
-                this.gameObject.layer = 9;
-                if (activeMat == 0)
-                {
-                    rnd.material = mats[1];
-                    activeMat = 1;
-                }
-            }
+            rnd.material = mats[1];
+            activeMat = 1;
         }
     }
 }
