@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class AffichageMotCupabilite : MonoBehaviour
 {
+    public GameObject player;
     public GameObject[] spawnPoints;
     public Sprite[] motsCulpabilite;
     public float speed;
     public float death;
+    public float smooth;
 
     int randomSpawn1;
     int randomSpawn2;
@@ -186,6 +188,25 @@ public class AffichageMotCupabilite : MonoBehaviour
                 timer5 = timing5;
                 stop5 = true;
             }
+        }
+    }
+
+    public IEnumerator philipe()
+    {
+        yield return new WaitForSeconds(8);
+        player.GetComponent<Controller2D>().FinishLevel();
+    }
+
+    public void FinishCulpabilite()
+    {
+        StartCoroutine(philipe());
+        player.GetComponent<Controller2D>().mvtSpeed = 1;
+        for (int i =0; i <= 12; i++)
+        {
+            //spawnPoints[i].transform.position = Vector3.Lerp(spawnPoints[i].transform.position, player.transform.position, smooth);
+            spawnPoints[i].transform.position = new Vector3(player.transform.position.x, player.transform.position.y + i * smooth, player.transform.position.z);
+            spawnPoints[i].GetComponent<SpriteRenderer>().sortingLayerName = "Premier_plan";
+            spawnPoints[i].GetComponent<SpriteRenderer>().sortingOrder = 1;
         }
     }
 }
