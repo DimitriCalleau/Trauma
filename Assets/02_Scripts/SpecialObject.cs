@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpecialObject : MonoBehaviour
 {
+    public ParticleSystem prtc;
     public int nbObjet;
     public string sceneToLoad;
     public Renderer rnd;
@@ -14,6 +15,7 @@ public class SpecialObject : MonoBehaviour
     {
         rnd.material = mats[0];
         activeMat = 0;
+        prtc.Play();
     }
 
     public void ChangeMat()
@@ -23,6 +25,7 @@ public class SpecialObject : MonoBehaviour
         {
             rnd.material = mats[1];
             activeMat = 1;
+            prtc.Stop();
         }
     }
 }
