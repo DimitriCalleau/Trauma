@@ -287,6 +287,7 @@ public class Controller2D : MonoBehaviour
             }
             else
             {
+                Debug.Log("bitch");
                 FinishLevel();
             }
         }
@@ -421,11 +422,6 @@ public class Controller2D : MonoBehaviour
         flammes[7].SetActive(false);
     }
 
-    public void Billy()
-    {
-        Debug.Log("Billy");
-    }
-
     public void FinishLevel()
     {
         menu2D.GetComponent<GameManager>().nbLvlDone += 1;
@@ -436,7 +432,7 @@ public class Controller2D : MonoBehaviour
     public void LaunchEndingAnimation()
     {
         pause = true;
-
+        Debug.Log("Launched   #SpaceX");
         if(menu2D.GetComponent<GameManager>().nbLvlDone == 0)
         {
             endingAnimator.GetComponent<Animator>().SetBool("Joie", true);
