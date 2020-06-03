@@ -45,6 +45,8 @@ public class Controller2D : MonoBehaviour
     public float rangeColere;
     public LayerMask layerColere;
     public GameObject flecheShooter;
+    public GameObject[] flammes;
+    public int nbStacks;
 
     //Peur
     public float slowSpeed;
@@ -65,6 +67,7 @@ public class Controller2D : MonoBehaviour
         //colere
         if(menu2D.GetComponent<GameManager>().nbLvlDone == 4)
         {
+            DesactivateFlammes();
             fullColere.SetActive(false);
             if (flecheShooter != null)
             {
@@ -232,6 +235,7 @@ public class Controller2D : MonoBehaviour
                     Collider2D[] colereRange = Physics2D.OverlapCircleAll(transform.position, rangeColere, layerColere);
                     if (Input.GetKey(KeyCode.A))
                     {
+                        DesactivateFlammes();
                         for (int i = 0; i < colereRange.Length; i++)
                         {
                             GameObject target = colereRange[i].gameObject;
@@ -351,6 +355,82 @@ public class Controller2D : MonoBehaviour
     {
         transform.position = new Vector3(-4, 0.6f, 0);
         insulte.GetComponent<AffichageMotCupabilite>().death += 1;
+    }
+
+    public void ActivateFlammes()
+    {
+        if (nbStacks >= 1)
+        {
+            flammes[0].SetActive(true);
+        }
+        if (nbStacks >= 2)
+        {
+            flammes[0].SetActive(true);
+            flammes[1].SetActive(true);
+        }
+        if (nbStacks >= 3)
+        {
+            flammes[0].SetActive(true);
+            flammes[1].SetActive(true);
+            flammes[2].SetActive(true);
+        }
+        if (nbStacks >= 4)
+        {
+            flammes[0].SetActive(true);
+            flammes[1].SetActive(true);
+            flammes[2].SetActive(true);
+            flammes[3].SetActive(true);
+        }
+        if (nbStacks >= 5)
+        {
+            flammes[0].SetActive(true);
+            flammes[1].SetActive(true);
+            flammes[2].SetActive(true);
+            flammes[3].SetActive(true);
+            flammes[4].SetActive(true);
+        }
+        if (nbStacks >= 6)
+        {
+            flammes[0].SetActive(true);
+            flammes[1].SetActive(true);
+            flammes[2].SetActive(true);
+            flammes[3].SetActive(true);
+            flammes[4].SetActive(true);
+            flammes[5].SetActive(true);
+        }
+        if (nbStacks >= 7)
+        {
+            flammes[0].SetActive(true);
+            flammes[1].SetActive(true);
+            flammes[2].SetActive(true);
+            flammes[3].SetActive(true);
+            flammes[4].SetActive(true);
+            flammes[5].SetActive(true);
+            flammes[6].SetActive(true);
+        }
+        if (nbStacks >= 8)
+        {
+            flammes[0].SetActive(true);
+            flammes[1].SetActive(true);
+            flammes[2].SetActive(true);
+            flammes[3].SetActive(true);
+            flammes[4].SetActive(true);
+            flammes[5].SetActive(true);
+            flammes[6].SetActive(true);
+            flammes[7].SetActive(true);
+        }
+    }
+
+    public void DesactivateFlammes()
+    {
+        flammes[0].SetActive(false);
+        flammes[1].SetActive(false);
+        flammes[2].SetActive(false);
+        flammes[3].SetActive(false);
+        flammes[4].SetActive(false);
+        flammes[5].SetActive(false);
+        flammes[6].SetActive(false);
+        flammes[7].SetActive(false);
     }
 
     public void FinishLevel()

@@ -34,6 +34,8 @@ public class FlecheColere : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             collision.gameObject.GetComponent<Controller2D>().stackColere += damages;
+            collision.gameObject.GetComponent<Controller2D>().nbStacks += 1;
+            collision.gameObject.GetComponent<Controller2D>().ActivateFlammes();
             Destroy(this.gameObject);
         }
     }
