@@ -201,12 +201,10 @@ public class PlayerController : MonoBehaviour
     }
     public void SaveTransform()
     {
-        Debug.Log("saved");
         SavingSystem.SaveData(this, menu3D.GetComponent<GameManager>(), menu3D.GetComponent<SceneAndUI>());
     }
     public void LoadTransform()
     {
-        Debug.Log("loaded");
         SaveData data = SavingSystem.LoadData();
 
         menu3D.GetComponent<GameManager>().nbLvlDone = data.lvlAvancement;

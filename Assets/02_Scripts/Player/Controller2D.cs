@@ -356,7 +356,6 @@ public class Controller2D : MonoBehaviour
     public void FinishLevel()
     {
         menu2D.GetComponent<GameManager>().nbLvlDone += 1;
-        Debug.Log(menu2D.GetComponent<GameManager>().nbLvlDone);
         menu2D.GetComponent<GameManager>().lvlDoneForce();
         menu2D.GetComponent<SceneAndUI>().ActiveScene("Maison");
         menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
