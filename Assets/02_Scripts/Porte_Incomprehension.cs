@@ -7,6 +7,6 @@ public class Porte_Incomprehension : MonoBehaviour
     public GameObject dragon;
     public void FinishIncomprehension()
     {
-        dragon.GetComponent<Controller2D>().FinishLevel();
+        dragon.GetComponent<Controller2D>().LaunchEndingAnimation();
     }
 }

@@ -13,13 +13,12 @@ public class Controller2D : MonoBehaviour
 
     //General
     public GameObject menu2D;
+    public GameObject endingAnimator;
     public GameObject camera2D;
-    public Image colereBar;
-    public GameObject fullColere;
     public GameObject insulte;
-    public bool colereStacked;
     public bool pause;
     public bool isDead;
+    public bool nextDeath;
 
     //Movement
     Rigidbody2D rb;
@@ -64,11 +63,11 @@ public class Controller2D : MonoBehaviour
         LoadInfos();
         mvtSpeed = startSpeed;
         rb = GetComponent<Rigidbody2D>();
+        nextDeath = false;
         //colere
         if(menu2D.GetComponent<GameManager>().nbLvlDone == 4)
         {
             DesactivateFlammes();
-            fullColere.SetActive(false);
             if (flecheShooter != null)
             {
                 flecheShooter.SetActive(true);
@@ -244,28 +243,6 @@ public class Controller2D : MonoBehaviour
                         }
                     }
                 }
-
-                if (stackColere >= 1)
-                {
-                    stackColere = 1;
-                    if (colereStacked == false)
-                    {
-                        fullColere.SetActive(true);
-                        colereStacked = true;
-                    }
-                }
-                else
-                {
-                    if (colereStacked == true)
-                    {
-                        fullColere.SetActive(false);
-                        colereStacked = false;
-                    }
-                }
-                if(colereBar != null)
-                {
-                    colereBar.fillAmount = stackColere;
-                }
             }
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 3)
             {
@@ -293,7 +270,14 @@ public class Controller2D : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Enemy"))
         {
-            menu2D.GetComponent<SceneAndUI>().Retry();
+            if(nextDeath == true)
+            {
+                FinishLevel();
+            }
+            else
+            {
+                menu2D.GetComponent<SceneAndUI>().Retry();
+            }
         }
         if (collision.gameObject.tag.Equals("Finish"))
         {
@@ -317,6 +301,10 @@ public class Controller2D : MonoBehaviour
                 TutoCulpability();
             }
 
+        }
+        if (collision.gameObject.tag.Equals("Peur"))
+        {
+            nextDeath = true;
         }
         if (collision.gameObject.tag.Equals("checkPoint"))
         {
@@ -433,13 +421,46 @@ public class Controller2D : MonoBehaviour
         flammes[7].SetActive(false);
     }
 
+    public void Billy()
+    {
+        Debug.Log("Billy");
+    }
+
     public void FinishLevel()
     {
         menu2D.GetComponent<GameManager>().nbLvlDone += 1;
         menu2D.GetComponent<GameManager>().lvlDoneForce();
         menu2D.GetComponent<SceneAndUI>().ActiveScene("Maison");
         menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
+    }
+    public void LaunchEndingAnimation()
+    {
+        pause = true;
 
+        if(menu2D.GetComponent<GameManager>().nbLvlDone == 0)
+        {
+            endingAnimator.GetComponent<Animator>().SetBool("Joie", true);
+        }
+        if(menu2D.GetComponent<GameManager>().nbLvlDone == 1)
+        {
+            endingAnimator.GetComponent<Animator>().SetBool("Incomprehension", true);
+        }
+        if(menu2D.GetComponent<GameManager>().nbLvlDone == 2)
+        {
+            endingAnimator.GetComponent<Animator>().SetBool("Peur", true);
+        }
+        if(menu2D.GetComponent<GameManager>().nbLvlDone == 3)
+        {
+            endingAnimator.GetComponent<Animator>().SetBool("Culpabilite", true);
+        }
+        if(menu2D.GetComponent<GameManager>().nbLvlDone == 4)
+        {
+            endingAnimator.GetComponent<Animator>().SetBool("Colere", true);
+        }
+        if(menu2D.GetComponent<GameManager>().nbLvlDone == 5)
+        {
+            endingAnimator.GetComponent<Animator>().SetBool("Tristesse", true);
+        }
     }
 
     public void LoadInfos()
