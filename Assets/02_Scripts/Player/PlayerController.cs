@@ -178,15 +178,32 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    IEnumerator Grow()
+    {
+        yield return new WaitForSeconds(0.2f);
+        transform.localScale = new Vector3(1, 1, 1);
+        controller.stepOffset = 0.2f;
+        speed = 3f;
+    }
+    IEnumerator Ungrow()
+    {
+        yield return new WaitForSeconds(0.2f);
+        transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        controller.stepOffset = 0.02f;
+        speed = 1f;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.Equals("Lilliputien"))
         {
             if(nbLvl < 3)
             {
-                transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                StartCoroutine(Ungrow());
+                /*transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                 controller.stepOffset = 0.02f;
-                speed = 1f;
+                speed = 1f;*/
             }
         }
     }
@@ -194,9 +211,13 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Lilliputien"))
         {
-            transform.localScale = new Vector3(1, 1, 1);
-            controller.stepOffset = 0.2f;
-            speed = 3f;
+            if (nbLvl < 3)
+            {
+                StartCoroutine(Grow());
+                /*transform.localScale = new Vector3(1, 1, 1);
+                controller.stepOffset = 0.2f;
+                speed = 3f;*/
+            }
         }
     }
     public void SaveTransform()
