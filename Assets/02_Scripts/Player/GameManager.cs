@@ -13,12 +13,15 @@ public class GameManager : MonoBehaviour
     public GameObject culpabilite;
     public GameObject colere;
     public GameObject tristesse;
+
+    public GameObject[] decalsPorte;
+
     int lvldone;
 
     private void Start()
     {
         //nbLvlDone = saveLvlDone;
-        nbLvlDone = 4;
+        nbLvlDone = 6;
     }
     private void Update()
     {
@@ -30,26 +33,32 @@ public class GameManager : MonoBehaviour
         if(saveLvlDone == 1)
         {
             joie.GetComponent<SpecialObject>().ChangeMat();
+            decalsPorte[0].SetActive(true);
         }
-        if(saveLvlDone == 2)
+        if (saveLvlDone == 2)
         {
             incompehension.GetComponent<SpecialObject>().ChangeMat();
+            decalsPorte[1].SetActive(true);
         }
-        if(saveLvlDone == 3)
+        if (saveLvlDone == 3)
         {
             peur.GetComponent<SpecialObject>().ChangeMat();
+            decalsPorte[2].SetActive(true);
         }
-        if(saveLvlDone == 4)
+        if (saveLvlDone == 4)
         {
             culpabilite.GetComponent<SpecialObject>().ChangeMat();
+            decalsPorte[3].SetActive(true);
         }
-        if(saveLvlDone == 5)
+        if (saveLvlDone == 5)
         {
             colere.GetComponent<SpecialObject>().ChangeMat();
+            decalsPorte[4].SetActive(true);
         }
-        if(saveLvlDone == 6)
+        if (saveLvlDone == 6)
         {
             tristesse.GetComponent<SpecialObject>().ChangeMat();
+            decalsPorte[5].SetActive(true);
             saveLvlDone = 7;
         }
 
