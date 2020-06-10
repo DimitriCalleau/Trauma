@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
     static int saveLvlDone;
 
     public GameObject joie;
-    public GameObject joie2;
+    public GameObject joieHaut;
+    public GameObject joieInterieur;
     public GameObject incompehension;
     public GameObject peur;
     public GameObject culpabilite;
@@ -36,7 +37,8 @@ public class GameManager : MonoBehaviour
             if (joie != null)
             {
                 joie.GetComponent<SpecialObject>().ChangeMat();
-                joie2.GetComponent<SpecialObject>().ChangeMat();
+                joieHaut.GetComponent<SpecialObject>().ChangeMat();
+                joieInterieur.GetComponent<SpecialObject>().ChangeMat();
                 decalsPorte[0].SetActive(true);
             }
         }
