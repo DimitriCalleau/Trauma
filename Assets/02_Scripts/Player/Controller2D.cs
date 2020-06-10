@@ -24,6 +24,7 @@ public class Controller2D : MonoBehaviour
     Rigidbody2D rb;
     public float mvtSpeed;
     public float startSpeed;
+
     //Jump
     public float jumpForce;
     Collider2D grounding;
@@ -46,6 +47,7 @@ public class Controller2D : MonoBehaviour
     public GameObject flecheShooter;
     public GameObject[] flammes;
     public int nbStacks;
+    bool laColere;
 
     //Peur
     public float slowSpeed;
@@ -160,6 +162,7 @@ public class Controller2D : MonoBehaviour
                         mvtSpeed = startSpeed;
                     }
                 }
+
                 if (isJumping == true)
                 {
                     Anm.SetBool("Jump", false);
@@ -229,20 +232,28 @@ public class Controller2D : MonoBehaviour
             }
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 4)
             {
+
+                if (laColere == true)
+                {
+                    mvtSpeed = 0;
+                }
+
                 if (stackColere >= 1)
                 {
                     Collider2D[] colereRange = Physics2D.OverlapCircleAll(transform.position, rangeColere, layerColere);
                     if (Input.GetKey(KeyCode.A))
                     {
+                        Debug.Log("A");
                         DesactivateFlammes();
                         Anm.SetBool("Colere", true);
-                        mvtSpeed = 0;
+                        laColere = true;
                         for (int i = 0; i < colereRange.Length; i++)
                         {
                             GameObject target = colereRange[i].gameObject;
                             target.GetComponent<BlockDestructible>().BreakingAnim();
                             stackColere = 0;
                         }
+                        StartCoroutine(StopAnmColere());
                     }
                 }
             }
@@ -346,6 +357,13 @@ public class Controller2D : MonoBehaviour
     {
         transform.position = new Vector3(-4, 0.6f, 0);
         insulte.GetComponent<AffichageMotCupabilite>().death += 1;
+    }
+
+    public IEnumerator StopAnmColere()
+    {
+        yield return new WaitForSeconds(1);
+        Anm.SetBool("Colere", false);
+        laColere = false;
     }
 
     public void ActivateFlammes()
@@ -459,11 +477,6 @@ public class Controller2D : MonoBehaviour
         {
             endingAnimator.GetComponent<Animator>().SetBool("Tristesse", true);
         }
-    }
-
-    public void StopColere()
-    {
-        Anm.SetBool("Colere", false);
     }
 
     public void LoadInfos()
