@@ -252,7 +252,7 @@ public class Controller2D : MonoBehaviour
                         stackColere = 0;
                         if(explosionColere != null)
                         {
-                            explosionColere.Play();
+                            Instantiate(explosionColere, zone.transform.position, Quaternion.identity);
                         }
                         for (int i = 0; i < colereRange.Length; i++)
                         {
