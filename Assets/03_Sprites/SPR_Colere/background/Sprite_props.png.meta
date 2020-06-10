@@ -249,9 +249,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 213
-        y: 1188
-        width: 1602
-        height: 1163
+        y: 1424
+        width: 772
+        height: 927
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -395,7 +395,7 @@ TextureImporter:
       name: Sprite_props_15
       rect:
         serializedVersion: 2
-        x: 184
+        x: 181
         y: 101
         width: 1455
         height: 1052
@@ -450,6 +450,27 @@ TextureImporter:
       bones: []
       spriteID: 5f2842fe5974f2c4a9dea03a17b29695
       internalID: 2561884544718031991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_props_5
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 1186
+        width: 794
+        height: 984
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89da1b0a26188c43b37314bb3ab6e70
+      internalID: 3430811099533044449
       vertices: []
       indices: 
       edges: []

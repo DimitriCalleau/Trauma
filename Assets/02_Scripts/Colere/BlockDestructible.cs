@@ -6,10 +6,15 @@ public class BlockDestructible : MonoBehaviour
 {
     public Sprite normal;
     public Sprite casse;
+    public GameObject morceau;
 
     private void Awake()
     {
-        if(normal != null)
+        if(morceau != null)
+        {
+            morceau.SetActive(false);
+        }
+        if (normal != null)
         {
             transform.GetComponent<SpriteRenderer>().sprite = normal;
         }
@@ -17,6 +22,11 @@ public class BlockDestructible : MonoBehaviour
     public void BreakingAnim()
     {
         transform.GetComponent<SpriteRenderer>().sprite = casse;
+        transform.GetComponent<BoxCollider2D>().isTrigger = true;
+        if (morceau != null)
+        {
+            morceau.SetActive(true);
+        }
     }
     public void NormalDestruction()
     {
