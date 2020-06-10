@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: 351c310f4c1dbea40bc930cb97eb77b1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4685276879989827736
+    second: Sprite_Oeil_texte_0
+  - first:
+      213: 7202722344687852101
+    second: Sprite_Oeil_texte_2
+  - first:
+      213: -1296602350008201715
+    second: Sprite_Oeil_texte_3
+  - first:
+      213: 7452249420993786807
+    second: Sprite_Oeil_texte_5
+  - first:
+      213: -1915401941556868131
+    second: Sprite_Oeil_texte_6
+  - first:
+      213: 258538532923389601
+    second: Sprite_Oeil_texte_7
+  - first:
+      213: 7032787445694875246
+    second: Sprite_Oeil_texte_8
+  - first:
+      213: -4246582701867753853
+    second: Sprite_Oeil_texte_9
+  - first:
+      213: -556854639388410131
+    second: Sprite_Oeil_texte_11
+  - first:
+      213: -773702166905785209
+    second: Sprite_Oeil_texte_15
+  - first:
+      213: -7457198698388291010
+    second: Sprite_Oeil_texte_22
+  - first:
+      213: 1193880429749831911
+    second: Sprite_Oeil_texte_23
+  - first:
+      213: -7663183991321095282
+    second: Sprite_Oeil_texte_33
+  - first:
+      213: 5490444841193567760
+    second: Sprite_Oeil_texte_34
+  - first:
+      213: -8755241859966324215
+    second: Sprite_Oeil_texte_44
+  - first:
+      213: -5065189086125231489
+    second: Sprite_Oeil_texte_49
+  - first:
+      213: 3911102192341688339
+    second: Sprite_Oeil_texte_60
+  - first:
+      213: 6895197816984022406
+    second: Sprite_Oeil_texte_69
+  - first:
+      213: -3809754312394714190
+    second: Sprite_Oeil_texte_70
+  - first:
+      213: -1800965950292786650
+    second: Sprite_Oeil_texte_1
+  - first:
+      213: 7245982199709297600
+    second: Sprite_Oeil_texte_4
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_6
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 2057
+        width: 1183
+        height: 653
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe78dc7ec194554faf7376903f5f6f9
+      internalID: -1915401941556868131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_9
+      rect:
+        serializedVersion: 2
+        x: 4479
+        y: 2247
+        width: 948
+        height: 644
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443537137cdec51438eec67989c1740c
+      internalID: -4246582701867753853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_11
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1936
+        width: 1383
+        height: 774
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253b6a56358be584c9a98a413fff5c7c
+      internalID: -556854639388410131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_15
+      rect:
+        serializedVersion: 2
+        x: 1731
+        y: 1866
+        width: 1142
+        height: 752
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64234e0e0a293e14fb44ccee3e15b375
+      internalID: -773702166905785209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_33
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1219
+        width: 1375
+        height: 497
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77004c1768c4a64e9ce2bb2a1a1a378
+      internalID: -7663183991321095282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_44
+      rect:
+        serializedVersion: 2
+        x: 3466
+        y: 1487
+        width: 1752
+        height: 521
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8096547772770a4081632061bcc2eaf
+      internalID: -8755241859966324215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_49
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 1004
+        width: 883
+        height: 503
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31dff39ced9dbf547997dd2934893b4d
+      internalID: -5065189086125231489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_60
+      rect:
+        serializedVersion: 2
+        x: 2161
+        y: 565
+        width: 1865
+        height: 668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a206bc24218009469c9622ce277901f
+      internalID: 3911102192341688339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_70
+      rect:
+        serializedVersion: 2
+        x: 4135
+        y: 431
+        width: 913
+        height: 453
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73a522af67216e48b56dddd7c8781d9
+      internalID: -3809754312394714190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_1
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 1241
+        width: 1527
+        height: 533
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5faabecb2dbbba04fa3ecf5fa18da4c5
+      internalID: -1800965950292786650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Oeil_texte_4
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 549
+        width: 1715
+        height: 515
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd8f89111e205b4cb60067d4ec288ba
+      internalID: 7245982199709297600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

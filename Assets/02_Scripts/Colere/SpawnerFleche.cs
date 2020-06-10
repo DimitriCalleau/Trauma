@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class SpawnerFleche : MonoBehaviour
 {
-    public GameObject flecheA;
-    public GameObject flecheB;
+    public GameObject player;
+
+    public GameObject fleche;
+
     public float timeBetweenArrows;
     float timer;
     bool playerPause;
 
     void Update()
     {
-        playerPause = transform.GetComponentInParent<Controller2D>().pause;
+        playerPause = player.GetComponent<Controller2D>().pause;
         if(playerPause == false)
         {
-            if (flecheA != null)
+            if (fleche != null)
             {
                 if (timer <= 0)
                 {
-                    Instantiate(flecheA, transform.position, Quaternion.identity);
+                    Instantiate(fleche, transform.position, Quaternion.identity);
                     timer = timeBetweenArrows;
                 }
                 timer -= Time.deltaTime;

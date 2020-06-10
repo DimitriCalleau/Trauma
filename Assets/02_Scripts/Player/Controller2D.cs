@@ -235,6 +235,8 @@ public class Controller2D : MonoBehaviour
                     if (Input.GetKey(KeyCode.A))
                     {
                         DesactivateFlammes();
+                        Anm.SetBool("Colere", true);
+                        mvtSpeed = 0;
                         for (int i = 0; i < colereRange.Length; i++)
                         {
                             GameObject target = colereRange[i].gameObject;
@@ -457,6 +459,11 @@ public class Controller2D : MonoBehaviour
         {
             endingAnimator.GetComponent<Animator>().SetBool("Tristesse", true);
         }
+    }
+
+    public void StopColere()
+    {
+        Anm.SetBool("Colere", false);
     }
 
     public void LoadInfos()

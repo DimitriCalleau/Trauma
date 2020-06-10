@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //nbLvlDone = saveLvlDone;
-        nbLvlDone = 6;
+        nbLvlDone = saveLvlDone;
+        //nbLvlDone = 4;
     }
     private void Update()
     {
@@ -32,34 +32,52 @@ public class GameManager : MonoBehaviour
 
         if(saveLvlDone == 1)
         {
-            joie.GetComponent<SpecialObject>().ChangeMat();
-            decalsPorte[0].SetActive(true);
+            if (joie != null)
+            {
+                joie.GetComponent<SpecialObject>().ChangeMat();
+                decalsPorte[0].SetActive(true);
+            }
         }
         if (saveLvlDone == 2)
         {
-            incompehension.GetComponent<SpecialObject>().ChangeMat();
-            decalsPorte[1].SetActive(true);
+            if (incompehension != null)
+            {
+                incompehension.GetComponent<SpecialObject>().ChangeMat();
+                decalsPorte[1].SetActive(true);
+            }
         }
         if (saveLvlDone == 3)
         {
-            peur.GetComponent<SpecialObject>().ChangeMat();
-            decalsPorte[2].SetActive(true);
+            if (peur != null)
+            {
+                peur.GetComponent<SpecialObject>().ChangeMat();
+                decalsPorte[2].SetActive(true);
+            }
         }
         if (saveLvlDone == 4)
         {
-            culpabilite.GetComponent<SpecialObject>().ChangeMat();
-            decalsPorte[3].SetActive(true);
+            if(culpabilite != null)
+            {
+                culpabilite.GetComponent<SpecialObject>().ChangeMat();
+                decalsPorte[3].SetActive(true);
+            }
         }
         if (saveLvlDone == 5)
         {
-            colere.GetComponent<SpecialObject>().ChangeMat();
-            decalsPorte[4].SetActive(true);
+            if (colere != null)
+            {
+                colere.GetComponent<SpecialObject>().ChangeMat();
+                decalsPorte[4].SetActive(true);
+            }
         }
         if (saveLvlDone == 6)
         {
-            tristesse.GetComponent<SpecialObject>().ChangeMat();
-            decalsPorte[5].SetActive(true);
-            saveLvlDone = 7;
+            if (tristesse != null)
+            {
+                tristesse.GetComponent<SpecialObject>().ChangeMat();
+                decalsPorte[5].SetActive(true);
+                saveLvlDone = 7;
+            }
         }
 
 
