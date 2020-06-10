@@ -46,7 +46,6 @@ public class Controller2D : MonoBehaviour
     public LayerMask layerColere;
     public GameObject flecheShooter;
     public GameObject[] flammes;
-    public int nbStacks;
     bool laColere;
 
     //Peur
@@ -238,7 +237,7 @@ public class Controller2D : MonoBehaviour
                     mvtSpeed = 0;
                 }
 
-                if (stackColere >= 1)
+                if (stackColere >= 8)
                 {
                     Collider2D[] colereRange = Physics2D.OverlapCircleAll(transform.position, rangeColere, layerColere);
                     if (Input.GetKey(KeyCode.A))
@@ -247,11 +246,11 @@ public class Controller2D : MonoBehaviour
                         DesactivateFlammes();
                         Anm.SetBool("Colere", true);
                         laColere = true;
+                        stackColere = 0;
                         for (int i = 0; i < colereRange.Length; i++)
                         {
                             GameObject target = colereRange[i].gameObject;
                             target.GetComponent<BlockDestructible>().BreakingAnim();
-                            stackColere = 0;
                         }
                         StartCoroutine(StopAnmColere());
                     }
@@ -368,29 +367,29 @@ public class Controller2D : MonoBehaviour
 
     public void ActivateFlammes()
     {
-        if (nbStacks >= 1)
+        if (stackColere >= 1)
         {
             flammes[0].SetActive(true);
         }
-        if (nbStacks >= 2)
+        if (stackColere >= 2)
         {
             flammes[0].SetActive(true);
             flammes[1].SetActive(true);
         }
-        if (nbStacks >= 3)
+        if (stackColere >= 3)
         {
             flammes[0].SetActive(true);
             flammes[1].SetActive(true);
             flammes[2].SetActive(true);
         }
-        if (nbStacks >= 4)
+        if (stackColere >= 4)
         {
             flammes[0].SetActive(true);
             flammes[1].SetActive(true);
             flammes[2].SetActive(true);
             flammes[3].SetActive(true);
         }
-        if (nbStacks >= 5)
+        if (stackColere >= 5)
         {
             flammes[0].SetActive(true);
             flammes[1].SetActive(true);
@@ -398,7 +397,7 @@ public class Controller2D : MonoBehaviour
             flammes[3].SetActive(true);
             flammes[4].SetActive(true);
         }
-        if (nbStacks >= 6)
+        if (stackColere >= 6)
         {
             flammes[0].SetActive(true);
             flammes[1].SetActive(true);
@@ -407,7 +406,7 @@ public class Controller2D : MonoBehaviour
             flammes[4].SetActive(true);
             flammes[5].SetActive(true);
         }
-        if (nbStacks >= 7)
+        if (stackColere >= 7)
         {
             flammes[0].SetActive(true);
             flammes[1].SetActive(true);
@@ -417,7 +416,7 @@ public class Controller2D : MonoBehaviour
             flammes[5].SetActive(true);
             flammes[6].SetActive(true);
         }
-        if (nbStacks >= 8)
+        if (stackColere >= 8)
         {
             flammes[0].SetActive(true);
             flammes[1].SetActive(true);

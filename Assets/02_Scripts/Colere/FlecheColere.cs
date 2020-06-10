@@ -24,7 +24,6 @@ public class FlecheColere : MonoBehaviour
     }
     private void Start()
     {
-
         timer = lifetime;
     }
     private void Update()
@@ -53,7 +52,6 @@ public class FlecheColere : MonoBehaviour
             //StartCoroutine(ArrowExplosion());
             Destroy(this.gameObject);
             collision.gameObject.GetComponent<Controller2D>().stackColere += damages;
-            collision.gameObject.GetComponent<Controller2D>().nbStacks += 1;
             collision.gameObject.GetComponent<Controller2D>().ActivateFlammes();
             Destroy(this.gameObject);
         }
