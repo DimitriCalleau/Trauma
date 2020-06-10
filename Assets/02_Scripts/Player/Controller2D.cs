@@ -45,6 +45,7 @@ public class Controller2D : MonoBehaviour
     public float rangeColere;
     public LayerMask layerColere;
     public GameObject flecheShooter;
+    public GameObject zone;
     public GameObject[] flammes;
     public ParticleSystem explosionColere;
     bool laColere;
@@ -240,7 +241,8 @@ public class Controller2D : MonoBehaviour
 
                 if (stackColere >= 8)
                 {
-                    Collider2D[] colereRange = Physics2D.OverlapCircleAll(transform.position, rangeColere, layerColere);
+                    Collider2D[] colereRange = Physics2D.OverlapCircleAll(zone.transform.position, rangeColere, layerColere);
+                    
                     if (Input.GetKey(KeyCode.A))
                     {
                         Debug.Log("A");
@@ -248,7 +250,10 @@ public class Controller2D : MonoBehaviour
                         Anm.SetBool("Colere", true);
                         laColere = true;
                         stackColere = 0;
-                        explosionColere.Play();
+                        if(explosionColere != null)
+                        {
+                            explosionColere.Play();
+                        }
                         for (int i = 0; i < colereRange.Length; i++)
                         {
                             GameObject target = colereRange[i].gameObject;
@@ -344,6 +349,7 @@ public class Controller2D : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundDetector.position, groundingRange);
+        Gizmos.DrawWireSphere(zone.transform.position, rangeColere);
     }
     public void RespawnCulpability()
     {
