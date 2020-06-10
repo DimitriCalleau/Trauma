@@ -52,6 +52,7 @@ public class Controller2D : MonoBehaviour
 
     //Peur
     public float slowSpeed;
+    public ParticleSystem fumeeSlow;
 
     //Culpabilité
     public bool milieuCulpa;
@@ -68,6 +69,10 @@ public class Controller2D : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         nextDeath = false;
         //colere
+        if(fumeeSlow != null)
+        {
+            fumeeSlow.Stop();
+        }
         if(menu2D.GetComponent<GameManager>().nbLvlDone == 4)
         {
             DesactivateFlammes();
@@ -153,6 +158,10 @@ public class Controller2D : MonoBehaviour
                 {
                     if (mvtSpeed != slowSpeed)
                     {
+                        if (fumeeSlow != null)
+                        {
+                            fumeeSlow.Play();
+                        }
                         mvtSpeed = slowSpeed;
                     }
                 }
@@ -160,6 +169,10 @@ public class Controller2D : MonoBehaviour
                 {
                     if (mvtSpeed != startSpeed)
                     {
+                        if (fumeeSlow != null)
+                        {
+                            fumeeSlow.Stop();
+                        }
                         mvtSpeed = startSpeed;
                     }
                 }
@@ -349,7 +362,10 @@ public class Controller2D : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundDetector.position, groundingRange);
-        Gizmos.DrawWireSphere(zone.transform.position, rangeColere);
+        if(menu2D.GetComponent<GameManager>().nbLvlDone == 4)
+        {
+            Gizmos.DrawWireSphere(zone.transform.position, rangeColere);
+        }
     }
     public void RespawnCulpability()
     {
