@@ -46,6 +46,7 @@ public class Controller2D : MonoBehaviour
     public LayerMask layerColere;
     public GameObject flecheShooter;
     public GameObject[] flammes;
+    public ParticleSystem explosionColere;
     bool laColere;
 
     //Peur
@@ -247,6 +248,7 @@ public class Controller2D : MonoBehaviour
                         Anm.SetBool("Colere", true);
                         laColere = true;
                         stackColere = 0;
+                        explosionColere.Play();
                         for (int i = 0; i < colereRange.Length; i++)
                         {
                             GameObject target = colereRange[i].gameObject;

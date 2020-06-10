@@ -19,6 +19,9 @@ public class CheckPoint : MonoBehaviour
     public int cameraDistanceBefore;
     public int cameraDistanceAfter;
 
+    public ParticleSystem up;
+    public ParticleSystem down;
+
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +37,7 @@ public class CheckPoint : MonoBehaviour
                 {
                     if (done == false)
                     {
+                        up.Play();
                         state = 1;
                         collision.gameObject.GetComponent<Controller2D>().jumpForce = modifiedJump;
                         collision.gameObject.GetComponent<Controller2D>().mvtSpeed = modifiedSpeed;
@@ -45,7 +49,8 @@ public class CheckPoint : MonoBehaviour
                 if (state == 1)
                 {
                     if (done == false)
-                    { 
+                    {
+                        down.Play();
                         collision.gameObject.GetComponent<Controller2D>().jumpForce = jump;
                         collision.gameObject.GetComponent<Controller2D>().mvtSpeed = speed;
                         collision.gameObject.GetComponent<Rigidbody2D>().gravityScale = gravity;
