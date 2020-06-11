@@ -200,11 +200,12 @@ public class AffichageMotCupabilite : MonoBehaviour
     public void FinishCulpabilite()
     {
         StartCoroutine(philipe());
-        player.GetComponent<Controller2D>().mvtSpeed = 1;
+        player.GetComponent<Controller2D>().mvtSpeed = 0.3f;
         for (int i =0; i <= 12; i++)
         {
             //spawnPoints[i].transform.position = Vector3.Lerp(spawnPoints[i].transform.position, player.transform.position, smooth);
             spawnPoints[i].transform.position = new Vector3(player.transform.position.x, player.transform.position.y + i * smooth, player.transform.position.z);
+            spawnPoints[i].transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             spawnPoints[i].GetComponent<SpriteRenderer>().sortingLayerName = "Premier_plan";
             spawnPoints[i].GetComponent<SpriteRenderer>().sortingOrder = 1;
         }

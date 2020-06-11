@@ -16,6 +16,7 @@ public class Controller2D : MonoBehaviour
     public GameObject endingAnimator;
     public GameObject camera2D;
     public GameObject insulte;
+
     public bool pause;
     public bool isDead;
     public bool nextDeath;
@@ -26,30 +27,38 @@ public class Controller2D : MonoBehaviour
     public float startSpeed;
 
     //Jump
-    public float jumpForce;
-    Collider2D grounding;
-    public float groundingRange;
+
     public LayerMask layerGround;
     public Transform groundDetector;
+    public AudioSource jumpSound;
+
+    public float jumpForce;
+    public float groundingRange;
     public bool isGrounded;
 
-    //Lvl Bougie
-    private int checkPoint;
-    public int nbCheckpoint;
-    public GameObject lightBougie;
-    bool isLightUp;
-    bool alreadyLit;
+    Collider2D grounding;
+
 
     //Colere
+    bool laColere;
+    public bool finColere;
+    public bool fullDestruction;
+
     public float stackColere;
     public float rangeColere;
+    public float rangeFinColere;
+    int compteurFleche;
+    bool stopFlammeActivating;
+
     public LayerMask layerColere;
     public GameObject flecheShooter;
     public GameObject zone;
-    public GameObject[] flammes;
     public ParticleSystem explosionColere;
-    bool laColere;
-
+    public ParticleSystem explosionFinColere;
+    public AudioSource explodingSound;
+    public GameObject pressA;
+    public GameObject[] flammes;
+    GameObject instanceExplosion;
     //Peur
     public float slowSpeed;
     public ParticleSystem fumeeSlow;
@@ -60,7 +69,14 @@ public class Controller2D : MonoBehaviour
 
     //Tristesse
     public float stackTristesse;
+    private int checkPoint;
+    public int nbCheckpoint;
 
+    public GameObject lightBougie;
+    public AudioSource fireSound;
+
+    bool isLightUp;
+    bool alreadyLit;
 
     void Start()
     {
@@ -68,6 +84,7 @@ public class Controller2D : MonoBehaviour
         mvtSpeed = startSpeed;
         rb = GetComponent<Rigidbody2D>();
         nextDeath = false;
+
         //colere
         if(fumeeSlow != null)
         {
@@ -75,6 +92,8 @@ public class Controller2D : MonoBehaviour
         }
         if(menu2D.GetComponent<GameManager>().nbLvlDone == 4)
         {
+            zone.SetActive(false);
+            pressA.SetActive(false);
             DesactivateFlammes();
             if (flecheShooter != null)
             {
@@ -147,7 +166,15 @@ public class Controller2D : MonoBehaviour
                 if (isGrounded)
                 {
                     rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                    //jumpSound.Play();
                 }
+            }
+
+            //Potit truc test shake cam
+
+            if (Input.GetKey(KeyCode.R))
+            {
+                camera2D.GetComponent<CameraFollow>().CameraShake(0.5f, 0.5f);
             }
 
             //Anim
@@ -246,33 +273,69 @@ public class Controller2D : MonoBehaviour
             }
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 4)
             {
-
-                if (laColere == true)
+                if(finColere == false)
                 {
-                    mvtSpeed = 0;
-                }
-
-                if (stackColere >= 8)
-                {
-                    Collider2D[] colereRange = Physics2D.OverlapCircleAll(zone.transform.position, rangeColere, layerColere);
-                    
-                    if (Input.GetKey(KeyCode.A))
+                    if (laColere == true)
                     {
-                        Debug.Log("A");
-                        DesactivateFlammes();
-                        Anm.SetBool("Colere", true);
-                        laColere = true;
-                        stackColere = 0;
-                        if(explosionColere != null)
+                        mvtSpeed = 0;
+                    }
+                    if (stackColere >= 8)
+                    {
+                        pressA.SetActive(true);
+
+                        Collider2D[] colereRange = Physics2D.OverlapCircleAll(zone.transform.position, rangeColere, layerColere);
+
+                        if (Input.GetKey(KeyCode.A))
                         {
-                            Instantiate(explosionColere, zone.transform.position, Quaternion.identity);
+                            camera2D.GetComponent<CameraFollow>().CameraShake(0.5f, 0.5f);
+                            pressA.SetActive(false);
+                            if (explodingSound != null)
+                            {
+                                explodingSound.Play();
+                            }
+                            DesactivateFlammes();
+                            Anm.SetBool("Colere", true);
+                            laColere = true;
+                            stackColere = 0;
+                            if (explosionColere != null)
+                            {
+                                Instantiate(explosionColere, zone.transform.position, Quaternion.identity);
+                            }
+                            for (int i = 0; i < colereRange.Length; i++)
+                            {
+                                GameObject target = colereRange[i].gameObject;
+                                target.GetComponent<BlockDestructible>().BreakingAnim();
+                            }
+                            StartCoroutine(StopAnmColere());
                         }
-                        for (int i = 0; i < colereRange.Length; i++)
+                    }
+                }
+                else
+                {
+                    if(stopFlammeActivating == false)
+                    {
+                        flammes[0].SetActive(true);
+                        flammes[1].SetActive(true);
+                        flammes[2].SetActive(true);
+                        flammes[3].SetActive(true);
+                        flammes[4].SetActive(true);
+                        flammes[5].SetActive(true);
+                        flammes[6].SetActive(true);
+                        flammes[7].SetActive(true);
+                        stopFlammeActivating = false;
+                    }
+
+                    Collider2D[] colereFinRange = Physics2D.OverlapCircleAll(zone.transform.position, rangeFinColere/*, layerGround*/);
+
+                    if(fullDestruction == true)
+                    {
+                        Debug.Log("pupoui");
+                        for (int i = 0; i < colereFinRange.Length; i++)
                         {
-                            GameObject target = colereRange[i].gameObject;
-                            target.GetComponent<BlockDestructible>().BreakingAnim();
+                            GameObject target = colereFinRange[i].gameObject;
+                            Destroy(target.gameObject);
                         }
-                        StartCoroutine(StopAnmColere());
+                        StartCoroutine(FinColere());
                     }
                 }
             }
@@ -343,6 +406,10 @@ public class Controller2D : MonoBehaviour
         {
             checkPoint += 1;
         }
+        if (collision.gameObject.tag.Equals("FinColere"))
+        {
+            finColere = true;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -376,6 +443,7 @@ public class Controller2D : MonoBehaviour
             milieuCulpa = true;
         }
     }
+
     public void TutoCulpability()
     {
         transform.position = new Vector3(-4, 0.6f, 0);
@@ -387,6 +455,12 @@ public class Controller2D : MonoBehaviour
         yield return new WaitForSeconds(1);
         Anm.SetBool("Colere", false);
         laColere = false;
+    }
+
+    public IEnumerator FinColere()
+    {
+        yield return new WaitForSeconds(4);
+        FinishLevel();
     }
 
     public void ActivateFlammes()
@@ -464,6 +538,30 @@ public class Controller2D : MonoBehaviour
         flammes[6].SetActive(false);
         flammes[7].SetActive(false);
     }
+    
+    public void FinColereExplosion()
+    {
+        compteurFleche += 1;
+        camera2D.GetComponent<CameraFollow>().CameraShake(0.5f, 5);
+        if (compteurFleche == 1)
+        {
+            zone.SetActive(true);
+        }
+        if (explodingSound != null)
+        {
+            explodingSound.Play();
+        }
+        if (explosionColere != null)
+        {
+            explosionFinColere.gameObject.transform.localScale = explosionFinColere.gameObject.transform.localScale * Mathf.Pow(1.015f, compteurFleche);
+            explosionFinColere.Play();
+        }
+        if (compteurFleche >= 18)
+        {
+            rangeFinColere = rangeColere * Mathf.Pow(1.015f, compteurFleche);
+            fullDestruction = true;
+        }
+    }
 
     public void FinishLevel()
     {
@@ -472,6 +570,7 @@ public class Controller2D : MonoBehaviour
         menu2D.GetComponent<SceneAndUI>().ActiveScene("Maison");
         menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
     }
+
     public void LaunchEndingAnimation()
     {
         pause = true;
