@@ -325,14 +325,12 @@ public class Controller2D : MonoBehaviour
                         stopFlammeActivating = false;
                     }
 
-                    Collider[] colereFinRange = Physics.OverlapSphere(zone.transform.position, rangeFinColere, layerGround);
+                    Collider[] colereFinRange = Physics.OverlapSphere(zone.transform.position, 30, layerGround);
 
                     if(fullDestruction == true)
                     {
                         for (int i = 0; i < colereFinRange.Length; i++)
                         {
-                            Debug.Log("pupoui");
-
                             GameObject target = colereFinRange[i].gameObject;
                             Destroy(target.gameObject);
                         }
