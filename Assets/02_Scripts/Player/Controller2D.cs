@@ -166,7 +166,7 @@ public class Controller2D : MonoBehaviour
                 if (isGrounded)
                 {
                     rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-                    //jumpSound.Play();
+                    jumpSound.Play();
                 }
             }
 
@@ -325,13 +325,14 @@ public class Controller2D : MonoBehaviour
                         stopFlammeActivating = false;
                     }
 
-                    Collider2D[] colereFinRange = Physics2D.OverlapCircleAll(zone.transform.position, rangeFinColere/*, layerGround*/);
+                    Collider[] colereFinRange = Physics.OverlapSphere(zone.transform.position, rangeFinColere, layerGround);
 
                     if(fullDestruction == true)
                     {
-                        Debug.Log("pupoui");
                         for (int i = 0; i < colereFinRange.Length; i++)
                         {
+                            Debug.Log("pupoui");
+
                             GameObject target = colereFinRange[i].gameObject;
                             Destroy(target.gameObject);
                         }
