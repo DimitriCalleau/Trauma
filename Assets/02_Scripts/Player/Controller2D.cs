@@ -72,7 +72,7 @@ public class Controller2D : MonoBehaviour
     private int checkPoint;
     public int nbCheckpoint;
 
-    public GameObject lightBougie;
+    public ParticleSystem lightBougie;
     public AudioSource fireSound;
 
     bool isLightUp;
@@ -106,6 +106,10 @@ public class Controller2D : MonoBehaviour
             {
                 flecheShooter.SetActive(false);
             }
+        }
+        if(menu2D.GetComponent<GameManager>().nbLvlDone == 5)
+        {
+            
         }
     }
 
@@ -242,28 +246,7 @@ public class Controller2D : MonoBehaviour
 
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 5)
             {
-                //allumage
-                if (lightBougie != null)
-                {
-                    isLightUp = !isLightUp;
-                }
 
-                if (isLightUp)
-                {
-                    if (alreadyLit == false)
-                    {
-                        lightBougie.SetActive(true);
-                        alreadyLit = true;
-                    }
-                }
-                else
-                {
-                    if (alreadyLit == true)
-                    {
-                        lightBougie.SetActive(false);
-                        alreadyLit = false;
-                    }
-                }
 
                 if (checkPoint >= nbCheckpoint)
                 {
