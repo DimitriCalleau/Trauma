@@ -58,14 +58,7 @@ public class CheckPoint : MonoBehaviour
                         state = 0;
                         done = true;
                     }
-
                 }
-            }
-
-            if(nbLvl == 4)
-            {
-                collision.gameObject.GetComponent<Controller2D>().stackTristesse += 1;
-                Destroy(this.gameObject);
             }
         }
     }

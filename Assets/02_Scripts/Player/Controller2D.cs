@@ -68,15 +68,27 @@ public class Controller2D : MonoBehaviour
     public Transform spawnPoint;
 
     //Tristesse
-    public float stackTristesse;
-    private int checkPoint;
-    public int nbCheckpoint;
+    public GameObject endingPosition;
 
     public ParticleSystem lightBougie;
+    public ParticleSystem cireCorpEnDecomposition;
     public AudioSource fireSound;
 
-    bool isLightUp;
-    bool alreadyLit;
+    public Animator Anim1;
+    public Animator Anim2;
+    public Animator Anim3;
+    public Animator Anim4;
+
+    public int tristesseChangeAnim1; 
+    public int tristesseChangeAnim2;
+
+    bool animChanged1;
+    bool animChanged2;
+
+    bool finTristesse;
+
+    float ratioAvancement;
+    public float ratioTristesse;
 
     void Start()
     {
@@ -109,11 +121,12 @@ public class Controller2D : MonoBehaviour
         }
         if(menu2D.GetComponent<GameManager>().nbLvlDone == 5)
         {
-            
+            Anim2.gameObject.SetActive(false);
+            Anim3.gameObject.SetActive(false);
+            Anim4.gameObject.SetActive(false);
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isDead == true)
@@ -127,7 +140,6 @@ public class Controller2D : MonoBehaviour
         pause = menu2D.GetComponent<SceneAndUI>().pause;
         if (pause == false)
         {
-            //MVT
             float h = Input.GetAxisRaw("Horizontal");
             float v = Input.GetAxisRaw("Vertical");
             bool jump = Input.GetButtonDown("Jump");
@@ -164,7 +176,6 @@ public class Controller2D : MonoBehaviour
                 rb.velocity = new Vector2(-mvtSpeed, rb.velocity.y);
             }
 
-            // le saut
             if (jump == true)
             {
                 if (isGrounded)
@@ -176,12 +187,10 @@ public class Controller2D : MonoBehaviour
 
             //Potit truc test shake cam
 
-            if (Input.GetKey(KeyCode.R))
+            if (Input.GetKey(KeyCode.P))
             {
                 camera2D.GetComponent<CameraFollow>().CameraShake(0.5f, 0.5f);
             }
-
-            //Anim
 
             if (isGrounded)
             {
@@ -243,15 +252,36 @@ public class Controller2D : MonoBehaviour
                 }
             }
 
-
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 5)
             {
-
-
-                if (checkPoint >= nbCheckpoint)
+                ratioAvancement = endingPosition.GetComponent<PourcentageNiveau>().ratio;
+                if (ratioAvancement >= tristesseChangeAnim1)
                 {
-                    menu2D.GetComponent<GameManager>().nbLvlDone += 1;
-                    menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
+                    if(animChanged1 == false)
+                    {
+                        /*
+                        Anim2.gameObject.SetActive(true);
+                        Anm = Anim2;
+                        Anim1.gameObject.SetActive(false);
+                        animChanged1 = true;
+                        */
+                        var emission = cireCorpEnDecomposition.GetComponent<ParticleSystem>().emission;
+                        emission.rateOverTime = 8f;
+                    }
+                }
+                if(ratioAvancement >= tristesseChangeAnim2)
+                {
+                    if (animChanged2 == false)
+                    {
+                        /*
+                        Anim3.gameObject.SetActive(true);
+                        Anm = Anim3;
+                        Anim2.gameObject.SetActive(false);
+                        animChanged2 = true;
+                        */
+                        var emission = cireCorpEnDecomposition.GetComponent<ParticleSystem>().emission;
+                        emission.rateOverTime = 15f;
+                    }
                 }
             }
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 4)
@@ -332,8 +362,6 @@ public class Controller2D : MonoBehaviour
             Anm.SetBool("Jump", false);
             Anm.SetBool("Walk", false);
         }
-
-
     }
 
     private void FixedUpdate()
@@ -378,15 +406,10 @@ public class Controller2D : MonoBehaviour
             {
                 TutoCulpability();
             }
-
         }
         if (collision.gameObject.tag.Equals("Peur"))
         {
             nextDeath = true;
-        }
-        if (collision.gameObject.tag.Equals("checkPoint"))
-        {
-            checkPoint += 1;
         }
         if (collision.gameObject.tag.Equals("FinColere"))
         {
@@ -416,6 +439,7 @@ public class Controller2D : MonoBehaviour
             Gizmos.DrawWireSphere(zone.transform.position, rangeColere);
         }
     }
+
     public void RespawnCulpability()
     {
         insulte.GetComponent<AffichageMotCupabilite>().death += 1;
@@ -440,6 +464,12 @@ public class Controller2D : MonoBehaviour
     }
 
     public IEnumerator FinColere()
+    {
+        yield return new WaitForSeconds(4);
+        FinishLevel();
+    }
+
+    public IEnumerator FinTristesse()
     {
         yield return new WaitForSeconds(4);
         FinishLevel();
@@ -543,6 +573,11 @@ public class Controller2D : MonoBehaviour
             rangeFinColere = rangeColere * Mathf.Pow(1.015f, compteurFleche);
             fullDestruction = true;
         }
+    }
+
+    public void Tristesse()
+    {
+        
     }
 
     public void FinishLevel()
