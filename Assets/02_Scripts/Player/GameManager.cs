@@ -83,7 +83,30 @@ public class GameManager : MonoBehaviour
                 saveLvlDone = 7;
             }
         }
-
+        if(saveLvlDone >= 1)
+        {
+            decalsPorte[0].SetActive(true);
+        }
+        if (saveLvlDone >= 2)
+        {
+            decalsPorte[1].SetActive(true);
+        }
+        if (saveLvlDone >= 3)
+        {
+            decalsPorte[2].SetActive(true);
+        }
+        if (saveLvlDone >= 4)
+        {
+            decalsPorte[3].SetActive(true);
+        }
+        if (saveLvlDone >= 5)
+        {
+            decalsPorte[4].SetActive(true);
+        }
+        if (saveLvlDone >= 6)
+        {
+            decalsPorte[5].SetActive(true);
+        }
     }
 
     public void lvlDoneForce()

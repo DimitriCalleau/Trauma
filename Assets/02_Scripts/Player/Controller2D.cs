@@ -400,7 +400,6 @@ public class Controller2D : MonoBehaviour
                 {
                     var rate = trailEtoile.GetComponent<ParticleSystem>().emission;
                     rate.rateOverDistance = etoiles;
-                    trailEtoile.Play();
                 }
             }
             else
@@ -457,6 +456,12 @@ public class Controller2D : MonoBehaviour
             {
                 TutoCulpability();
             }
+        }
+        if (collision.gameObject.tag.Equals("Etoile"))
+        {
+            etoiles += 1;
+            trailEtoile.Play();
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag.Equals("Peur"))
         {
