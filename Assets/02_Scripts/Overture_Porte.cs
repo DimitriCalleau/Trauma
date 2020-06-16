@@ -39,15 +39,21 @@ public class Overture_Porte : MonoBehaviour
             if (opened == false)
             {
                 animator.SetBool("Open", true);
-                soundFermer.Stop();
-                soundOuvrir.Play();
+                if(soundOuvrir != null && soundFermer != null)
+                {
+                    soundFermer.Stop();
+                    soundOuvrir.Play();
+                }
                 opened = true;
             }
             else
             {
                 animator.SetBool("Open", false);
-                soundOuvrir.Stop();
-                soundFermer.Play();
+                if (soundOuvrir != null && soundFermer != null)
+                {
+                    soundOuvrir.Stop();
+                    soundFermer.Play();
+                }
                 opened = false;
             }
         }
