@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     //temp
     bool billy;
+    bool dontGrowUp;
     //Movement
     public CharacterController controller;
     public GameObject menu3D;
@@ -43,7 +44,6 @@ public class PlayerController : MonoBehaviour
         {
             LoadTransform();
             verifEnterScene = false;
-
         }
         speed = 3f;
         uiPorte.SetActive(false);
@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(verifEnterScene);
         nbLvlDonePorte = nbLvl;
         bool pause = menu3D.GetComponent<SceneAndUI>().pause;
         if(pause == false)
@@ -201,11 +202,9 @@ public class PlayerController : MonoBehaviour
             if(nbLvl < 3)
             {
                 StartCoroutine(Ungrow());
-                /*transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-                controller.stepOffset = 0.02f;
-                speed = 1f;*/
             }
         }
+
     }
     private void OnTriggerExit(Collider other)
     {
@@ -214,20 +213,19 @@ public class PlayerController : MonoBehaviour
             if (nbLvl < 3)
             {
                 StartCoroutine(Grow());
-                /*transform.localScale = new Vector3(1, 1, 1);
-                controller.stepOffset = 0.2f;
-                speed = 3f;*/
             }
         }
     }
+
     public void SaveTransform()
     {
+        Debug.Log("Save");
         SavingSystem.SaveData(this, menu3D.GetComponent<GameManager>(), menu3D.GetComponent<SceneAndUI>());
     }
     public void LoadTransform()
     {
         SaveData data = SavingSystem.LoadData();
-
+        Debug.Log("Load");
         menu3D.GetComponent<GameManager>().nbLvlDone = data.lvlAvancement;
         
         //position joueur

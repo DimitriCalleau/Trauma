@@ -5,8 +5,8 @@ using UnityEngine;
 public class Overture_Porte : MonoBehaviour
 {
     public int lvlToUnlock;
-    int NblvlDone;
-    public GameObject player;
+    public int NblvlDone;
+    public GameObject menu;
 
     bool opened;
     public Animator animator;
@@ -19,7 +19,14 @@ public class Overture_Porte : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        NblvlDone = player.GetComponent<PlayerController>().nbLvlDonePorte;
+        if(menu == true)
+        {
+            NblvlDone = menu.GetComponent<GameManager>().nbLvlDone;
+        }
+        else
+        {
+            NblvlDone = 0;
+        }
 
     }
 

@@ -34,7 +34,7 @@ public class SaveData
 
         //Player
         positionX = playerCtrl.transform.position.x;
-        positionY = playerCtrl.transform.position.y;
+        positionY = playerCtrl.transform.position.y + 1;
         positionZ = playerCtrl.transform.position.z;
         rotationX = playerCtrl.transform.localRotation.x;
         rotationY = playerCtrl.transform.localRotation.y;

@@ -92,8 +92,8 @@ public class Controller2D : MonoBehaviour
     public Transform positionLightBougie3;
     public Transform positionLightBougie4;
 
-    public GameObject lightBougie;
-    /*public ParticleSystem lightBougieAlpha;
+    /*public GameObject lightBougie;
+    public ParticleSystem lightBougieAlpha;
     public ParticleSystem lightBougieAdd;
     public ParticleSystem lightBougieSparks;*/
     public GameObject fire;
@@ -153,239 +153,248 @@ public class Controller2D : MonoBehaviour
         pause = menu2D.GetComponent<SceneAndUI>().pause;
         if (pause == false)
         {
-            float h = Input.GetAxisRaw("Horizontal");
-            float v = Input.GetAxisRaw("Vertical");
-            bool jump = Input.GetButtonDown("Jump");
-
-            if (h > 0)
+            if(finTristesse == false)
             {
-                transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-            if (h < 0)
-            {
-                transform.rotation = Quaternion.Euler(0, 180, 0);
-            }
-            if (h != 0)
-            {
-                rb.velocity = new Vector2(mvtSpeed * h, rb.velocity.y);
-            }
-            if (h == 0)
-            {
-                if (isGrounded == true)
+                if (Input.GetKey(KeyCode.M))
                 {
-                    rb.velocity = new Vector2(0f, rb.velocity.y);
+                    FinishLevel();
                 }
-                else
+                float h = Input.GetAxisRaw("Horizontal");
+                float v = Input.GetAxisRaw("Vertical");
+                bool jump = Input.GetButtonDown("Jump");
+
+                if (h > 0)
                 {
-                    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
                 }
-            }
-            if (rb.velocity.x >= mvtSpeed)
-            {
-                rb.velocity = new Vector2(mvtSpeed, rb.velocity.y);
-            }
-            if (rb.velocity.x <= -mvtSpeed)
-            {
-                rb.velocity = new Vector2(-mvtSpeed, rb.velocity.y);
-            }
-
-            if (jump == true)
-            {
-                if (isGrounded)
+                if (h < 0)
                 {
-                    rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-                    jumpSound.Play();
-                }
-            }
-
-            //Potit truc test shake cam
-
-            if (Input.GetKey(KeyCode.P))
-            {
-                camera2D.GetComponent<CameraFollow>().CameraShake(0.5f, 0.5f);
-            }
-
-            if (isGrounded)
-            {
-                if (grounding.gameObject.tag.Equals("Slow"))
-                {
-                    if (mvtSpeed != slowSpeed)
-                    {
-                        if (fumeeSlow != null)
-                        {
-                            fumeeSlow.Play();
-                        }
-                        mvtSpeed = slowSpeed;
-                    }
-                }
-                else
-                {
-                    if (mvtSpeed != startSpeed)
-                    {
-                        if (fumeeSlow != null)
-                        {
-                            fumeeSlow.Stop();
-                        }
-                        mvtSpeed = startSpeed;
-                    }
-                }
-
-                if (isJumping == true)
-                {
-                    Anm.SetBool("Jump", false);
-                    isJumping = false;
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
                 }
                 if (h != 0)
                 {
-                    if(isWalking == false)
+                    rb.velocity = new Vector2(mvtSpeed * h, rb.velocity.y);
+                }
+                if (h == 0)
+                {
+                    if (isGrounded == true)
                     {
-                        Anm.SetBool("Walk", true);
-                        isWalking = true;
+                        rb.velocity = new Vector2(0f, rb.velocity.y);
+                    }
+                    else
+                    {
+                        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+                    }
+                }
+                if (rb.velocity.x >= mvtSpeed)
+                {
+                    rb.velocity = new Vector2(mvtSpeed, rb.velocity.y);
+                }
+                if (rb.velocity.x <= -mvtSpeed)
+                {
+                    rb.velocity = new Vector2(-mvtSpeed, rb.velocity.y);
+                }
+
+                if (jump == true)
+                {
+                    if (isGrounded)
+                    {
+                        rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                        jumpSound.Play();
+                    }
+                }
+
+                //Potit truc test shake cam
+
+                if (Input.GetKey(KeyCode.P))
+                {
+                    camera2D.GetComponent<CameraFollow>().CameraShake(0.5f, 0.5f);
+                }
+
+                if (isGrounded)
+                {
+                    if (grounding.gameObject.tag.Equals("Slow"))
+                    {
+                        if (mvtSpeed != slowSpeed)
+                        {
+                            if (fumeeSlow != null)
+                            {
+                                fumeeSlow.Play();
+                            }
+                            mvtSpeed = slowSpeed;
+                        }
+                    }
+                    else
+                    {
+                        if (mvtSpeed != startSpeed)
+                        {
+                            if (fumeeSlow != null)
+                            {
+                                fumeeSlow.Stop();
+                            }
+                            mvtSpeed = startSpeed;
+                        }
+                    }
+
+                    if (isJumping == true)
+                    {
+                        Anm.SetBool("Jump", false);
+                        isJumping = false;
+                    }
+                    if (h != 0)
+                    {
+                        if (isWalking == false)
+                        {
+                            Anm.SetBool("Walk", true);
+                            isWalking = true;
+                        }
+                    }
+                    else
+                    {
+                        if (isWalking == true)
+                        {
+                            Anm.SetBool("Walk", false);
+                            isWalking = false;
+                        }
                     }
                 }
                 else
                 {
-                    if (isWalking == true)
+                    if (isJumping == false)
                     {
-                        Anm.SetBool("Walk", false);
-                        isWalking = false;
+                        Anm.SetBool("Jump", true);
+                        isJumping = true;
+                    }
+                    if (rb.velocity.y >= 0) //verif quil saute et pas tombe
+                    {
+
+                    }
+                }
+
+                if (menu2D.GetComponent<GameManager>().nbLvlDone == 5)
+                {
+                    ratioAvancement = endingPosition.GetComponent<PourcentageNiveau>().ratio;
+                    if (ratioAvancement < tristesseChangeAnim1)
+                    {
+                        if (positionLightBougie1 != null)
+                        {
+                            fire.transform.position = positionLightBougie1.position;
+                        }
+                    }
+                    if (ratioAvancement >= tristesseChangeAnim1)
+                    {
+                        if (animChanged1 == false)
+                        {
+                            Anim2.gameObject.SetActive(true);
+                            Anm = Anim2;
+                            Anim1.gameObject.SetActive(false);
+                            animChanged1 = true;
+
+                            var emissionCire = cireCreationGoutte.GetComponent<ParticleSystem>().emission;
+                            emissionCire.rateOverTime = 8f;
+                        }
+                        if (positionLightBougie2 != null)
+                        {
+                            fire.transform.position = positionLightBougie2.position;
+                        }
+                    }
+                    if (ratioAvancement >= tristesseChangeAnim2)
+                    {
+                        if (animChanged2 == false)
+                        {
+                            Anim3.gameObject.SetActive(true);
+                            Anm = Anim3;
+                            Anim2.gameObject.SetActive(false);
+                            animChanged2 = true;
+
+                            var emissionCire = cireCreationGoutte.GetComponent<ParticleSystem>().emission;
+                            emissionCire.rateOverTime = 15f;
+                        }
+                        if (positionLightBougie3 != null)
+                        {
+                            fire.transform.position = positionLightBougie3.position;
+                        }
+
+                        
+                        if (ratioAvancement >= ratioTristesse)
+                        {
+                            StartCoroutine(FinTristesse());
+                        }
+                    }
+
+
+                }
+                if (menu2D.GetComponent<GameManager>().nbLvlDone == 4)
+                {
+                    if (finColere == false)
+                    {
+                        if (laColere == true)
+                        {
+                            mvtSpeed = 0;
+                        }
+                        if (stackColere >= 8)
+                        {
+                            pressA.SetActive(true);
+
+                            Collider2D[] colereRange = Physics2D.OverlapCircleAll(zone.transform.position, rangeColere, layerColere);
+
+                            if (Input.GetKey(KeyCode.A))
+                            {
+                                camera2D.GetComponent<CameraFollow>().CameraShake(0.5f, 0.5f);
+                                pressA.SetActive(false);
+                                if (explodingSound != null)
+                                {
+                                    explodingSound.Play();
+                                }
+                                DesactivateFlammes();
+                                Anm.SetBool("Colere", true);
+                                laColere = true;
+                                stackColere = 0;
+                                if (explosionColere != null)
+                                {
+                                    Instantiate(explosionColere, zone.transform.position, Quaternion.identity);
+                                }
+                                for (int i = 0; i < colereRange.Length; i++)
+                                {
+                                    GameObject target = colereRange[i].gameObject;
+                                    target.GetComponent<BlockDestructible>().BreakingAnim();
+                                }
+                                StartCoroutine(StopAnmColere());
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (stopFlammeActivating == false)
+                        {
+                            flammes[0].SetActive(true);
+                            flammes[1].SetActive(true);
+                            flammes[2].SetActive(true);
+                            flammes[3].SetActive(true);
+                            flammes[4].SetActive(true);
+                            flammes[5].SetActive(true);
+                            flammes[6].SetActive(true);
+                            flammes[7].SetActive(true);
+                            stopFlammeActivating = false;
+                        }
+
+                        Collider[] colereFinRange = Physics.OverlapSphere(zone.transform.position, 30, layerGround);
+
+                        if (fullDestruction == true)
+                        {
+                            for (int i = 0; i < colereFinRange.Length; i++)
+                            {
+                                GameObject target = colereFinRange[i].gameObject;
+                                Destroy(target.gameObject);
+                            }
+                            StartCoroutine(FinColere());
+                        }
                     }
                 }
             }
             else
             {
-                if (isJumping == false)
-                {
-                    Anm.SetBool("Jump", true);
-                    isJumping = true;
-                }
-                if (rb.velocity.y >= 0) //verif quil saute et pas tombe
-                {
-
-                }
-            }
-
-            if (menu2D.GetComponent<GameManager>().nbLvlDone == 5)
-            {
-                ratioAvancement = endingPosition.GetComponent<PourcentageNiveau>().ratio;
-                if(ratioAvancement < tristesseChangeAnim1)
-                {
-                    if(positionLightBougie1 != null)
-                    {
-                        lightBougie.transform.position = positionLightBougie1.position;
-                    }
-                }
-                if (ratioAvancement >= tristesseChangeAnim1)
-                {
-                    if(animChanged1 == false)
-                    {
-                        Anim2.gameObject.SetActive(true);
-                        Anm = Anim2;
-                        Anim1.gameObject.SetActive(false);
-                        animChanged1 = true;
-                        
-                        var emissionCire = cireCreationGoutte.GetComponent<ParticleSystem>().emission;
-                        emissionCire.rateOverTime = 8f;
-                    }
-                    if(positionLightBougie2 != null)
-                    {
-                        lightBougie.transform.position = positionLightBougie2.position;
-                    }
-                }
-                if(ratioAvancement >= tristesseChangeAnim2)
-                {
-                    if (animChanged2 == false)
-                    {
-                        Anim3.gameObject.SetActive(true);
-                        Anm = Anim3;
-                        Anim2.gameObject.SetActive(false);
-                        animChanged2 = true;
-                        
-                        var emissionCire = cireCreationGoutte.GetComponent<ParticleSystem>().emission;
-                        emissionCire.rateOverTime = 15f;
-                    }
-                    if (positionLightBougie3 != null)
-                    {
-                        lightBougie.transform.position = positionLightBougie3.position;
-                    }
-                }
-
-
-                if (Input.GetKeyDown(KeyCode.O))
-                {
-                    StartCoroutine(FinTristesse());
-                }
-            }
-            if (menu2D.GetComponent<GameManager>().nbLvlDone == 4)
-            {
-                if(finColere == false)
-                {
-                    if (laColere == true)
-                    {
-                        mvtSpeed = 0;
-                    }
-                    if (stackColere >= 8)
-                    {
-                        pressA.SetActive(true);
-
-                        Collider2D[] colereRange = Physics2D.OverlapCircleAll(zone.transform.position, rangeColere, layerColere);
-
-                        if (Input.GetKey(KeyCode.A))
-                        {
-                            camera2D.GetComponent<CameraFollow>().CameraShake(0.5f, 0.5f);
-                            pressA.SetActive(false);
-                            if (explodingSound != null)
-                            {
-                                explodingSound.Play();
-                            }
-                            DesactivateFlammes();
-                            Anm.SetBool("Colere", true);
-                            laColere = true;
-                            stackColere = 0;
-                            if (explosionColere != null)
-                            {
-                                Instantiate(explosionColere, zone.transform.position, Quaternion.identity);
-                            }
-                            for (int i = 0; i < colereRange.Length; i++)
-                            {
-                                GameObject target = colereRange[i].gameObject;
-                                target.GetComponent<BlockDestructible>().BreakingAnim();
-                            }
-                            StartCoroutine(StopAnmColere());
-                        }
-                    }
-                }
-                else
-                {
-                    if(stopFlammeActivating == false)
-                    {
-                        flammes[0].SetActive(true);
-                        flammes[1].SetActive(true);
-                        flammes[2].SetActive(true);
-                        flammes[3].SetActive(true);
-                        flammes[4].SetActive(true);
-                        flammes[5].SetActive(true);
-                        flammes[6].SetActive(true);
-                        flammes[7].SetActive(true);
-                        stopFlammeActivating = false;
-                    }
-
-                    Collider[] colereFinRange = Physics.OverlapSphere(zone.transform.position, 30, layerGround);
-
-                    if(fullDestruction == true)
-                    {
-                        for (int i = 0; i < colereFinRange.Length; i++)
-                        {
-                            GameObject target = colereFinRange[i].gameObject;
-                            Destroy(target.gameObject);
-                        }
-                        StartCoroutine(FinColere());
-                    }
-                }
-            }
-            if (menu2D.GetComponent<GameManager>().nbLvlDone == 3)
-            {
-                
+                rb.velocity = new Vector2(0 , 0);
             }
         }
         else
@@ -424,7 +433,6 @@ public class Controller2D : MonoBehaviour
             }
             else
             {
-                Debug.Log("bitch");
                 FinishLevel();
             }
         }
@@ -503,6 +511,7 @@ public class Controller2D : MonoBehaviour
 
     public IEnumerator FinTristesse()
     {
+        finTristesse = true;
         float taille = 0;
         float ratioReduc = 0.005f;
         /*
@@ -518,17 +527,15 @@ public class Controller2D : MonoBehaviour
 
         if (positionLightBougie4 != null)
         {
-            lightBougie.transform.position = positionLightBougie4.position;
+            fire.transform.position = positionLightBougie4.position;
         }
 
         //Tentative de Reduction du feu
 
         while (taille <= 0.95)
         {
-
             fire.GetComponent<MeshRenderer>().material.SetFloat("_Flame_Opacity", taille);
             taille += ratioReduc;
-            Debug.Log(taille);
             yield return new WaitForSeconds(0.01f);
             /*
             var lightBougieAddSize = lightBougieAdd.main.startSize;
@@ -552,7 +559,6 @@ public class Controller2D : MonoBehaviour
 
         if(taille >= 0.95)
         {
-            Debug.Log("penis");
             taille = 0.99f;
             fire.GetComponent<MeshRenderer>().material.SetFloat("_Flame_Opacity", taille);
             yield return new WaitForSeconds(1);
@@ -681,7 +687,7 @@ public class Controller2D : MonoBehaviour
     public void LaunchEndingAnimation()
     {
         pause = true;
-        Debug.Log("Launched   #SpaceX");
+
         if(menu2D.GetComponent<GameManager>().nbLvlDone == 0)
         {
             endingAnimator.GetComponent<Animator>().SetBool("Joie", true);
