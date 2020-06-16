@@ -10,6 +10,8 @@ public class Overture_Porte : MonoBehaviour
 
     bool opened;
     public Animator animator;
+    public AudioSource soundOuvrir;
+    public AudioSource soundFermer;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,11 +39,15 @@ public class Overture_Porte : MonoBehaviour
             if (opened == false)
             {
                 animator.SetBool("Open", true);
+                soundFermer.Stop();
+                soundOuvrir.Play();
                 opened = true;
             }
             else
             {
                 animator.SetBool("Open", false);
+                soundOuvrir.Stop();
+                soundFermer.Play();
                 opened = false;
             }
         }
