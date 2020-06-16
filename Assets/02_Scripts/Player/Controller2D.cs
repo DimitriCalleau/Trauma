@@ -38,7 +38,11 @@ public class Controller2D : MonoBehaviour
 
     Collider2D grounding;
 
+    //Joie
 
+    public int etoiles;
+    public ParticleSystem trailEtoile;
+    
     //Colere
     bool laColere;
     public bool finColere;
@@ -59,6 +63,7 @@ public class Controller2D : MonoBehaviour
     public GameObject pressA;
     public GameObject[] flammes;
     GameObject instanceExplosion;
+
     //Peur
     public float slowSpeed;
     public ParticleSystem fumeeSlow;
@@ -390,6 +395,12 @@ public class Controller2D : MonoBehaviour
                             StartCoroutine(FinColere());
                         }
                     }
+                }
+                if (menu2D.GetComponent<GameManager>().nbLvlDone == 0)
+                {
+                    var rate = trailEtoile.GetComponent<ParticleSystem>().emission;
+                    rate.rateOverDistance = etoiles;
+                    trailEtoile.Play();
                 }
             }
             else
