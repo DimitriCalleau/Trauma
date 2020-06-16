@@ -8,13 +8,11 @@ public class Overture_Porte : MonoBehaviour
     int NblvlDone;
     public GameObject player;
 
-    bool open;
     bool opened;
     public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
-        open = false;
         opened = false;
     }
 

@@ -68,18 +68,8 @@ public class Controller2D : MonoBehaviour
     public Transform spawnPoint;
 
     //Tristesse
-    public GameObject endingPosition;
 
-    public ParticleSystem lightBougie;
-    public ParticleSystem cireCorpEnDecomposition;
-    public AudioSource fireSound;
-
-    public Animator Anim1;
-    public Animator Anim2;
-    public Animator Anim3;
-    public Animator Anim4;
-
-    public int tristesseChangeAnim1; 
+    public int tristesseChangeAnim1;
     public int tristesseChangeAnim2;
 
     bool animChanged1;
@@ -89,6 +79,29 @@ public class Controller2D : MonoBehaviour
 
     float ratioAvancement;
     public float ratioTristesse;
+    public Animator Anim1;
+    public Animator Anim2;
+    public Animator Anim3;
+    public Animator Anim4;
+
+    public GameObject endingPosition;
+
+    //Flamme FX
+    public Transform positionLightBougie1;
+    public Transform positionLightBougie2;
+    public Transform positionLightBougie3;
+    public Transform positionLightBougie4;
+
+    public GameObject lightBougie;
+    /*public ParticleSystem lightBougieAlpha;
+    public ParticleSystem lightBougieAdd;
+    public ParticleSystem lightBougieSparks;*/
+    public GameObject fire;
+
+    //Cire FX
+    public ParticleSystem cireCreationGoutte;
+
+    public AudioSource fireSound;
 
     void Start()
     {
@@ -255,33 +268,52 @@ public class Controller2D : MonoBehaviour
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 5)
             {
                 ratioAvancement = endingPosition.GetComponent<PourcentageNiveau>().ratio;
+                if(ratioAvancement < tristesseChangeAnim1)
+                {
+                    if(positionLightBougie1 != null)
+                    {
+                        lightBougie.transform.position = positionLightBougie1.position;
+                    }
+                }
                 if (ratioAvancement >= tristesseChangeAnim1)
                 {
                     if(animChanged1 == false)
                     {
-                        /*
                         Anim2.gameObject.SetActive(true);
                         Anm = Anim2;
                         Anim1.gameObject.SetActive(false);
                         animChanged1 = true;
-                        */
-                        var emission = cireCorpEnDecomposition.GetComponent<ParticleSystem>().emission;
-                        emission.rateOverTime = 8f;
+                        
+                        var emissionCire = cireCreationGoutte.GetComponent<ParticleSystem>().emission;
+                        emissionCire.rateOverTime = 8f;
+                    }
+                    if(positionLightBougie2 != null)
+                    {
+                        lightBougie.transform.position = positionLightBougie2.position;
                     }
                 }
                 if(ratioAvancement >= tristesseChangeAnim2)
                 {
                     if (animChanged2 == false)
                     {
-                        /*
                         Anim3.gameObject.SetActive(true);
                         Anm = Anim3;
                         Anim2.gameObject.SetActive(false);
                         animChanged2 = true;
-                        */
-                        var emission = cireCorpEnDecomposition.GetComponent<ParticleSystem>().emission;
-                        emission.rateOverTime = 15f;
+                        
+                        var emissionCire = cireCreationGoutte.GetComponent<ParticleSystem>().emission;
+                        emissionCire.rateOverTime = 15f;
                     }
+                    if (positionLightBougie3 != null)
+                    {
+                        lightBougie.transform.position = positionLightBougie3.position;
+                    }
+                }
+
+
+                if (Input.GetKeyDown(KeyCode.O))
+                {
+                    StartCoroutine(FinTristesse());
                 }
             }
             if (menu2D.GetComponent<GameManager>().nbLvlDone == 4)
@@ -471,8 +503,66 @@ public class Controller2D : MonoBehaviour
 
     public IEnumerator FinTristesse()
     {
-        yield return new WaitForSeconds(4);
-        FinishLevel();
+        float taille = 0;
+        float ratioReduc = 0.005f;
+        /*
+        var shapeAlpha = lightBougieAlpha.GetComponent<ParticleSystem>().shape;
+        var shapeAdd = lightBougieAdd.GetComponent<ParticleSystem>().shape;
+        var shapeSparks = lightBougieSparks.GetComponent<ParticleSystem>().shape;
+        */
+        Anim4.gameObject.SetActive(true);
+        Anm = Anim4;
+        Anim3.gameObject.SetActive(false);
+
+        cireCreationGoutte.Stop();
+
+        if (positionLightBougie4 != null)
+        {
+            lightBougie.transform.position = positionLightBougie4.position;
+        }
+
+        //Tentative de Reduction du feu
+
+        while (taille <= 0.95)
+        {
+
+            fire.GetComponent<MeshRenderer>().material.SetFloat("_Flame_Opacity", taille);
+            taille += ratioReduc;
+            Debug.Log(taille);
+            yield return new WaitForSeconds(0.01f);
+            /*
+            var lightBougieAddSize = lightBougieAdd.main.startSize;
+            var lightBougieAlphaSize = lightBougieAlpha.main.startSize;
+            var lightBougieSparksSpeed = lightBougieSparks.main.startSpeed;
+            var lightBougieAddLF = lightBougieAdd.main.startLifetime;
+            var lightBougieAlphaLF = lightBougieAlpha.main.startLifetime;
+            var lightBougieSparksLF = lightBougieSparks.main.startLifetime;
+
+            lightBougieAddSize.constant -= ratioReduc;
+            lightBougieAddLF.constantMin -= ratioReduc;
+            lightBougieAddLF.constantMax -= ratioReduc;
+            lightBougieAlphaSize.constant -= ratioReduc;
+            lightBougieAlphaLF.constantMin -= ratioReduc;
+            lightBougieAlphaLF.constantMax -= ratioReduc;
+            lightBougieSparksSpeed.constant -= ratioReduc;
+            lightBougieSparksLF.constantMin -= ratioReduc;
+            lightBougieSparksLF.constantMax -= ratioReduc;
+            */
+        }
+
+        if(taille >= 0.95)
+        {
+            Debug.Log("penis");
+            taille = 0.99f;
+            fire.GetComponent<MeshRenderer>().material.SetFloat("_Flame_Opacity", taille);
+            yield return new WaitForSeconds(1);
+            taille = 1;
+            fire.GetComponent<MeshRenderer>().material.SetFloat("_Flame_Opacity", taille);
+            yield return new WaitForSeconds(1);
+            fire.SetActive(false);
+            yield return new WaitForSeconds(2);
+            FinishLevel();
+        }
     }
 
     public void ActivateFlammes()
