@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
             saveLvlDone = nbLvlDone;
         }
 
-        if(saveLvlDone == 1)
+        if(saveLvlDone >= 1)
         {
             if (joie != null)
             {
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
                 decalsPorte[0].SetActive(true);
             }
         }
-        if (saveLvlDone == 2)
+        if (saveLvlDone >= 2)
         {
             if (incompehension != null)
             {
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
                 decalsPorte[1].SetActive(true);
             }
         }
-        if (saveLvlDone == 3)
+        if (saveLvlDone >= 3)
         {
             if (peur != null)
             {
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
                 decalsPorte[2].SetActive(true);
             }
         }
-        if (saveLvlDone == 4)
+        if (saveLvlDone >= 4)
         {
             if(culpabilite != null)
             {
@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
                 decalsPorte[3].SetActive(true);
             }
         }
-        if (saveLvlDone == 5)
+        if (saveLvlDone >= 5)
         {
             if (colere != null)
             {
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
                 decalsPorte[4].SetActive(true);
             }
         }
-        if (saveLvlDone == 6)
+        if (saveLvlDone >= 6)
         {
             if (tristesse != null)
             {
@@ -83,30 +83,7 @@ public class GameManager : MonoBehaviour
                 saveLvlDone = 7;
             }
         }
-        if(saveLvlDone >= 1)
-        {
-            decalsPorte[0].SetActive(true);
-        }
-        if (saveLvlDone >= 2)
-        {
-            decalsPorte[1].SetActive(true);
-        }
-        if (saveLvlDone >= 3)
-        {
-            decalsPorte[2].SetActive(true);
-        }
-        if (saveLvlDone >= 4)
-        {
-            decalsPorte[3].SetActive(true);
-        }
-        if (saveLvlDone >= 5)
-        {
-            decalsPorte[4].SetActive(true);
-        }
-        if (saveLvlDone >= 6)
-        {
-            decalsPorte[5].SetActive(true);
-        }
+
     }
 
     public void lvlDoneForce()
