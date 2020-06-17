@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,15 +19,18 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] decalsPorte;
 
+    public GameObject text;
+
     int lvldone;
 
     private void Start()
     {
-        nbLvlDone = saveLvlDone;
+        nbLvlDone = PlayerPrefs.GetInt("nbLvlDone");
         //nbLvlDone = 0;
     }
     private void Update()
     {
+
         if (saveLvlDone < nbLvlDone)
         {
             saveLvlDone = nbLvlDone;

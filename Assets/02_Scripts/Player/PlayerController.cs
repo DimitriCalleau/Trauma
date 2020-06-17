@@ -35,15 +35,14 @@ public class PlayerController : MonoBehaviour
     public float holdingWait;
     float distance;
     public float distanceMax;
-    static public bool verifEnterScene;
-    static public int nbLvl;
+    public bool verifEnterScene;
     public int nbLvlDonePorte;
     private void Start()
     {
-        if(verifEnterScene == true)
+        if (PlayerPrefs.HasKey("saved"))
         {
+            Debug.Log("load");
             LoadTransform();
-            verifEnterScene = false;
         }
         speed = 3f;
         uiPorte.SetActive(false);
@@ -52,8 +51,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(verifEnterScene);
-        nbLvlDonePorte = nbLvl;
+
+        Debug.Log(PlayerPrefs.GetInt("saved"));
+        nbLvlDonePorte = menu3D.GetComponent<GameManager>().nbLvlDone;
         bool pause = menu3D.GetComponent<SceneAndUI>().pause;
         if(pause == false)
         {
@@ -165,11 +165,12 @@ public class PlayerController : MonoBehaviour
                 {
                     if(verifEnterScene == false)
                     {
-                        if (pickedItem.GetComponent<SpecialObject>().nbObjet == nbLvl + 1)
+                        if (pickedItem.GetComponent<SpecialObject>().nbObjet == menu3D.GetComponent<GameManager>().nbLvlDone + 1)
                         {
-                            nbLvl += 1;
+                            Debug.Log("changescene");
                             string sceneToLoad = pickedItem.GetComponent<SpecialObject>().sceneToLoad;
                             menu3D.GetComponent<SceneAndUI>().ActiveScene(sceneToLoad);
+                            StartCoroutine(SaveBeforeSceneChange());
                             SaveTransform();
                             verifEnterScene = true;
                             menu3D.GetComponent<SceneAndUI>().SceneLoader(sceneToLoad);
@@ -180,6 +181,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    IEnumerator SaveBeforeSceneChange()
+    {
+        SaveTransform();
+        yield return new WaitForSeconds(0.2f);
+    }
     IEnumerator Grow()
     {
         yield return new WaitForSeconds(0.2f);
@@ -199,7 +205,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Lilliputien"))
         {
-            if(nbLvl < 3)
+            if(menu3D.GetComponent<GameManager>().nbLvlDone < 3)
             {
                 StartCoroutine(Ungrow());
             }
@@ -210,7 +216,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Lilliputien"))
         {
-            if (nbLvl < 3)
+            if (menu3D.GetComponent<GameManager>().nbLvlDone < 3)
             {
                 StartCoroutine(Grow());
             }
@@ -219,11 +225,40 @@ public class PlayerController : MonoBehaviour
 
     public void SaveTransform()
     {
+        PlayerPrefs.SetInt("saved", 1);
+        PlayerPrefs.SetFloat("positionX", transform.position.x);
+        PlayerPrefs.SetFloat("positionY", transform.position.y + 1);
+        PlayerPrefs.SetFloat("positionZ", transform.position.z);
+        if(pickedItem != null)
+        {
+            PlayerPrefs.SetString("pickedItem", pickedItem.name);
+        }
+        PlayerPrefs.SetInt("nbLvlDone", menu3D.GetComponent<GameManager>().nbLvlDone);
+        PlayerPrefs.SetString("activeScene", menu3D.GetComponent<SceneAndUI>().activeScene);
+        /*
         Debug.Log("Save");
-        SavingSystem.SaveData(this, menu3D.GetComponent<GameManager>(), menu3D.GetComponent<SceneAndUI>());
+        SavingSystem.SaveData(this, menu3D.GetComponent<GameManager>(), menu3D.GetComponent<SceneAndUI>());*/
     }
     public void LoadTransform()
     {
+        transform.position = new Vector3(PlayerPrefs.GetFloat("positionX"), PlayerPrefs.GetFloat("positionY"), PlayerPrefs.GetFloat("positionZ"));
+
+        if (PlayerPrefs.HasKey("pickedItem"))
+        {
+            pickedItem = GameObject.Find(PlayerPrefs.GetString("pickedItem"));
+        }
+
+        if (pickedItem != null)
+        {
+            pickedItem.transform.SetParent(tempParent.transform);
+            pickedItem.GetComponent<Rigidbody>().isKinematic = true;
+            pickedItem.transform.position = tempParent.transform.position;
+            isHolding = true;
+        }
+
+        menu3D.GetComponent<GameManager>().nbLvlDone = PlayerPrefs.GetInt("nbLvlDone");
+        menu3D.GetComponent<SceneAndUI>().ActiveScene(PlayerPrefs.GetString("activeScene"));
+        /*
         SaveData data = SavingSystem.LoadData();
         Debug.Log("Load");
         menu3D.GetComponent<GameManager>().nbLvlDone = data.lvlAvancement;
@@ -245,5 +280,6 @@ public class PlayerController : MonoBehaviour
 
         string activeSceneName = data.scene;
         menu3D.GetComponent<SceneAndUI>().ActiveScene(activeSceneName);
+        */
     }
 }

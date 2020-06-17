@@ -694,8 +694,8 @@ public class Controller2D : MonoBehaviour
 
     public void FinishLevel()
     {
-        menu2D.GetComponent<GameManager>().nbLvlDone += 1;
-        menu2D.GetComponent<GameManager>().lvlDoneForce();
+        //menu2D.GetComponent<GameManager>().nbLvlDone += 1;
+        PlayerPrefs.SetInt("nbLvlDone", menu2D.GetComponent<GameManager>().nbLvlDone + 1);
         menu2D.GetComponent<SceneAndUI>().ActiveScene("Maison");
         menu2D.GetComponent<SceneAndUI>().SceneLoader("Maison");
     }
@@ -732,9 +732,12 @@ public class Controller2D : MonoBehaviour
 
     public void LoadInfos()
     {
+        /*
         SaveData data = SavingSystem.LoadData();
 
         string activeSceneName = data.scene;
         menu2D.GetComponent<SceneAndUI>().ActiveScene(activeSceneName);
+        */
+        menu2D.GetComponent<SceneAndUI>().ActiveScene(PlayerPrefs.GetString("activeScene"));
     }
 }

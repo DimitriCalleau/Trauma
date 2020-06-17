@@ -88,6 +88,14 @@ public class SceneAndUI : MonoBehaviour
         pause = false;
         hasStarted = true;
         startPanel.SetActive(false);
+
+    }
+
+
+    public void Recommencer()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneLoader("Maison");
     }
 
     public void Resume()
@@ -108,6 +116,7 @@ public class SceneAndUI : MonoBehaviour
     {
         player.GetComponent<PlayerController>().LoadTransform();
     }
+
 
     public void End()
     {
