@@ -67,6 +67,7 @@ public class Controller2D : MonoBehaviour
     //Peur
     public float slowSpeed;
     public ParticleSystem fumeeSlow;
+    public bool respawnPeur;
 
     //Culpabilité
     public bool milieuCulpa;
@@ -149,10 +150,6 @@ public class Controller2D : MonoBehaviour
     {
         if (isDead == true)
         {
-            if (menu2D.GetComponent<GameManager>().nbLvlDone == 3)
-            {
-                
-            }   
             menu2D.GetComponent<SceneAndUI>().Retry();
         }
         pause = menu2D.GetComponent<SceneAndUI>().pause;
@@ -424,6 +421,11 @@ public class Controller2D : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag.Equals("CheckPoints"))
+        {
+            menu2D.GetComponent<SceneAndUI>().nbCheckpoints += 1;
+            collision.gameObject.tag = "Untagged";
+        }
         if (collision.gameObject.tag.Equals("Enemy"))
         {
             if(nextDeath == true)
@@ -432,8 +434,14 @@ public class Controller2D : MonoBehaviour
             }
             else
             {
+                if (menu2D.GetComponent<GameManager>().nbLvlDone == 2)
+                {
+                    RespawnPeur();
+                }
+
                 menu2D.GetComponent<SceneAndUI>().Retry();
             }
+
         }
         if (collision.gameObject.tag.Equals("Finish"))
         {
@@ -448,14 +456,7 @@ public class Controller2D : MonoBehaviour
         }
         if (collision.gameObject.tag.Equals("Marteau"))
         {
-            if (milieuCulpa == true)
-            {
-                RespawnCulpability();
-            }
-            if (milieuCulpa == false)
-            {
-                TutoCulpability();
-            }
+            RespawnCulpability();
         }
         if (collision.gameObject.tag.Equals("Etoile"))
         {
@@ -494,22 +495,6 @@ public class Controller2D : MonoBehaviour
         {
             Gizmos.DrawWireSphere(zone.transform.position, rangeColere);
         }
-    }
-
-    public void RespawnCulpability()
-    {
-        insulte.GetComponent<AffichageMotCupabilite>().death += 1;
-        transform.position = spawnPoint.position;
-        if (milieuCulpa == false)
-        {
-            milieuCulpa = true;
-        }
-    }
-
-    public void TutoCulpability()
-    {
-        transform.position = new Vector3(-4, 0.6f, 0);
-        insulte.GetComponent<AffichageMotCupabilite>().death += 1;
     }
 
     public IEnumerator StopAnmColere()
@@ -728,6 +713,18 @@ public class Controller2D : MonoBehaviour
         {
             endingAnimator.GetComponent<Animator>().SetBool("Tristesse", true);
         }
+    }
+
+    public void RespawnCulpability()
+    {
+        menu2D.GetComponent<SceneAndUI>().Retry();
+        insulte.GetComponent<AffichageMotCupabilite>().death += 1;
+    }
+
+    public void RespawnPeur()
+    {
+        respawnPeur = true;
+        menu2D.GetComponent<SceneAndUI>().Retry();
     }
 
     public void LoadInfos()

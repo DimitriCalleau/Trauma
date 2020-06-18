@@ -17,6 +17,9 @@ public class SceneAndUI : MonoBehaviour
     public GameObject startPanel;
     public GameObject player;
 
+    public GameObject[] Checkpoints;
+    public int nbCheckpoints = 0;
+
     private void Start()
     {
         if(hasStarted == false)
@@ -80,7 +83,8 @@ public class SceneAndUI : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene(activeScene);
+        player.transform.position = Checkpoints[nbCheckpoints].gameObject.transform.position;
+        //SceneManager.LoadScene(activeScene);
     }
 
     public void Play()
@@ -91,6 +95,19 @@ public class SceneAndUI : MonoBehaviour
 
     }
 
+    public void MainMenu()
+    {
+        if (hasStarted == true)
+        {
+            if (startPanel != null)
+            {
+                startPanel.SetActive(true);
+            }
+            hasStarted = false;
+        }
+        isPaused = false;
+        pausePanel.SetActive(false);
+    }
 
     public void Recommencer()
     {

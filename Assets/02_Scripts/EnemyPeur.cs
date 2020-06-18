@@ -16,7 +16,11 @@ public class EnemyPeur : MonoBehaviour
     }
     void Update()
     {
-
+        if (player.GetComponent<Controller2D>().respawnPeur == true)
+        {
+            transform.position = new Vector2(player.transform.position.x - 8, transform.position.y);
+            player.GetComponent<Controller2D>().respawnPeur = false;
+        }
         rb.velocity = new Vector2(mvtSpeed, rb.velocity.y);
 
         if (player.GetComponent<Controller2D>().pause == false)

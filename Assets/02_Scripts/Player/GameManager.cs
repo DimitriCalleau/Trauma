@@ -17,6 +17,20 @@ public class GameManager : MonoBehaviour
     public GameObject colere;
     public GameObject tristesse;
 
+    bool changed1;
+    bool changed2;
+    bool changed3;
+    bool changed4;
+    bool changed5;
+    bool changed6;
+    bool old1;
+    bool old2;
+    bool old3;
+    bool old4;
+    bool old5;
+    bool old6;
+
+
     public GameObject[] decalsPorte;
 
     public GameObject text;
@@ -26,65 +40,182 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         nbLvlDone = PlayerPrefs.GetInt("nbLvlDone");
-        //nbLvlDone = 4;
+        //nbLvlDone = 5;
     }
     private void Update()
     {
-
         if (saveLvlDone < nbLvlDone)
         {
             saveLvlDone = nbLvlDone;
         }
 
-        if(saveLvlDone >= 1)
+        if(nbLvlDone >= 1)
         {
-            if (joie != null)
+            if(changed1 == false)
             {
-                joie.GetComponent<SpecialObject>().ChangeMat();
-                joieHaut.GetComponent<SpecialObject>().ChangeMat();
-                joieInterieur.GetComponent<SpecialObject>().ChangeMat();
-                decalsPorte[0].SetActive(true);
+                if (joie != null)
+                {
+                    joie.GetComponent<SpecialObject>().ChangeMat();
+                    joieHaut.GetComponent<SpecialObject>().ChangeMat();
+                    joieInterieur.GetComponent<SpecialObject>().ChangeMat();
+                    decalsPorte[0].SetActive(true);
+                    changed1 = true;
+                    old1 = false;
+                }
+            }
+
+        }
+        else if(nbLvlDone < 1)
+        {
+            if (old1 == false)
+            {
+                if (joie != null)
+                {
+                    joie.GetComponent<SpecialObject>().OldMat();
+                    joieHaut.GetComponent<SpecialObject>().OldMat();
+                    joieInterieur.GetComponent<SpecialObject>().OldMat();
+                    decalsPorte[0].SetActive(false);
+                    changed1 = false;
+                    old1 = true;
+                }
             }
         }
-        if (saveLvlDone >= 2)
+
+        if (nbLvlDone >= 2)
         {
-            if (incompehension != null)
+            if (changed2 == false)
             {
-                incompehension.GetComponent<SpecialObject>().ChangeMat();
-                decalsPorte[1].SetActive(true);
+                if (incompehension != null)
+                {
+                    incompehension.GetComponent<SpecialObject>().ChangeMat();
+                    decalsPorte[1].SetActive(true);
+                    changed2 = true;
+                    old2 = false;
+                }
             }
         }
-        if (saveLvlDone >= 3)
+        else if (nbLvlDone < 2)
         {
-            if (peur != null)
+            if (old2 == false)
             {
-                peur.GetComponent<SpecialObject>().ChangeMat();
-                decalsPorte[2].SetActive(true);
+                if (incompehension != null)
+                {
+                    incompehension.GetComponent<SpecialObject>().OldMat();
+                    decalsPorte[1].SetActive(false);
+                    old2 = true;
+                    changed2 = false;
+                }
+            }
+
+        }
+
+    
+        if (nbLvlDone >= 3)
+        {
+            if(changed3 == false)
+            {
+                if (peur != null)
+                {
+                    peur.GetComponent<SpecialObject>().ChangeMat();
+                    decalsPorte[2].SetActive(true);
+                    changed3 = true;
+                    old3 = false;
+                }
+            }
+        }    
+        else if (nbLvlDone < 3)
+        {
+            if (old3 == false)
+            {
+                if (peur != null)
+                {
+                    peur.GetComponent<SpecialObject>().OldMat();
+                    decalsPorte[2].SetActive(false);
+                    old3 = true;
+                    changed3 = false;
+                }
             }
         }
-        if (saveLvlDone >= 4)
+
+        if (nbLvlDone >= 4)
         {
-            if(culpabilite != null)
+            if(changed4 == false)
             {
-                culpabilite.GetComponent<SpecialObject>().ChangeMat();
-                decalsPorte[3].SetActive(true);
+                if (culpabilite != null)
+                {
+                    culpabilite.GetComponent<SpecialObject>().ChangeMat();
+                    decalsPorte[3].SetActive(true);
+                    changed4 = true;
+                    old4 = false;
+                }
             }
         }
-        if (saveLvlDone >= 5)
+        else if (nbLvlDone < 4)
         {
-            if (colere != null)
+            if (old4 == false)
             {
-                colere.GetComponent<SpecialObject>().ChangeMat();
-                decalsPorte[4].SetActive(true);
+                if (culpabilite != null)
+                {
+                    culpabilite.GetComponent<SpecialObject>().OldMat();
+                    decalsPorte[3].SetActive(false);
+                    old4 = true;
+                    changed4 = false;
+                }
             }
         }
-        if (saveLvlDone >= 6)
+
+        if (nbLvlDone >= 5)
         {
-            if (tristesse != null)
+            if(changed5 == false)
             {
-                tristesse.GetComponent<SpecialObject>().ChangeMat();
-                decalsPorte[5].SetActive(true);
-                saveLvlDone = 7;
+                if (colere != null)
+                {
+                    colere.GetComponent<SpecialObject>().ChangeMat();
+                    decalsPorte[4].SetActive(true);
+                    changed5 = true;
+                    old5 = false;
+                }
+            }
+        }
+        else if (nbLvlDone < 5)
+        {
+            if (old5 == false)
+            {
+                if (colere != null)
+                {
+                    colere.GetComponent<SpecialObject>().OldMat();
+                    decalsPorte[4].SetActive(false);
+                    old5 = true;
+                    changed5 = false;
+                }
+            }
+        }
+
+        if (nbLvlDone >= 6)
+        {
+            if(changed6 == false)
+            {
+                if (tristesse != null)
+                {
+                    tristesse.GetComponent<SpecialObject>().ChangeMat();
+                    decalsPorte[5].SetActive(true);
+                    saveLvlDone = 7;
+                    changed6 = true;
+                    old6 = true;
+                }
+            }
+        }
+        else if (nbLvlDone < 6)
+        {
+            if (old6 == false)
+            {
+                if (tristesse != null)
+                {
+                    tristesse.GetComponent<SpecialObject>().OldMat();
+                    decalsPorte[5].SetActive(false);
+                    old6 = true;
+                    changed6 = true;
+                }
             }
         }
 

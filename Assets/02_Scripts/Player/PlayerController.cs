@@ -5,8 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     //temp
-    bool billy;
-    bool dontGrowUp;
+    bool loading;
     //Movement
     public CharacterController controller;
     public GameObject menu3D;
@@ -37,12 +36,13 @@ public class PlayerController : MonoBehaviour
     public float distanceMax;
     public bool verifEnterScene;
     public int nbLvlDonePorte;
+
     private void Start()
     {
-        if (PlayerPrefs.HasKey("saved"))
+        if (PlayerPrefs.HasKey("saved") == true)
         {
-            Debug.Log("load");
-            LoadTransform();
+
+            StartCoroutine(LoadingButBetter());
         }
         speed = 3f;
         uiPorte.SetActive(false);
@@ -51,12 +51,18 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
-        Debug.Log(PlayerPrefs.GetInt("saved"));
         nbLvlDonePorte = menu3D.GetComponent<GameManager>().nbLvlDone;
         bool pause = menu3D.GetComponent<SceneAndUI>().pause;
         if(pause == false)
         {
+            if (PlayerPrefs.HasKey("saved") == true)
+            {
+                if (loading == false)
+                {
+                    StartCoroutine(LoadingButBetter());
+                }
+            }
+
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
             if (isGrounded == true && velocity.y < 0)
@@ -167,7 +173,7 @@ public class PlayerController : MonoBehaviour
                     {
                         if (pickedItem.GetComponent<SpecialObject>().nbObjet == menu3D.GetComponent<GameManager>().nbLvlDone + 1)
                         {
-                            Debug.Log("changescene");
+
                             string sceneToLoad = pickedItem.GetComponent<SpecialObject>().sceneToLoad;
                             menu3D.GetComponent<SceneAndUI>().ActiveScene(sceneToLoad);
                             StartCoroutine(SaveBeforeSceneChange());
@@ -188,15 +194,24 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator Grow()
     {
-        yield return new WaitForSeconds(0.2f);
-        transform.localScale = new Vector3(1, 1, 1);
+        float growFactor = 0.05f;
+        while (transform.localScale.x < 1)
+        {
+            transform.localScale = new Vector3(transform.localScale.x + growFactor, transform.localScale.y + growFactor, transform.localScale.z + growFactor);
+            yield return new WaitForSeconds(0.05f);
+        }
         controller.stepOffset = 0.2f;
         speed = 3f;
     }
     IEnumerator Ungrow()
     {
-        yield return new WaitForSeconds(0.2f);
-        transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        float growFactor = 0.05f;
+        while (transform.localScale.x > 0.1f)
+        {
+            transform.localScale = new Vector3(transform.localScale.x - growFactor, transform.localScale.y - growFactor, transform.localScale.z - growFactor);
+            yield return new WaitForSeconds(0.05f);
+        }
+        
         controller.stepOffset = 0.02f;
         speed = 1f;
     }
@@ -233,6 +248,10 @@ public class PlayerController : MonoBehaviour
         {
             PlayerPrefs.SetString("pickedItem", pickedItem.name);
         }
+        else
+        {
+            PlayerPrefs.DeleteKey("pickedItem");
+        }
         PlayerPrefs.SetInt("nbLvlDone", menu3D.GetComponent<GameManager>().nbLvlDone);
         PlayerPrefs.SetString("activeScene", menu3D.GetComponent<SceneAndUI>().activeScene);
         /*
@@ -258,6 +277,8 @@ public class PlayerController : MonoBehaviour
 
         menu3D.GetComponent<GameManager>().nbLvlDone = PlayerPrefs.GetInt("nbLvlDone");
         menu3D.GetComponent<SceneAndUI>().ActiveScene(PlayerPrefs.GetString("activeScene"));
+
+        loading = true;
         /*
         SaveData data = SavingSystem.LoadData();
         Debug.Log("Load");
@@ -281,5 +302,17 @@ public class PlayerController : MonoBehaviour
         string activeSceneName = data.scene;
         menu3D.GetComponent<SceneAndUI>().ActiveScene(activeSceneName);
         */
+    }
+
+    IEnumerator LoadingButBetter()
+    {
+        int repeatJustInCase = 0;
+        while (repeatJustInCase < 2)
+        {
+            LoadTransform();
+            yield return new WaitForSeconds(0.2f);
+            repeatJustInCase += 1;
+        }
+
     }
 }

@@ -28,4 +28,15 @@ public class SpecialObject : MonoBehaviour
             prtc.Stop();
         }
     }
+
+    public void OldMat()
+    {
+        this.gameObject.layer = 11;
+        if (activeMat == 1)
+        {
+            rnd.material = mats[0];
+            activeMat = 0;
+            prtc.Play();
+        }
+    }
 }
