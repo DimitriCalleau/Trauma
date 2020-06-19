@@ -14,9 +14,11 @@ public class Marteau : MonoBehaviour
     public float timingClosed;
     public int phase;
     public bool respawnOrNot;
+    public AudioSource bonk;
     // Start is called before the first frame update
     void Start()
     {
+        bonk.Play();
         kill.SetActive(true);
         block.isTrigger = false;
         timer = timingClosed;
@@ -35,6 +37,7 @@ public class Marteau : MonoBehaviour
         {
             if (phase == 0)
             {
+                bonk.Stop();
                 kill.SetActive(false);
                 block.isTrigger = true;
                 timer = timingOpen;
@@ -47,6 +50,7 @@ public class Marteau : MonoBehaviour
         {
             if (phase == 1)
             {
+                bonk.Play();
                 kill.SetActive(true);
                 block.isTrigger = false;
                 timer = timingClosed;

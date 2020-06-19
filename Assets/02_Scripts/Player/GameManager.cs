@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
             saveLvlDone = nbLvlDone;
         }
 
-        if(nbLvlDone >= 1)
+        if (nbLvlDone >= 1)
         {
             if(changed1 == false)
             {
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
             }
 
         }
-        else if(nbLvlDone < 1)
+        else if (nbLvlDone < 1)
         {
             if (old1 == false)
             {
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
                     joie.GetComponent<SpecialObject>().OldMat();
                     joieHaut.GetComponent<SpecialObject>().OldMat();
                     joieInterieur.GetComponent<SpecialObject>().OldMat();
-                    decalsPorte[0].SetActive(false);
+                    decalsPorte[6].SetActive(false);
                     changed1 = false;
                     old1 = true;
                 }
@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
                 if (incompehension != null)
                 {
                     incompehension.GetComponent<SpecialObject>().OldMat();
-                    decalsPorte[1].SetActive(false);
+                    decalsPorte[7].SetActive(false);
                     old2 = true;
                     changed2 = false;
                 }
@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
                 if (peur != null)
                 {
                     peur.GetComponent<SpecialObject>().OldMat();
-                    decalsPorte[2].SetActive(false);
+                    decalsPorte[8].SetActive(false);
                     old3 = true;
                     changed3 = false;
                 }
@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour
                 if (culpabilite != null)
                 {
                     culpabilite.GetComponent<SpecialObject>().OldMat();
-                    decalsPorte[3].SetActive(false);
+                    decalsPorte[9].SetActive(false);
                     old4 = true;
                     changed4 = false;
                 }
@@ -184,7 +184,7 @@ public class GameManager : MonoBehaviour
                 if (colere != null)
                 {
                     colere.GetComponent<SpecialObject>().OldMat();
-                    decalsPorte[4].SetActive(false);
+                    decalsPorte[10].SetActive(false);
                     old5 = true;
                     changed5 = false;
                 }
@@ -212,7 +212,7 @@ public class GameManager : MonoBehaviour
                 if (tristesse != null)
                 {
                     tristesse.GetComponent<SpecialObject>().OldMat();
-                    decalsPorte[5].SetActive(false);
+                    decalsPorte[11].SetActive(false);
                     old6 = true;
                     changed6 = true;
                 }
