@@ -38,7 +38,11 @@ public class SceneAndUI : MonoBehaviour
         }
         isPaused = false;
         pausePanel.SetActive(false);
-        endPanel.SetActive(false);
+        if (endPanel != null)
+        {
+            endPanel.SetActive(false);
+        }
+
     }
 
     private void Update()
