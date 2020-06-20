@@ -53,45 +53,73 @@ public class PlayerController : MonoBehaviour
     {
         nbLvlDonePorte = menu3D.GetComponent<GameManager>().nbLvlDone;
         bool pause = menu3D.GetComponent<SceneAndUI>().pause;
-        if(pause == false)
+        bool end = menu3D.GetComponent<SceneAndUI>().end;
+        if(end == false)
         {
-            if (PlayerPrefs.HasKey("saved") == true)
+            if (pause == false)
             {
-                if (loading == false)
+                if (PlayerPrefs.HasKey("saved") == true)
                 {
-                    StartCoroutine(LoadingButBetter());
-                }
-            }
-
-            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-            if (isGrounded == true && velocity.y < 0)
-            {
-                velocity.y = -2f;
-            }
-
-            float x = Input.GetAxis("Horizontal");
-            float z = Input.GetAxis("Vertical");
-
-            Vector3 move = transform.right * x + transform.forward * z;
-            velocity.y -= gravity * Time.deltaTime;
-
-            controller.Move(move * speed * Time.deltaTime);
-            controller.Move(velocity * Time.deltaTime);
-
-            //Pickup
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.transform.gameObject.tag.Equals("Pickable"))
-                {
-                    selectedItem = hit.transform.gameObject;
-                    if (Vector3.Distance(transform.position, selectedItem.transform.position) < distanceMax)
+                    if (loading == false)
                     {
-                        if (isHolding == false)
+                        StartCoroutine(LoadingButBetter());
+                    }
+                }
+
+                isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+                if (isGrounded == true && velocity.y < 0)
+                {
+                    velocity.y = -2f;
+                }
+
+                float x = Input.GetAxis("Horizontal");
+                float z = Input.GetAxis("Vertical");
+
+                Vector3 move = transform.right * x + transform.forward * z;
+                velocity.y -= gravity * Time.deltaTime;
+
+                controller.Move(move * speed * Time.deltaTime);
+                controller.Move(velocity * Time.deltaTime);
+
+                //Pickup
+                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if (hit.transform.gameObject.tag.Equals("Fin"))
+                    {
+                        GameObject tableau;
+                        tableau = hit.transform.gameObject;
+                        if (Vector3.Distance(transform.position, tableau.transform.position) < distanceMax)
                         {
                             uiGrab.SetActive(true);
+
+                            if (Input.GetButtonDown("Interact"))
+                            {
+                                menu3D.GetComponent<SceneAndUI>().End();
+                                uiGrab.SetActive(false);
+                            }
+                        }
+                        else
+                        {
+                            uiGrab.SetActive(false);
+                        }
+                    }
+
+                    if (hit.transform.gameObject.tag.Equals("Pickable"))
+                    {
+                        selectedItem = hit.transform.gameObject;
+                        if (Vector3.Distance(transform.position, selectedItem.transform.position) < distanceMax)
+                        {
+                            if (isHolding == false)
+                            {
+                                uiGrab.SetActive(true);
+                            }
+                            else
+                            {
+                                uiGrab.SetActive(false);
+                            }
                         }
                         else
                         {
@@ -100,24 +128,23 @@ public class PlayerController : MonoBehaviour
                     }
                     else
                     {
+                        selectedItem = null;
                         uiGrab.SetActive(false);
                     }
-                }
-                else
-                {
-                    selectedItem = null;
-                    uiGrab.SetActive(false);
-                }
 
-                if (hit.transform.gameObject.tag.Equals("Porte"))
-                {
-                    if(hit.distance <= 1.5)
+                    if (hit.transform.gameObject.tag.Equals("Porte"))
                     {
-                        uiPorte.SetActive(true);
-                        if (Input.GetButtonDown("Interact"))
+                        if (hit.distance <= 1.5)
                         {
-                            hit.transform.gameObject.GetComponent<Overture_Porte>().Open();
-                        
+                            uiPorte.SetActive(true);
+                            if (Input.GetButtonDown("Interact"))
+                            {
+                                hit.transform.gameObject.GetComponent<Overture_Porte>().Open();
+                            }
+                        }
+                        else
+                        {
+                            uiPorte.SetActive(false);
                         }
                     }
                     else
@@ -125,61 +152,67 @@ public class PlayerController : MonoBehaviour
                         uiPorte.SetActive(false);
                     }
                 }
-                else
+                if (holdingTimer > 0)
                 {
-                    uiPorte.SetActive(false);
+                    holdingTimer -= Time.deltaTime;
                 }
-            }
-            if (holdingTimer > 0)
-            {
-                holdingTimer -= Time.deltaTime;
-            }
-            if (selectedItem != null)
-            {
-                distance = Vector3.Distance(selectedItem.transform.position, transform.position);
-
-                if (distance <= distanceMax)
+                if (selectedItem != null)
                 {
-                    if (isHolding == false)
+                    distance = Vector3.Distance(selectedItem.transform.position, transform.position);
+
+                    if (distance <= distanceMax)
                     {
-                        if (Input.GetButtonDown("Interact"))
+                        if (isHolding == false)
                         {
-                            pickedItem = selectedItem;
-                            uiGrab.SetActive(false);
-                            pickedItem.transform.SetParent(tempParent.transform);
-                            pickedItem.GetComponent<Rigidbody>().isKinematic = true;
-                            pickedItem.transform.position = tempParent.transform.position;
-                            holdingTimer = holdingWait;
-                            isHolding = true;
+                            if (Input.GetButtonDown("Interact"))
+                            {
+                                pickedItem = selectedItem;
+                                uiGrab.SetActive(false);
+                                pickedItem.transform.SetParent(tempParent.transform);
+                                pickedItem.GetComponent<Rigidbody>().isKinematic = true;
+                                pickedItem.transform.position = tempParent.transform.position;
+                                holdingTimer = holdingWait;
+                                isHolding = true;
+                            }
                         }
                     }
                 }
-            }
-            if (isHolding == true)
-            {
-                if (Input.GetButton("Interact") && holdingTimer <= 0)
+                if (isHolding == true)
                 {
-                    pickedItem.GetComponent<Rigidbody>().isKinematic = false;
-                    pickedItem.transform.SetParent(null);
-                    isHolding = false;
-                    pickedItem = null;
-                }
-            }
-            if (pickedItem != null)
-            {
-                if (pickedItem.layer.ToString() == "11")
-                {
-                    if(verifEnterScene == false)
+                    if (Input.GetButton("Interact") && holdingTimer <= 0)
                     {
-                        if (pickedItem.GetComponent<SpecialObject>().nbObjet == menu3D.GetComponent<GameManager>().nbLvlDone + 1)
+                        pickedItem.GetComponent<Rigidbody>().isKinematic = false;
+                        pickedItem.transform.SetParent(null);
+                        isHolding = false;
+                        pickedItem = null;
+                    }
+                }
+                if (pickedItem != null)
+                {
+                    if (pickedItem.layer.ToString() == "11")
+                    {
+                        if (verifEnterScene == false)
                         {
+                            if (pickedItem.GetComponent<SpecialObject>().nbObjet == menu3D.GetComponent<GameManager>().nbLvlDone + 1)
+                            {
 
-                            string sceneToLoad = pickedItem.GetComponent<SpecialObject>().sceneToLoad;
-                            menu3D.GetComponent<SceneAndUI>().ActiveScene(sceneToLoad);
-                            StartCoroutine(SaveBeforeSceneChange());
-                            SaveTransform();
-                            verifEnterScene = true;
-                            menu3D.GetComponent<SceneAndUI>().SceneLoader(sceneToLoad);
+                                string sceneToLoad = pickedItem.GetComponent<SpecialObject>().sceneToLoad;
+                                menu3D.GetComponent<SceneAndUI>().ActiveScene(sceneToLoad);
+                                StartCoroutine(SaveBeforeSceneChange());
+                                SaveTransform();
+                                if (menu3D.GetComponent<GameManager>().nbLvlDone == 2)
+                                {
+                                    SaveBureau();
+                                    verifEnterScene = true;
+                                    menu3D.GetComponent<SceneAndUI>().SceneLoader(sceneToLoad);
+                                }
+                                else
+                                {
+                                    SaveTransform();
+                                    verifEnterScene = true;
+                                    menu3D.GetComponent<SceneAndUI>().SceneLoader(sceneToLoad);
+                                }
+                            }
                         }
                     }
                 }
@@ -242,7 +275,7 @@ public class PlayerController : MonoBehaviour
     {
         PlayerPrefs.SetInt("saved", 1);
         PlayerPrefs.SetFloat("positionX", transform.position.x);
-        PlayerPrefs.SetFloat("positionY", transform.position.y + 1);
+        PlayerPrefs.SetFloat("positionY", transform.position.y);
         PlayerPrefs.SetFloat("positionZ", transform.position.z);
         if(pickedItem != null)
         {
@@ -257,6 +290,23 @@ public class PlayerController : MonoBehaviour
         /*
         Debug.Log("Save");
         SavingSystem.SaveData(this, menu3D.GetComponent<GameManager>(), menu3D.GetComponent<SceneAndUI>());*/
+    }
+    public void SaveBureau()
+    {
+        PlayerPrefs.SetInt("saved", 1);
+        PlayerPrefs.SetFloat("positionX", transform.position.x);
+        PlayerPrefs.SetFloat("positionY", transform.position.y + 0.5f);
+        PlayerPrefs.SetFloat("positionZ", transform.position.z + 2);
+        if(pickedItem != null)
+        {
+            PlayerPrefs.SetString("pickedItem", pickedItem.name);
+        }
+        else
+        {
+            PlayerPrefs.DeleteKey("pickedItem");
+        }
+        PlayerPrefs.SetInt("nbLvlDone", menu3D.GetComponent<GameManager>().nbLvlDone);
+        PlayerPrefs.SetString("activeScene", menu3D.GetComponent<SceneAndUI>().activeScene);
     }
     public void LoadTransform()
     {
