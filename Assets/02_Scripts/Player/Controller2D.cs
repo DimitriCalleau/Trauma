@@ -111,6 +111,7 @@ public class Controller2D : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         LoadInfos();
         mvtSpeed = startSpeed;
         rb = GetComponent<Rigidbody2D>();

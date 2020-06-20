@@ -11,10 +11,12 @@ public class SceneAndUI : MonoBehaviour
 
     //Ui
     public bool pause;
+    public bool end;
     private bool isPaused;
     static private bool hasStarted;
     public GameObject pausePanel;
     public GameObject startPanel;
+    public GameObject endPanel;
     public GameObject player;
 
     public GameObject[] Checkpoints;
@@ -36,6 +38,7 @@ public class SceneAndUI : MonoBehaviour
         }
         isPaused = false;
         pausePanel.SetActive(false);
+        endPanel.SetActive(false);
     }
 
     private void Update()
@@ -44,7 +47,7 @@ public class SceneAndUI : MonoBehaviour
         {
             pause = !pause;
         }
-        if(pause == true)
+        if (pause == true)
         {
             if (Cursor.lockState == CursorLockMode.Locked)
             {
@@ -120,6 +123,20 @@ public class SceneAndUI : MonoBehaviour
         pause = false;
     }
 
+    public void End()
+    {
+        end = true;
+        endPanel.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void Continue()
+    {
+        end = false;
+        endPanel.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     public void Quit()
     {
         Application.Quit();
@@ -132,11 +149,5 @@ public class SceneAndUI : MonoBehaviour
     public void Load()
     {
         player.GetComponent<PlayerController>().LoadTransform();
-    }
-
-
-    public void End()
-    {
-        player.transform.position = new Vector3(6, 1f, 0);
     }
 }
