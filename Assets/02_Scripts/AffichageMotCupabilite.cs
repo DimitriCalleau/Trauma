@@ -200,7 +200,7 @@ public class AffichageMotCupabilite : MonoBehaviour
     public void FinishCulpabilite()
     {
         StartCoroutine(philipe());
-        player.GetComponent<Controller2D>().mvtSpeed = 0.3f;
+        player.GetComponent<Controller2D>().mvtSpeed = 0.02f;
         for (int i =0; i <= 12; i++)
         {
             //spawnPoints[i].transform.position = Vector3.Lerp(spawnPoints[i].transform.position, player.transform.position, smooth);

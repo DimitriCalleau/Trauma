@@ -98,16 +98,14 @@ public class Controller2D : MonoBehaviour
     public Transform positionLightBougie3;
     public Transform positionLightBougie4;
 
-    /*public GameObject lightBougie;
-    public ParticleSystem lightBougieAlpha;
-    public ParticleSystem lightBougieAdd;
-    public ParticleSystem lightBougieSparks;*/
+    public GameObject lightBougie;
     public GameObject fire;
+    public AudioSource fireSound;
 
     //Cire FX
     public ParticleSystem cireCreationGoutte;
 
-    public AudioSource fireSound;
+
 
     void Start()
     {
@@ -268,14 +266,54 @@ public class Controller2D : MonoBehaviour
                         Anm.SetBool("Jump", true);
                         isJumping = true;
                     }
-                    if (rb.velocity.y >= 0) //verif quil saute et pas tombe
-                    {
 
-                    }
                 }
 
                 if (menu2D.GetComponent<GameManager>().nbLvlDone == 5)
                 {
+                    bool lit = true;
+                    if (Input.GetKeyDown(KeyCode.A))
+                    {
+                        if(lit == true)
+                        {
+                            if(fire != null)
+                            {
+                                fire.SetActive(false);
+                            }
+
+                            if (lightBougie != null)
+                            {
+                                lightBougie.SetActive(false);
+                            }
+
+                            if(fireSound != null)
+                            {
+                                fireSound.Stop();
+                            }
+
+                            lit = false;
+                        }
+                        else
+                        {
+                            if (fire != null)
+                            {
+                                fire.SetActive(true);
+                            }
+
+                            if (lightBougie != null)
+                            {
+                                lightBougie.SetActive(true);
+                            }
+
+                            if (fireSound != null)
+                            {
+                                fireSound.Stop();
+                            }
+
+                            lit = true;
+                        }
+                    } //allumer/eteindre
+
                     ratioAvancement = endingPosition.GetComponent<PourcentageNiveau>().ratio;
                     if (ratioAvancement < tristesseChangeAnim1)
                     {

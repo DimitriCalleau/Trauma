@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     GameObject selectedItem;
     public GameObject pickedItem;
     public GameObject tempParent;
+    public AudioSource grab;
 
     //UI
     public GameObject uiPorte;
@@ -167,6 +168,7 @@ public class PlayerController : MonoBehaviour
                             if (Input.GetButtonDown("Interact"))
                             {
                                 pickedItem = selectedItem;
+                                grab.Play();
                                 uiGrab.SetActive(false);
                                 pickedItem.transform.SetParent(tempParent.transform);
                                 pickedItem.GetComponent<Rigidbody>().isKinematic = true;

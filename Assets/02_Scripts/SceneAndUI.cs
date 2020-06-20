@@ -114,6 +114,11 @@ public class SceneAndUI : MonoBehaviour
         }
         isPaused = false;
         pausePanel.SetActive(false);
+        if(end == true)
+        {
+            end = false;
+            endPanel.SetActive(false);
+        }
     }
 
     public void Recommencer()
