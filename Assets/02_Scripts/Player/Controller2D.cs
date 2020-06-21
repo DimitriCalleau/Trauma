@@ -88,7 +88,7 @@ public class Controller2D : MonoBehaviour
     public Animator Anim1;
     public Animator Anim2;
     public Animator Anim3;
-    public Animator Anim4;
+    public GameObject Anim4;
 
     public GameObject endingPosition;
 
@@ -97,6 +97,9 @@ public class Controller2D : MonoBehaviour
     public Transform positionLightBougie2;
     public Transform positionLightBougie3;
     public Transform positionLightBougie4;
+    public Transform positionCire1;
+    public Transform positionCire2;
+    public Transform positionCire3;
 
     public GameObject lightBougie;
     public GameObject fire;
@@ -104,6 +107,7 @@ public class Controller2D : MonoBehaviour
 
     //Cire FX
     public ParticleSystem cireCreationGoutte;
+    public GameObject cire;
 
 
 
@@ -166,11 +170,28 @@ public class Controller2D : MonoBehaviour
 
                 if (h > 0)
                 {
-                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                    if(menu2D.GetComponent<GameManager>().nbLvlDone == 5)
+                    {
+                        transform.rotation = Quaternion.Euler(0, 180, 0);
+                        fire.transform.position = new Vector3(fire.transform.position.x, fire.transform.position.y, -0.4f);
+                    }
+                    else
+                    {
+                        transform.rotation = Quaternion.Euler(0, 0, 0);
+                    }
                 }
                 if (h < 0)
                 {
-                    transform.rotation = Quaternion.Euler(0, 180, 0);
+
+                    if (menu2D.GetComponent<GameManager>().nbLvlDone == 5)
+                    {
+                        transform.rotation = Quaternion.Euler(0, 0, 0);
+                        fire.transform.position = new Vector3(fire.transform.position.x, fire.transform.position.y, 0.4f);
+                    }
+                    else
+                    {
+                        transform.rotation = Quaternion.Euler(0, 180, 0);
+                    }
                 }
                 if (h != 0)
                 {
@@ -319,7 +340,8 @@ public class Controller2D : MonoBehaviour
                     {
                         if (positionLightBougie1 != null)
                         {
-                            fire.transform.position = positionLightBougie1.position;
+                            fire.transform.position = new Vector3(positionLightBougie1.position.x, positionLightBougie1.position.y, fire.transform.position.z);
+                            cire.transform.position = positionCire1.transform.position;
                         }
                     }
                     if (ratioAvancement >= tristesseChangeAnim1)
@@ -329,6 +351,7 @@ public class Controller2D : MonoBehaviour
                             Anim2.gameObject.SetActive(true);
                             Anm = Anim2;
                             Anim1.gameObject.SetActive(false);
+                            Anm.SetBool("Walk", true);
                             animChanged1 = true;
 
                             var emissionCire = cireCreationGoutte.GetComponent<ParticleSystem>().emission;
@@ -336,7 +359,8 @@ public class Controller2D : MonoBehaviour
                         }
                         if (positionLightBougie2 != null)
                         {
-                            fire.transform.position = positionLightBougie2.position;
+                            fire.transform.position = new Vector3(positionLightBougie2.position.x, positionLightBougie2.position.y, fire.transform.position.z);
+                            cire.transform.position = positionCire2.transform.position;
                         }
                     }
                     if (ratioAvancement >= tristesseChangeAnim2)
@@ -346,6 +370,7 @@ public class Controller2D : MonoBehaviour
                             Anim3.gameObject.SetActive(true);
                             Anm = Anim3;
                             Anim2.gameObject.SetActive(false);
+                            Anm.SetBool("Walk", true);
                             animChanged2 = true;
 
                             var emissionCire = cireCreationGoutte.GetComponent<ParticleSystem>().emission;
@@ -353,7 +378,8 @@ public class Controller2D : MonoBehaviour
                         }
                         if (positionLightBougie3 != null)
                         {
-                            fire.transform.position = positionLightBougie3.position;
+                            fire.transform.position = new Vector3(positionLightBougie3.position.x, positionLightBougie3.position.y, fire.transform.position.z);
+                            cire.transform.position = positionCire3.transform.position;
                         }
 
                         
@@ -554,47 +580,27 @@ public class Controller2D : MonoBehaviour
         finTristesse = true;
         float taille = 0;
         float ratioReduc = 0.005f;
-        /*
-        var shapeAlpha = lightBougieAlpha.GetComponent<ParticleSystem>().shape;
-        var shapeAdd = lightBougieAdd.GetComponent<ParticleSystem>().shape;
-        var shapeSparks = lightBougieSparks.GetComponent<ParticleSystem>().shape;
-        */
+
+        Anm.SetBool("Fonte", true);
+        yield return new WaitForSeconds(2);
+
         Anim4.gameObject.SetActive(true);
-        Anm = Anim4;
+        Anm = null;
         Anim3.gameObject.SetActive(false);
 
         cireCreationGoutte.Stop();
+        cire.SetActive(false);
 
         if (positionLightBougie4 != null)
         {
-            fire.transform.position = positionLightBougie4.position;
+            fire.transform.position = new Vector3(positionLightBougie4.position.x, positionLightBougie4.position.y, fire.transform.position.z);
         }
-
-        //Tentative de Reduction du feu
 
         while (taille <= 0.95)
         {
             fire.GetComponent<MeshRenderer>().material.SetFloat("_Flame_Opacity", taille);
             taille += ratioReduc;
             yield return new WaitForSeconds(0.01f);
-            /*
-            var lightBougieAddSize = lightBougieAdd.main.startSize;
-            var lightBougieAlphaSize = lightBougieAlpha.main.startSize;
-            var lightBougieSparksSpeed = lightBougieSparks.main.startSpeed;
-            var lightBougieAddLF = lightBougieAdd.main.startLifetime;
-            var lightBougieAlphaLF = lightBougieAlpha.main.startLifetime;
-            var lightBougieSparksLF = lightBougieSparks.main.startLifetime;
-
-            lightBougieAddSize.constant -= ratioReduc;
-            lightBougieAddLF.constantMin -= ratioReduc;
-            lightBougieAddLF.constantMax -= ratioReduc;
-            lightBougieAlphaSize.constant -= ratioReduc;
-            lightBougieAlphaLF.constantMin -= ratioReduc;
-            lightBougieAlphaLF.constantMax -= ratioReduc;
-            lightBougieSparksSpeed.constant -= ratioReduc;
-            lightBougieSparksLF.constantMin -= ratioReduc;
-            lightBougieSparksLF.constantMax -= ratioReduc;
-            */
         }
 
         if(taille >= 0.95)
