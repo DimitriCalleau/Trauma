@@ -51,32 +51,44 @@ public class SceneAndUI : MonoBehaviour
         {
             pause = !pause;
         }
-        if (pause == true)
+        if(end == false)
+        {
+            if (pause == true)
+            {
+                if (Cursor.lockState == CursorLockMode.Locked)
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                }
+                if (isPaused == false)
+                {
+                    pausePanel.SetActive(true);
+                    isPaused = true;
+                }
+            }
+            else
+            {
+                if (Cursor.lockState == CursorLockMode.None)
+                {
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
+                }
+                if (isPaused == true)
+                {
+                    pausePanel.SetActive(false);
+                    isPaused = false;
+                }
+            }
+        }
+        else
         {
             if (Cursor.lockState == CursorLockMode.Locked)
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
-            if (isPaused == false)
-            {
-                pausePanel.SetActive(true);
-                isPaused = true;
-            }
         }
-        else
-        {
-            if (Cursor.lockState == CursorLockMode.None)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-            }
-            if (isPaused == true)
-            {
-                pausePanel.SetActive(false);
-                isPaused = false;
-            }
-        }
+
     }
 
     public void SceneLoader(string sceneName)
@@ -120,6 +132,9 @@ public class SceneAndUI : MonoBehaviour
         {
             end = false;
             endPanel.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            pause = true;
         }
     }
 

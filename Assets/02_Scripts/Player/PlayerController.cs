@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     //UI
     public GameObject uiPorte;
     public GameObject uiGrab;
+    public GameObject uiTableau;
     float distancesSelection;
 
     float holdingTimer;
@@ -48,6 +49,7 @@ public class PlayerController : MonoBehaviour
         speed = 3f;
         uiPorte.SetActive(false);
         uiGrab.SetActive(false);
+        uiTableau.SetActive(false);
     }
 
     void Update()
@@ -90,22 +92,32 @@ public class PlayerController : MonoBehaviour
                 {
                     if (hit.transform.gameObject.tag.Equals("Fin"))
                     {
+                        bool test = false;
                         GameObject tableau;
                         tableau = hit.transform.gameObject;
                         if (Vector3.Distance(transform.position, tableau.transform.position) < distanceMax)
                         {
-                            Debug.Log("Tableau");
-                            uiGrab.SetActive(true);
+                            if(test == false)
+                            {
+                                uiTableau.SetActive(true);
+                                test = true;
+                            }
+
 
                             if (Input.GetButtonDown("Interact"))
                             {
                                 menu3D.GetComponent<SceneAndUI>().End();
-                                uiGrab.SetActive(false);
+                                uiTableau.SetActive(false);
+                                test = false;
                             }
                         }
                         else
                         {
-                            uiGrab.SetActive(false);
+                            if(test == true)
+                            {
+                                uiTableau.SetActive(false);
+                                test = false;
+                            }
                         }
                     }
 

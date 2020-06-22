@@ -7,7 +7,6 @@ public class Overture_Porte : MonoBehaviour
     public GameObject menu;
 
     bool opened;
-    public bool chambreViolet;
     public Animator animator;
     public AudioSource soundOuvrir;
     public AudioSource soundFermer;
@@ -15,8 +14,6 @@ public class Overture_Porte : MonoBehaviour
     //PorteViolet;
     public AudioSource soundLock;
     public GameObject Porte;
-    public Material MatNoir;
-    public Material MatPorte;
 
     // Start is called before the first frame update
     void Start()
@@ -34,24 +31,6 @@ public class Overture_Porte : MonoBehaviour
         else
         {
             NblvlDone = 0;
-        }
-
-        if (chambreViolet == true)
-        {
-            if(NblvlDone < 6)
-            {
-                if (Porte.transform.GetComponent<MeshRenderer>().material != MatNoir)
-                {
-                    Porte.transform.GetComponent<MeshRenderer>().material = MatNoir;
-                }
-            }
-            else
-            {
-                if (Porte.transform.GetComponent<MeshRenderer>().material != MatPorte)
-                {
-                    Porte.transform.GetComponent<MeshRenderer>().material = MatPorte;
-                }
-            }
         }
 
     }
