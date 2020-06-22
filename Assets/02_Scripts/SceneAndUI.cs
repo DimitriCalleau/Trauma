@@ -56,6 +56,7 @@ public class SceneAndUI : MonoBehaviour
             if (Cursor.lockState == CursorLockMode.Locked)
             {
                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
             if (isPaused == false)
             {
@@ -68,6 +69,7 @@ public class SceneAndUI : MonoBehaviour
             if (Cursor.lockState == CursorLockMode.None)
             {
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
             if (isPaused == true)
             {
@@ -137,6 +139,7 @@ public class SceneAndUI : MonoBehaviour
         end = true;
         endPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void Continue()
@@ -144,6 +147,7 @@ public class SceneAndUI : MonoBehaviour
         end = false;
         endPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void Quit()

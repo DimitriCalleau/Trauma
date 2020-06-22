@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
                         tableau = hit.transform.gameObject;
                         if (Vector3.Distance(transform.position, tableau.transform.position) < distanceMax)
                         {
+                            Debug.Log("Tableau");
                             uiGrab.SetActive(true);
 
                             if (Input.GetButtonDown("Interact"))
