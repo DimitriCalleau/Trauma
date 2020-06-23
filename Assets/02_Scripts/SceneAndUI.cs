@@ -19,6 +19,12 @@ public class SceneAndUI : MonoBehaviour
     public GameObject endPanel;
     public GameObject player;
 
+    //Affichage texte de mort
+    public GameObject[] texteHistoire;
+    bool text1;
+    bool text2;
+    bool text3;
+
     public GameObject[] Checkpoints;
     public int nbCheckpoints = 0;
 
@@ -105,7 +111,6 @@ public class SceneAndUI : MonoBehaviour
     public void Retry()
     {
         player.transform.position = Checkpoints[nbCheckpoints].gameObject.transform.position;
-        //SceneManager.LoadScene(activeScene);
     }
 
     public void Play()

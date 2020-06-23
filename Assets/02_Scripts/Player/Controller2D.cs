@@ -160,6 +160,10 @@ public class Controller2D : MonoBehaviour
         {
             if(finTristesse == false)
             {
+                if(endingPosition != null)
+                {
+                    ratioAvancement = endingPosition.GetComponent<PourcentageNiveau>().ratio;
+                }
                 if (Input.GetKey(KeyCode.M))
                 {
                     FinishLevel();
@@ -335,7 +339,6 @@ public class Controller2D : MonoBehaviour
                         }
                     } //allumer/eteindre
 
-                    ratioAvancement = endingPosition.GetComponent<PourcentageNiveau>().ratio;
                     if (ratioAvancement < tristesseChangeAnim1)
                     {
                         if (positionLightBougie1 != null)
