@@ -1,0 +1,763 @@
+fileFormatVersion: 2
+guid: 81b52eb32e814b4409c895065eb7aef3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2695136332502519623
+    second: Tristesse_rochers_0
+  - first:
+      213: -5675255315604479177
+    second: Tristesse_rochers_1
+  - first:
+      213: -3114181995527350368
+    second: Tristesse_rochers_2
+  - first:
+      213: 8124198697410418658
+    second: Tristesse_rochers_3
+  - first:
+      213: 4347892746921956422
+    second: Tristesse_rochers_4
+  - first:
+      213: 8967752236167176073
+    second: Tristesse_rochers_5
+  - first:
+      213: -7990285392703053619
+    second: Tristesse_rochers_6
+  - first:
+      213: -763751314754984616
+    second: Tristesse_rochers_7
+  - first:
+      213: -2148984940099464518
+    second: Tristesse_rochers_8
+  - first:
+      213: -1993267255884424654
+    second: Tristesse_rochers_9
+  - first:
+      213: 614673101959401481
+    second: Tristesse_rochers_10
+  - first:
+      213: 4787370502188839119
+    second: Tristesse_rochers_11
+  - first:
+      213: 2818513966337362941
+    second: Tristesse_rochers_12
+  - first:
+      213: -8451027630988479209
+    second: Tristesse_rochers_13
+  - first:
+      213: 1676564009353530043
+    second: Tristesse_rochers_14
+  - first:
+      213: 5169220216277463528
+    second: Tristesse_rochers_15
+  - first:
+      213: 7052934612368055054
+    second: Tristesse_rochers_16
+  - first:
+      213: -633820125412011068
+    second: Tristesse_rochers_17
+  - first:
+      213: 6246393311136347588
+    second: Tristesse_rochers_18
+  - first:
+      213: -6238275037584106350
+    second: Tristesse_rochers_19
+  - first:
+      213: -4068156519248949841
+    second: Tristesse_rochers_20
+  - first:
+      213: -6871886557003111920
+    second: Tristesse_rochers_21
+  - first:
+      213: 9150387836792605573
+    second: Tristesse_rochers_22
+  - first:
+      213: 4599496973312858894
+    second: Tristesse_rochers_23
+  - first:
+      213: 2589282618878392707
+    second: Tristesse_rochers_24
+  - first:
+      213: 6878091632895204341
+    second: Tristesse_rochers_25
+  - first:
+      213: 8626807258936250452
+    second: Tristesse_rochers_26
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tristesse_rochers_0
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 2283
+        width: 1471
+        height: 741
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ff30df0121ee3448d97aaa083883fb
+      internalID: 2695136332502519623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_1
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 2286
+        width: 1469
+        height: 741
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7658be90f579141b7e1f639454be12
+      internalID: -5675255315604479177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_2
+      rect:
+        serializedVersion: 2
+        x: 3544
+        y: 2305
+        width: 1689
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38de4fb8fd1b85498c538d1892ae1cb
+      internalID: -3114181995527350368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_3
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 1457
+        width: 1426
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672b8018793ea3a41ad27d8d9434aaf7
+      internalID: 8124198697410418658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_4
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 1456
+        width: 1426
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93974fafa0f27494ba6a135ab2251662
+      internalID: 4347892746921956422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_5
+      rect:
+        serializedVersion: 2
+        x: 3801
+        y: 1726
+        width: 916
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf6bfb8955b7e84cad8d19505670783
+      internalID: 8967752236167176073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_6
+      rect:
+        serializedVersion: 2
+        x: 4803
+        y: 1719
+        width: 516
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a73e23efdbdd446900c1bfccd56e93
+      internalID: -7990285392703053619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_7
+      rect:
+        serializedVersion: 2
+        x: 5049
+        y: 1681
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacc72511bd5ca2408d0a69926847ec1
+      internalID: -763751314754984616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_8
+      rect:
+        serializedVersion: 2
+        x: 5068
+        y: 1681
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bec99423533c384fa7c6755ec720f94
+      internalID: -2148984940099464518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_9
+      rect:
+        serializedVersion: 2
+        x: 5088
+        y: 1680
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cda91d675e5b948ace1b795b54b4dc
+      internalID: -1993267255884424654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_10
+      rect:
+        serializedVersion: 2
+        x: 5096
+        y: 1680
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c5b46b9e2e9e874fa014c8c490bef7c
+      internalID: 614673101959401481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_11
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 1443
+        width: 88
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29a6d09b09c7504fbeff8c863c20df3
+      internalID: 4787370502188839119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_12
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 1454
+        width: 78
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06aeddb755f771f4998cff54b10e1ca8
+      internalID: 2818513966337362941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_13
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 1443
+        width: 89
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d30b0d668d35f4887dee91bf6c6b07
+      internalID: -8451027630988479209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_14
+      rect:
+        serializedVersion: 2
+        x: 3229
+        y: 1454
+        width: 78
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5cc05a840ba854fb9879902aa262bd
+      internalID: 1676564009353530043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_15
+      rect:
+        serializedVersion: 2
+        x: 4129
+        y: 1379
+        width: 894
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abcb8ad103126a143b27be81881c41e2
+      internalID: 5169220216277463528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_16
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 855
+        width: 372
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e44de4401142546b932f8338e1f7fa
+      internalID: 7052934612368055054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_17
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 852
+        width: 301
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c78e8751a128ef4db41c5fc9e1d3a39
+      internalID: -633820125412011068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_18
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 834
+        width: 309
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3367f7dc95c87b44b51ac46efc73213
+      internalID: 6246393311136347588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_19
+      rect:
+        serializedVersion: 2
+        x: 1846
+        y: 812
+        width: 288
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b56628617d9af419f47ccb17fff3cd
+      internalID: -6238275037584106350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_20
+      rect:
+        serializedVersion: 2
+        x: 3313
+        y: 772
+        width: 915
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d1377f1445aa349a21f3ef03ed157e
+      internalID: -4068156519248949841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_21
+      rect:
+        serializedVersion: 2
+        x: 4315
+        y: 764
+        width: 515
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37549906d71d9a4a91b0ab90239ee78
+      internalID: -6871886557003111920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_22
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 369
+        width: 276
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 966b7e559547b7d43a5acd122e9cbd8d
+      internalID: 9150387836792605573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_23
+      rect:
+        serializedVersion: 2
+        x: 1846
+        y: 377
+        width: 301
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d592ebd6bdf00bc4c8f478900456b324
+      internalID: 4599496973312858894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_24
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 334
+        width: 295
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2897f08616f857a409883ab4835d9ee5
+      internalID: 2589282618878392707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_25
+      rect:
+        serializedVersion: 2
+        x: 2641
+        y: 361
+        width: 331
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cfbf7bdd2184324889a607317f32c0a
+      internalID: 6878091632895204341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_rochers_26
+      rect:
+        serializedVersion: 2
+        x: 3646
+        y: 439
+        width: 894
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf61d8b0bfdc654d9a7cbb08048863d
+      internalID: 8626807258936250452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7c615eea36a19e6458bed0ded47ddc8c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

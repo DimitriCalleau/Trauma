@@ -1,0 +1,691 @@
+fileFormatVersion: 2
+guid: c2746c7a8499178439ae0b2cc5389612
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4455633750127250143
+    second: Tristesse_colonnes_0
+  - first:
+      213: -2317339292598259078
+    second: Tristesse_colonnes_1
+  - first:
+      213: -8951713246655571907
+    second: Tristesse_colonnes_2
+  - first:
+      213: -7847065235812883171
+    second: Tristesse_colonnes_3
+  - first:
+      213: -1226681798501099128
+    second: Tristesse_colonnes_4
+  - first:
+      213: 2698842748217699698
+    second: Tristesse_colonnes_5
+  - first:
+      213: 8292275743110299974
+    second: Tristesse_colonnes_6
+  - first:
+      213: 230424203448791462
+    second: Tristesse_colonnes_7
+  - first:
+      213: -7848933341247699363
+    second: Tristesse_colonnes_8
+  - first:
+      213: -5828686226396420399
+    second: Tristesse_colonnes_9
+  - first:
+      213: -2250237731850732082
+    second: Tristesse_colonnes_10
+  - first:
+      213: -6041140047056182151
+    second: Tristesse_colonnes_11
+  - first:
+      213: 1306188513391716280
+    second: Tristesse_colonnes_12
+  - first:
+      213: 2086255530926403094
+    second: Tristesse_colonnes_13
+  - first:
+      213: -730543997948097482
+    second: Tristesse_colonnes_14
+  - first:
+      213: 5918276501257330560
+    second: Tristesse_colonnes_15
+  - first:
+      213: 8433649415075748024
+    second: Tristesse_colonnes_16
+  - first:
+      213: -5575198423324313121
+    second: Tristesse_colonnes_17
+  - first:
+      213: 3993849377985649395
+    second: Tristesse_colonnes_18
+  - first:
+      213: -6147557833390198612
+    second: Tristesse_colonnes_19
+  - first:
+      213: 3670971379700041143
+    second: Tristesse_colonnes_20
+  - first:
+      213: 132586017071954925
+    second: Tristesse_colonnes_21
+  - first:
+      213: 6691383922200310027
+    second: Tristesse_colonnes_22
+  - first:
+      213: -6446517365444530313
+    second: Tristesse_colonnes_23
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tristesse_colonnes_0
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1872
+        width: 290
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea8395ca55600849b9823cd9686b465
+      internalID: -4455633750127250143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_1
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 1883
+        width: 170
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976b0bd5aeab8a442b8a138ad00c75f3
+      internalID: -2317339292598259078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_2
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 1878
+        width: 169
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8f6331eb325b9459e246c6a2cc5e9c
+      internalID: -8951713246655571907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_3
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 1872
+        width: 169
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c4fa3493b22904a916f1d215877b1e
+      internalID: -7847065235812883171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_4
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 1881
+        width: 339
+        height: 1014
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca063784b43d224494a083059a21935
+      internalID: -1226681798501099128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_5
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 1878
+        width: 316
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2abf31eb0fb7f224b9cf16a57af67d4f
+      internalID: 2698842748217699698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_6
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 1854
+        width: 309
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fff17d3d9fe1384486d1c421634ed23
+      internalID: 8292275743110299974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_7
+      rect:
+        serializedVersion: 2
+        x: 2945
+        y: 1859
+        width: 290
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48ef39173d64a14b9e3c95e971e7d85
+      internalID: 230424203448791462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_8
+      rect:
+        serializedVersion: 2
+        x: 3326
+        y: 1867
+        width: 172
+        height: 1018
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb18012fa4edd548b00f0ced4fc4d7a
+      internalID: -7848933341247699363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_9
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 1864
+        width: 169
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d50943e0e2ea814594dd04dbe1e590b
+      internalID: -5828686226396420399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_10
+      rect:
+        serializedVersion: 2
+        x: 3917
+        y: 1859
+        width: 169
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070967f1a8552914e85c98f09a00cf2a
+      internalID: -2250237731850732082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_11
+      rect:
+        serializedVersion: 2
+        x: 4183
+        y: 1864
+        width: 338
+        height: 1018
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca1a230f474069419df3ff91e068adb
+      internalID: -6041140047056182151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_12
+      rect:
+        serializedVersion: 2
+        x: 4677
+        y: 1864
+        width: 314
+        height: 1026
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65fe9ffda753d594e8393f5163ca9a34
+      internalID: 1306188513391716280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_13
+      rect:
+        serializedVersion: 2
+        x: 5093
+        y: 1835
+        width: 309
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65afde6e65ccb7f498bdec666a7959e4
+      internalID: 2086255530926403094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_14
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 366
+        width: 290
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30b490b8ede7c941abe16ce7c05ca21
+      internalID: -730543997948097482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_15
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 377
+        width: 169
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb47b4e472301b4595921a7f7d6175b
+      internalID: 5918276501257330560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_16
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 372
+        width: 171
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9832d437c17a26145b0086de3140eb9f
+      internalID: 8433649415075748024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_17
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 366
+        width: 166
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4055bdaa6abd3bf44bf93d415256ff21
+      internalID: -5575198423324313121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_18
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 372
+        width: 338
+        height: 1017
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4444b396319309246afaccdada3a6fc4
+      internalID: 3993849377985649395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_19
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 372
+        width: 314
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d5f3de63a894d49958704db34c34c2
+      internalID: -6147557833390198612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_20
+      rect:
+        serializedVersion: 2
+        x: 2297
+        y: 337
+        width: 309
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43145ab2461bd27439db287ebaf965c3
+      internalID: 3670971379700041143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_21
+      rect:
+        serializedVersion: 2
+        x: 3117
+        y: 689
+        width: 467
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7a85d723fd518459f887c1b1471942
+      internalID: 132586017071954925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_22
+      rect:
+        serializedVersion: 2
+        x: 3732
+        y: 619
+        width: 558
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe7086936ff60645a4ac8f50e015241
+      internalID: 6691383922200310027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tristesse_colonnes_23
+      rect:
+        serializedVersion: 2
+        x: 4411
+        y: 499
+        width: 755
+        height: 743
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c2843cc5999d847bf887935399fe46
+      internalID: -6446517365444530313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c090095e989a39041bcb5d9ea45b538b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
