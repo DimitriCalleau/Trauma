@@ -291,7 +291,6 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag.Equals("Trigger"))
         {
             texteFin.SetActive(true);
-            texteFin.GetComponent<FadePanel>().FadingFin();
             other.gameObject.SetActive(false);
         }
     }

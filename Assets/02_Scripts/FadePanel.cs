@@ -13,26 +13,20 @@ public class FadePanel : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            FadingDebut();
+            Fading();
         }
     }
-    public void FadingFin()
+
+    public void Fading()
     {
         textIntegre = GetComponent<CanvasGroup>();
         StartCoroutine(Fade());
-    }
-
-    public void FadingDebut()
-    {
-        textIntegre = GetComponent<CanvasGroup>();
-        StartCoroutine(FadeFin());
     }
 
     IEnumerator Fade()
     {
         float counter = 0f;
 
-        yield return new WaitForSeconds(timeBeforeFade);
         while (counter < fadingDuration)
         {
             counter += Time.deltaTime;
@@ -46,19 +40,4 @@ public class FadePanel : MonoBehaviour
         }
     }
 
-    IEnumerator FadeFin()
-    {
-        float counter = 0f;
-        while (counter < fadingDuration)
-        {
-            counter += Time.deltaTime;
-            textIntegre.alpha = Mathf.Lerp(textIntegre.alpha, 0,  counter / fadingDuration);
-            yield return null;
-        }
-
-        if(counter > fadingDuration)
-        {
-            this.gameObject.SetActive(false);
-        }
-    }
 }
