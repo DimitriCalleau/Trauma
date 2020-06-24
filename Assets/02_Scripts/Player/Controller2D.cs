@@ -355,7 +355,7 @@ public class Controller2D : MonoBehaviour
                             animChanged1 = true;
 
                             var emissionCire = cireCreationGoutte.GetComponent<ParticleSystem>().emission;
-                            emissionCire.rateOverTime = 8f;
+                            emissionCire.rateOverTime = 2f;
                         }
                         if (positionLightBougie2 != null)
                         {
@@ -374,7 +374,7 @@ public class Controller2D : MonoBehaviour
                             animChanged2 = true;
 
                             var emissionCire = cireCreationGoutte.GetComponent<ParticleSystem>().emission;
-                            emissionCire.rateOverTime = 15f;
+                            emissionCire.rateOverTime = 4f;
                         }
                         if (positionLightBougie3 != null)
                         {
