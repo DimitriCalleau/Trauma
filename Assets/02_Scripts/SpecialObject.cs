@@ -16,7 +16,10 @@ public class SpecialObject : MonoBehaviour
     {
         rnd.material = mats[0];
         activeMat = 0;
-        prtc.Play();
+        if(prtc != null)
+        {
+            prtc.Play();
+        }
     }
 
     public void ChangeMat()
@@ -24,9 +27,12 @@ public class SpecialObject : MonoBehaviour
         this.gameObject.layer = 9;
         if (activeMat == 0)
         {
+            if (prtc != null)
+            {
+                prtc.Stop();
+            }
             rnd.material = mats[1];
             activeMat = 1;
-            prtc.Stop();
         }
     }
 

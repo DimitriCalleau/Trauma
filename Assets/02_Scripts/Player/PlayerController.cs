@@ -114,6 +114,7 @@ public class PlayerController : MonoBehaviour
                             {
                                 menu3D.GetComponent<SceneAndUI>().End();
                                 uiTableau.SetActive(false);
+                                tableau.GetComponent<SpecialObject>().ChangeMat();
                                 test = false;
                             }
                         }
