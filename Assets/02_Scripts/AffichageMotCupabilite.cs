@@ -5,6 +5,7 @@ using UnityEngine;
 public class AffichageMotCupabilite : MonoBehaviour
 {
     public GameObject player;
+    public GameObject camera2D;
     public GameObject[] spawnPoints;
     public Sprite[] motsCulpabilite;
     public float speed;
@@ -193,69 +194,22 @@ public class AffichageMotCupabilite : MonoBehaviour
 
     public IEnumerator philipe()
     {
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(5);
         player.GetComponent<Controller2D>().FinishLevel();
     }
 
     public void FinishCulpabilite()
     {
         StartCoroutine(philipe());
-        player.GetComponent<Controller2D>().mvtSpeed = 0.02f;
+        camera2D.GetComponent<CameraFollow>().CameraShake(0.5f, 5);
+        player.GetComponent<Controller2D>().mvtSpeed = 0.2f;
+        player.GetComponent<Controller2D>().startSpeed  = 0.2f;
         for (int i =0; i <= 12; i++)
         {
-            //spawnPoints[i].transform.position = Vector3.Lerp(spawnPoints[i].transform.position, player.transform.position, smooth);
             spawnPoints[i].transform.position = new Vector3(player.transform.position.x, player.transform.position.y + i * smooth, player.transform.position.z);
-            spawnPoints[i].transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            spawnPoints[i].transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             spawnPoints[i].GetComponent<SpriteRenderer>().sortingLayerName = "Premier_plan";
             spawnPoints[i].GetComponent<SpriteRenderer>().sortingOrder = 1;
         }
     }
 }
-/*
-                if (randomMot3 == randomMot1)
-                {
-                    if (randomMot3 <= 1)
-                    {
-                        randomMot3 += 1;
-                    }
-                    if (randomMot3 >= motsCulpabilite.Length - 1)
-                    {
-                        randomMot3 -= 1;
-                    }
-                }
-                if (randomMot3 == randomMot2)
-                {
-                    if (randomMot3 <= 1)
-                    {
-                        randomMot3 += 1;
-                    }
-                    if (randomMot3 >= motsCulpabilite.Length - 1)
-                    {
-                        randomMot3 -= 1;
-                    }
-                }
-
-
-                if (randomSpawn3 == randomSpawn2)
-                {
-                    if (randomSpawn3 <= 1)
-                    {
-                        randomSpawn3 += 1;
-                    }
-                    if (randomSpawn3 >= spawnPoints.Length - 1)
-                    {
-                        randomSpawn3 -= 1;
-                    }
-                }
-                if (randomSpawn3 == randomSpawn1)
-                {
-                    if (randomSpawn3 <= 1)
-                    {
-                        randomSpawn3 += 1;
-                    }
-                    if (randomSpawn3 >= spawnPoints.Length - 1)
-                    {
-                        randomSpawn3 -= 1;
-                    }
-                }
-*/
