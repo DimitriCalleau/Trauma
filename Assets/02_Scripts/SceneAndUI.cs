@@ -13,24 +13,52 @@ public class SceneAndUI : MonoBehaviour
     public bool pause;
     public bool end;
     private bool isPaused;
-    static private bool hasStarted;
+    static public bool hasStarted;
     public GameObject pausePanel;
     public GameObject startPanel;
     public GameObject endPanel;
     public GameObject player;
+    public GameObject textHistoire3D;
 
+    //Histoire Lvl 2D
+    bool history2DLvl;
+    public bool begin2DLvl;
+    public GameObject historyPanel;
+
+    //Checkpoints
     public GameObject[] Checkpoints;
     public int nbCheckpoints = 0;
 
     private void Start()
     {
-        if(hasStarted == false)
+
+        if (history2DLvl == false)
+        {
+            pause = true;
+        }
+        if (hasStarted == false)
         {
             pause = true;
         }
         else if (hasStarted == true)
         {
-            pause = false;
+            if(textHistoire3D != null)
+            {
+                textHistoire3D.SetActive(false);
+            }
+
+            if(historyPanel != null)
+            {
+                if (history2DLvl == true)
+                {
+                    pause = false;
+                }
+            }
+            else
+            {
+                pause = false;
+            }
+
             if(startPanel != null)
             {
                 startPanel.SetActive(false);
@@ -47,14 +75,26 @@ public class SceneAndUI : MonoBehaviour
 
     private void Update()
     {
+
         if (Input.GetButtonDown("Cancel"))
         {
             pause = !pause;
         }
-        if(end == false)
+        if (history2DLvl == true)
+        {
+            if (begin2DLvl == false)
+            {
+                historyPanel.SetActive(false);
+                pause = false;
+                begin2DLvl = true;
+            }
+        }
+
+        if (end == false)
         {
             if (pause == true)
             {
+
                 if (Cursor.lockState == CursorLockMode.Locked)
                 {
                     Cursor.lockState = CursorLockMode.None;
@@ -113,7 +153,11 @@ public class SceneAndUI : MonoBehaviour
         pause = false;
         hasStarted = true;
         startPanel.SetActive(false);
+    }
 
+    public void SkipHistory()
+    {
+        history2DLvl = true;
     }
 
     public void MainMenu()
@@ -161,6 +205,7 @@ public class SceneAndUI : MonoBehaviour
     {
         end = false;
         endPanel.SetActive(false);
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

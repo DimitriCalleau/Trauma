@@ -7,6 +7,7 @@ public class SpecialObject : MonoBehaviour
     public ParticleSystem prtc;
     public int nbObjet;
     public string sceneToLoad;
+    public GameObject futurePanel;
     public Renderer rnd;
     public Material[] mats = new Material[2];
     private int activeMat;

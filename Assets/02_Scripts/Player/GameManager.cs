@@ -39,8 +39,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //nbLvlDone = PlayerPrefs.GetInt("nbLvlDone");
-        nbLvlDone = 1;
+        nbLvlDone = PlayerPrefs.GetInt("nbLvlDone");
+        //nbLvlDone = 1;
     }
     private void Update()
     {

@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     public GameObject uiPorte;
     public GameObject uiGrab;
     public GameObject uiTableau;
+    public GameObject texteFin;
+
+    bool test = false;
     float distancesSelection;
 
     float holdingTimer;
@@ -41,15 +44,17 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+
         if (PlayerPrefs.HasKey("saved") == true)
         {
-
             StartCoroutine(LoadingButBetter());
         }
+
         speed = 3f;
         uiPorte.SetActive(false);
         uiGrab.SetActive(false);
         uiTableau.SetActive(false);
+        texteFin.SetActive(false);
     }
 
     void Update()
@@ -90,12 +95,13 @@ public class PlayerController : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
+
                     if (hit.transform.gameObject.tag.Equals("Fin"))
                     {
-                        bool test = false;
+                        Debug.Log(test);
                         GameObject tableau;
                         tableau = hit.transform.gameObject;
-                        if (Vector3.Distance(transform.position, tableau.transform.position) < distanceMax)
+                        if (Vector3.Distance(transform.position, tableau.transform.position) < distanceMax + 2)
                         {
                             if(test == false)
                             {
@@ -120,7 +126,14 @@ public class PlayerController : MonoBehaviour
                             }
                         }
                     }
-
+                    else
+                    {
+                        if (test == true)
+                        {
+                            uiTableau.SetActive(false);
+                            test = false;
+                        }
+                    }
                     if (hit.transform.gameObject.tag.Equals("Pickable"))
                     {
                         selectedItem = hit.transform.gameObject;
@@ -274,6 +287,12 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (other.gameObject.tag.Equals("Trigger"))
+        {
+            texteFin.SetActive(true);
+            texteFin.GetComponent<FadePanel>().FadingFin();
+            other.gameObject.SetActive(false);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -302,9 +321,6 @@ public class PlayerController : MonoBehaviour
         }
         PlayerPrefs.SetInt("nbLvlDone", menu3D.GetComponent<GameManager>().nbLvlDone);
         PlayerPrefs.SetString("activeScene", menu3D.GetComponent<SceneAndUI>().activeScene);
-        /*
-        Debug.Log("Save");
-        SavingSystem.SaveData(this, menu3D.GetComponent<GameManager>(), menu3D.GetComponent<SceneAndUI>());*/
     }
     public void SaveBureau()
     {
