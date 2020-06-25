@@ -42,6 +42,15 @@ public class PlayerController : MonoBehaviour
     public bool verifEnterScene;
     public int nbLvlDonePorte;
 
+    private void Awake()
+    {
+
+        if (PlayerPrefs.HasKey("saved") == true)
+        {
+            StartCoroutine(LoadingButBetter());
+        }
+    }
+
     private void Start()
     {
 
@@ -360,29 +369,6 @@ public class PlayerController : MonoBehaviour
         menu3D.GetComponent<SceneAndUI>().ActiveScene(PlayerPrefs.GetString("activeScene"));
 
         loading = true;
-        /*
-        SaveData data = SavingSystem.LoadData();
-        Debug.Log("Load");
-        menu3D.GetComponent<GameManager>().nbLvlDone = data.lvlAvancement;
-        
-        //position joueur
-        transform.position = new Vector3(data.positionX, data.positionY, data.positionZ);
-        transform.localRotation = Quaternion.Euler(data.rotationX, data.rotationY, data.rotationZ);
-
-        //objet re dans les mains
-        pickedItem = GameObject.Find(data.objet);
-
-        if(pickedItem != null)
-        {
-            pickedItem.transform.SetParent(tempParent.transform);
-            pickedItem.GetComponent<Rigidbody>().isKinematic = true;
-            pickedItem.transform.position = tempParent.transform.position;
-            isHolding = true;
-        }
-
-        string activeSceneName = data.scene;
-        menu3D.GetComponent<SceneAndUI>().ActiveScene(activeSceneName);
-        */
     }
 
     IEnumerator LoadingButBetter()
