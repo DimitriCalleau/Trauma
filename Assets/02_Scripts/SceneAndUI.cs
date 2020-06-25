@@ -19,6 +19,7 @@ public class SceneAndUI : MonoBehaviour
     public GameObject endPanel;
     public GameObject player;
     public GameObject textHistoire3D;
+    public GameObject creditPanel;
 
     //Histoire Lvl 2D
     bool history2DLvl;
@@ -31,7 +32,7 @@ public class SceneAndUI : MonoBehaviour
 
     private void Start()
     {
-
+        creditPanel.SetActive(false);
         if (history2DLvl == false)
         {
             pause = true;
@@ -187,7 +188,14 @@ public class SceneAndUI : MonoBehaviour
         PlayerPrefs.DeleteAll();
         SceneLoader("Maison");
     }
-
+    public void CreditOn()
+    {
+        creditPanel.SetActive(true);
+    }
+    public void CreditOff()
+    {
+        creditPanel.SetActive(false);
+    }
     public void Resume()
     {
         pause = false;
