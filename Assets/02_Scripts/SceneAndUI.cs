@@ -32,7 +32,10 @@ public class SceneAndUI : MonoBehaviour
 
     private void Start()
     {
-        creditPanel.SetActive(false);
+        if (creditPanel != null)
+        {
+            creditPanel.SetActive(false);
+        }
         if (history2DLvl == false)
         {
             pause = true;
