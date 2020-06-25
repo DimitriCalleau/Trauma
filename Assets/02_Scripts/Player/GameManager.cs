@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         //nbLvlDone = PlayerPrefs.GetInt("nbLvlDone");
-        nbLvlDone = 5;
+        nbLvlDone = 4;
     }
     private void Update()
     {
