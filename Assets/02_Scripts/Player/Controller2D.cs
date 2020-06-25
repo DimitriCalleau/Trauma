@@ -292,12 +292,12 @@ public class Controller2D : MonoBehaviour
 
                 if (menu2D.GetComponent<GameManager>().nbLvlDone == 5)
                 {
-                    bool lit = true;
+                    /*bool lit = true;
                     if (Input.GetKeyDown(KeyCode.A))
                     {
-                        if(lit == true)
+                        if (lit == true)
                         {
-                            if(fire != null)
+                            if (fire != null)
                             {
                                 fire.SetActive(false);
                             }
@@ -307,14 +307,14 @@ public class Controller2D : MonoBehaviour
                                 lightBougie.SetActive(false);
                             }
 
-                            if(fireSound != null)
+                            if (fireSound != null)
                             {
                                 fireSound.Stop();
                             }
 
                             lit = false;
                         }
-                        else
+                        else if (lit == false) ;
                         {
                             if (fire != null)
                             {
@@ -334,7 +334,7 @@ public class Controller2D : MonoBehaviour
                             lit = true;
                         }
                     } //allumer/eteindre
-
+                    */
                     ratioAvancement = endingPosition.GetComponent<PourcentageNiveau>().ratio;
                     if (ratioAvancement < tristesseChangeAnim1)
                     {
@@ -356,6 +356,7 @@ public class Controller2D : MonoBehaviour
 
                             var emissionCire = cireCreationGoutte.GetComponent<ParticleSystem>().emission;
                             emissionCire.rateOverTime = 2f;
+                            jumpForce -= 2;
                         }
                         if (positionLightBougie2 != null)
                         {
@@ -375,6 +376,7 @@ public class Controller2D : MonoBehaviour
 
                             var emissionCire = cireCreationGoutte.GetComponent<ParticleSystem>().emission;
                             emissionCire.rateOverTime = 4f;
+                            jumpForce -= 2;
                         }
                         if (positionLightBougie3 != null)
                         {
@@ -466,7 +468,7 @@ public class Controller2D : MonoBehaviour
             }
             else
             {
-                rb.velocity = new Vector2(0 , 0);
+                rb.velocity = new Vector2(0 , rb.velocity.y);
             }
         }
         else
