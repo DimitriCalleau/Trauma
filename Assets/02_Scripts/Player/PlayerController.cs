@@ -374,10 +374,10 @@ public class PlayerController : MonoBehaviour
     IEnumerator LoadingButBetter()
     {
         int repeatJustInCase = 0;
-        while (repeatJustInCase < 4)
+        while (repeatJustInCase < 5)
         {
             LoadTransform();
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.3f);
             repeatJustInCase += 1;
         }
 
