@@ -97,7 +97,7 @@ ScriptedImporter:
       y: 4
       width: 2286
       height: 1941
-    spriteID: d35c73bfaf952a141b4d45c3ed06bcc1
+    spriteID: 7a5165e52fea43a4294b7745c14658df
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -131,14 +131,14 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: 
     layerID: 39
     mosaicPosition: {x: 0, y: 0}
   - name: Layer35
     spriteName: Layer35
     isGroup: 0
     parentIndex: 0
-    spriteID: d35c73bfaf952a141b4d45c3ed06bcc1
+    spriteID: 7a5165e52fea43a4294b7745c14658df
     layerID: 38
     mosaicPosition: {x: 4, y: 4}
   characterData:

@@ -149,6 +149,7 @@ public class SceneAndUI : MonoBehaviour
     public void Retry()
     {
         player.transform.position = Checkpoints[nbCheckpoints].gameObject.transform.position;
+        Resume();
         //SceneManager.LoadScene(activeScene);
     }
 
